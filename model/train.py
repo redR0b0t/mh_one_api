@@ -1,0 +1,18 @@
+!python finetune_seq2seq.py \
+        --model_name_or_path "google/flan-t5-xl" \
+        --bf16 True \
+        --train_file "stanford_alpaca/alpaca_data.json" \
+        --per_device_train_batch_size 2 \
+        --per_device_eval_batch_size 2 \
+        --gradient_accumulation_steps 1 \
+        --do_train \
+        --learning_rate 1.0e-5 \
+        --warmup_ratio 0.03 \
+        --weight_decay 0.0 \
+        --num_train_epochs 5 \
+        --logging_steps 10 \
+        --save_steps 2000 \
+        --save_total_limit 2 \
+        --overwrite_output_dir \
+        --output_dir ./flan-t5-xl_peft_finetuned_model \
+        --peft lora

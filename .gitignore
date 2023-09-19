@@ -1,0 +1,12 @@
+data/submission.csv
+data/test.csv
+data/train.csv
+data/_MACOSX/*
+
+model/intel-extension-for-transformers
+model/formatted_traind.csv
+
+
+# git rm -rf --cached
+# git filter-branch --tree-filter 'rm -f model/formatted_td.csv' HEAD
+find ./ -size +100M 
