@@ -5,8 +5,12 @@ data/_MACOSX/*
 
 model/intel-extension-for-transformers
 model/formatted_traind.csv
+model/ft_models/*
+
+# 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
 
 
 # git rm -rf --cached
 # git filter-branch --tree-filter 'rm -f model/formatted_td.csv' HEAD
-find ./ -size +100M 
+# find ./ -size +100M 
+# git remote add origin https://github.com/redR0b0t/mh_one_api.git

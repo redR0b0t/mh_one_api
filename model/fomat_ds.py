@@ -9,7 +9,7 @@ train_data=pd.read_csv(train_path)
 test_data=pd.read_csv(test_path)
 submission_data=pd.read_csv(submission_path)
 
-train_data=pd.read_csv(train_path)
+train_data.rename(columns = {'test':'TEST'}, inplace = True)
 
 print(train_data)
 
