@@ -4,7 +4,7 @@ import pandas as pd
 import torch
 
 
-batch_process=2
+batch_process=0
 
 
 # specify start index for continuing...
@@ -14,17 +14,26 @@ file_name=['0_10k.csv','10_20k.csv','20_30k.csv']
 
 
 
+
 test_path="/home/u131168/mh_one_api/data/test.csv"
 test_data=pd.read_csv(test_path)
 
 
-# Load model directly
-from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-model_path="google/flan-t5-xl"
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = AutoModelForSeq2SeqLM.from_pretrained(model_path)
 
+# !pip install bitsandbytes
+# !pip install accelerate
+# !pip install scipy
 
+# load model
+from peft import AutoPeftModelForSeq2SeqLM
+from transformers import AutoTokenizer
+import torch
+
+model_path="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/checkpoint-62000"
+tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
+model = AutoPeftModelForSeq2SeqLM.from_pretrained(model_path, )
+
+# ------predict--------------
 for i in range(start_index[batch_process],end_index[batch_process],20):
     prompts = test_data.loc[i:i+19,['Story','Question']].values.tolist()
     # print(prompts)
@@ -32,9 +41,9 @@ for i in range(start_index[batch_process],end_index[batch_process],20):
     input_ids = tokenizer(prompts, return_tensors="pt" ,padding=True,truncation=True, max_length=512).input_ids
     # sample up to 30 tokens
     torch.manual_seed(0)  # doctest: +IGNORE_RESULT
-    outputs = model.generate(input_ids, do_sample=True, max_length=20)
+    outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=20)
     res+=tokenizer.batch_decode(outputs, skip_special_tokens=True)
-    with open(f"/home/u131168/mh_one_api/data/flant5_pred/{file_name[batch_process]}", "a+") as file1:
+    with open(f"/home/u131168/mh_one_api/data/custom_pred/{file_name[batch_process]}", "a+") as file1:
         # Writing data to a file
         file1.writelines(f"{i+i1} $$ {res[i1]}\n" for i1 in range(len(res)))
 
