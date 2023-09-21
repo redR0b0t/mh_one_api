@@ -1,0 +1,395 @@
+starting fine tuning model
+Requirement already satisfied: datasets in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (2.14.5)
+Requirement already satisfied: torch in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.0.1)
+Requirement already satisfied: transformers>=4.32.0 in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (4.33.2)
+Requirement already satisfied: sentencepiece in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 4)) (0.1.99)
+Requirement already satisfied: peft in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (0.5.0)
+Requirement already satisfied: evaluate in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 6)) (0.4.0)
+Requirement already satisfied: nltk in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (3.8.1)
+Requirement already satisfied: rouge_score in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 8)) (0.1.2)
+Requirement already satisfied: einops in /opt/miniconda/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (0.6.1)
+Requirement already satisfied: xxhash in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (3.3.0)
+Requirement already satisfied: pyarrow>=8.0.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (13.0.0)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.3.7)
+Requirement already satisfied: multiprocess in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.70.15)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.17.2)
+Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2023.6.0)
+Requirement already satisfied: pyyaml>=5.1 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (6.0.1)
+Requirement already satisfied: pandas in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (1.26.0)
+Requirement already satisfied: tqdm>=4.62.1 in /opt/miniconda/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (4.65.0)
+Requirement already satisfied: packaging in /opt/miniconda/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (23.0)
+Requirement already satisfied: requests>=2.19.0 in /opt/miniconda/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2.28.1)
+Requirement already satisfied: aiohttp in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (3.8.5)
+Requirement already satisfied: networkx in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.1)
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.12.4)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.10.3.66)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.4.0.1)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (10.9.0.58)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.4.91)
+Requirement already satisfied: sympy in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (1.12)
+Requirement already satisfied: typing-extensions in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (4.8.0)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.91)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (8.5.0.96)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.101)
+Requirement already satisfied: triton==2.0.0 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (2.0.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.99)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (2.14.3)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (10.2.10.91)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.99)
+Requirement already satisfied: jinja2 in /opt/miniconda/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: setuptools in /opt/miniconda/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r requirements.txt (line 2)) (65.6.3)
+Requirement already satisfied: wheel in /opt/miniconda/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r requirements.txt (line 2)) (0.38.4)
+Requirement already satisfied: lit in /opt/miniconda/lib/python3.10/site-packages (from triton==2.0.0->torch->-r requirements.txt (line 2)) (16.0.6)
+Requirement already satisfied: cmake in /opt/miniconda/lib/python3.10/site-packages (from triton==2.0.0->torch->-r requirements.txt (line 2)) (3.27.5)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.13.3)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.3.3)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (2023.8.8)
+Requirement already satisfied: psutil in /home/u131168/.local/lib/python3.10/site-packages (from peft->-r requirements.txt (line 5)) (5.9.5)
+Requirement already satisfied: accelerate in /opt/miniconda/lib/python3.10/site-packages (from peft->-r requirements.txt (line 5)) (0.23.0)
+Requirement already satisfied: responses<0.19 in /opt/miniconda/lib/python3.10/site-packages (from evaluate->-r requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: click in /opt/miniconda/lib/python3.10/site-packages (from nltk->-r requirements.txt (line 7)) (8.1.7)
+Requirement already satisfied: joblib in /opt/miniconda/lib/python3.10/site-packages (from nltk->-r requirements.txt (line 7)) (1.3.2)
+Requirement already satisfied: six>=1.14.0 in /opt/miniconda/lib/python3.10/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.16.0)
+Requirement already satisfied: absl-py in /opt/miniconda/lib/python3.10/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.4.0)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (4.0.3)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: attrs>=17.3.0 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/miniconda/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (2.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2023.5.7)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/miniconda/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (1.26.15)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/miniconda/lib/python3.10/site-packages (from jinja2->torch->-r requirements.txt (line 2)) (2.1.1)
+Requirement already satisfied: tzdata>=2022.1 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3.post1)
+Requirement already satisfied: mpmath>=0.19 in /opt/miniconda/lib/python3.10/site-packages (from sympy->torch->-r requirements.txt (line 2)) (1.3.0)
+Collecting git+https://github.com/huggingface/transformers
+  Cloning https://github.com/huggingface/transformers to /tmp/pip-req-build-ki33c5_b
+  Running command git clone --filter=blob:none --quiet https://github.com/huggingface/transformers /tmp/pip-req-build-ki33c5_b
+  Resolved https://github.com/huggingface/transformers to commit b132c1703eb1c8bd9dfa4ad6a9be2bfd6ef819e9
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (2023.8.8)
+Collecting tokenizers<0.15,>=0.14
+  Downloading tokenizers-0.14.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 81.9 MB/s eta 0:00:00
+Requirement already satisfied: pyyaml>=5.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (6.0.1)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (0.3.3)
+Requirement already satisfied: packaging>=20.0 in /opt/miniconda/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (23.0)
+Requirement already satisfied: huggingface-hub<1.0,>=0.16.4 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (0.17.2)
+Requirement already satisfied: requests in /opt/miniconda/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (2.28.1)
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (3.12.4)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (1.26.0)
+Requirement already satisfied: tqdm>=4.27 in /opt/miniconda/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (4.65.0)
+Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.34.0.dev0) (2023.6.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/u131168/.local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.34.0.dev0) (4.8.0)
+Collecting huggingface-hub<1.0,>=0.16.4
+  Downloading huggingface_hub-0.16.4-py3-none-any.whl (268 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 268.8/268.8 kB 5.2 MB/s eta 0:00:00
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (2023.5.7)
+Requirement already satisfied: charset-normalizer<3,>=2 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (3.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (1.26.15)
+Building wheels for collected packages: transformers
+  Building wheel for transformers (pyproject.toml): started
+  Building wheel for transformers (pyproject.toml): finished with status 'done'
+  Created wheel for transformers: filename=transformers-4.34.0.dev0-py3-none-any.whl size=7700906 sha256=70b932a4a3f1f9212ae10ee756ef73b560c10c83c2a4410fb3919055973831cf
+  Stored in directory: /tmp/pip-ephem-wheel-cache-95ziqbtp/wheels/c0/14/d6/6c9a5582d2ac191ec0a483be151a4495fe1eb2a6706ca49f1b
+Successfully built transformers
+Installing collected packages: huggingface-hub, tokenizers, transformers
+  Attempting uninstall: huggingface-hub
+    Found existing installation: huggingface-hub 0.17.2
+    Uninstalling huggingface-hub-0.17.2:
+      Successfully uninstalled huggingface-hub-0.17.2
+  Attempting uninstall: tokenizers
+    Found existing installation: tokenizers 0.13.3
+    Uninstalling tokenizers-0.13.3:
+      Successfully uninstalled tokenizers-0.13.3
+  Attempting uninstall: transformers
+    Found existing installation: transformers 4.33.2
+    Uninstalling transformers-4.33.2:
+      Successfully uninstalled transformers-4.33.2
+Successfully installed huggingface-hub-0.16.4 tokenizers-0.14.0 transformers-4.34.0.dev0
+/opt/miniconda/lib/python3.10/site-packages/bitsandbytes/cextension.py:34: UserWarning: The installed version of bitsandbytes was compiled without GPU support. 8-bit optimizers, 8-bit multiplication, and GPU quantization are unavailable.
+  warn("The installed version of bitsandbytes was compiled without GPU support. "
+/opt/miniconda/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: undefined symbol: cadam32bit_grad_fp32
+-------------------starting-script
+-------------------setting up-logging
+09/21/2023 08:37:56 - WARNING - __main__ - Process rank: 0, device: cpu, n_gpu: 0distributed training: True, 16-bits training: False
+09/21/2023 08:37:56 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=0,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/runs/Sep21_08-37-56_idc-beta-batch-pvc-node-05,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=adamw_torch,
+optim_args=None,
+output_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/checkpoint-6000,
+run_name=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=2000,
+save_strategy=steps,
+save_total_limit=2,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+/home/u131168/.local/lib/python3.10/site-packages/datasets/load.py:2089: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=None' instead.
+  warnings.warn(
+Using custom data configuration default-50b8e5df3814dc7a
+----------------------detecting checkpoint
+09/21/2023 08:37:56 - INFO - datasets.builder - Using custom data configuration default-50b8e5df3814dc7a
+Loading Dataset Infos from /home/u131168/.local/lib/python3.10/site-packages/datasets/packaged_modules/csv
+09/21/2023 08:37:56 - INFO - datasets.info - Loading Dataset Infos from /home/u131168/.local/lib/python3.10/site-packages/datasets/packaged_modules/csv
+Overwrite dataset info from restored data version if exists.
+09/21/2023 08:37:56 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+09/21/2023 08:37:56 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+09/21/2023 08:37:56 - INFO - datasets.builder - Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+09/21/2023 08:37:56 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+[INFO|tokenization_utils_base.py:2037] 2023-09-21 08:37:56,777 >> loading file spiece.model from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/spiece.model
+[INFO|tokenization_utils_base.py:2037] 2023-09-21 08:37:56,777 >> loading file tokenizer.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer.json
+[INFO|tokenization_utils_base.py:2037] 2023-09-21 08:37:56,777 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2037] 2023-09-21 08:37:56,777 >> loading file special_tokens_map.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2037] 2023-09-21 08:37:56,777 >> loading file tokenizer_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer_config.json
+[WARNING|logging.py:305] 2023-09-21 08:37:56,777 >> Loading the tokenizer from the `special_tokens_map.json` and the `added_tokens.json` will be removed in `transformers 5`,  it is kept for forward compatibility, but it is recommended to update your `tokenizer_config.json` by uploading it again. You will see the new `added_tokens_decoder` attribute that will store the relevant information.
+Running tokenizer on train dataset:   0%|          | 0/25000 [00:00<?, ? examples/s]Caching processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-904ccf27356d0740.arrow
+-------------------preparing features
+09/21/2023 08:37:57 - INFO - datasets.arrow_dataset - Caching processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-50b8e5df3814dc7a/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-904ccf27356d0740.arrow
+Running tokenizer on train dataset:   4%|▍         | 1000/25000 [00:00<00:17, 1380.55 examples/s]Running tokenizer on train dataset:   8%|▊         | 2000/25000 [00:01<00:16, 1405.53 examples/s]Running tokenizer on train dataset:  12%|█▏        | 3000/25000 [00:02<00:15, 1391.07 examples/s]Running tokenizer on train dataset:  16%|█▌        | 4000/25000 [00:02<00:15, 1382.59 examples/s]Running tokenizer on train dataset:  20%|██        | 5000/25000 [00:03<00:14, 1359.05 examples/s]Running tokenizer on train dataset:  24%|██▍       | 6000/25000 [00:04<00:13, 1374.53 examples/s]Running tokenizer on train dataset:  28%|██▊       | 7000/25000 [00:05<00:13, 1378.69 examples/s]Running tokenizer on train dataset:  32%|███▏      | 8000/25000 [00:05<00:12, 1391.19 examples/s]Running tokenizer on train dataset:  36%|███▌      | 9000/25000 [00:06<00:11, 1385.68 examples/s]Running tokenizer on train dataset:  40%|████      | 10000/25000 [00:07<00:10, 1385.07 examples/s]Running tokenizer on train dataset:  44%|████▍     | 11000/25000 [00:07<00:10, 1393.04 examples/s]Running tokenizer on train dataset:  48%|████▊     | 12000/25000 [00:08<00:09, 1401.39 examples/s]Running tokenizer on train dataset:  52%|█████▏    | 13000/25000 [00:09<00:08, 1403.92 examples/s]Running tokenizer on train dataset:  56%|█████▌    | 14000/25000 [00:10<00:07, 1413.56 examples/s]Running tokenizer on train dataset:  60%|██████    | 15000/25000 [00:10<00:07, 1420.52 examples/s]Running tokenizer on train dataset:  64%|██████▍   | 16000/25000 [00:11<00:06, 1419.04 examples/s]Running tokenizer on train dataset:  68%|██████▊   | 17000/25000 [00:12<00:05, 1416.79 examples/s]Running tokenizer on train dataset:  72%|███████▏  | 18000/25000 [00:12<00:04, 1415.05 examples/s]Running tokenizer on train dataset:  76%|███████▌  | 19000/25000 [00:13<00:04, 1414.90 examples/s]Running tokenizer on train dataset:  80%|████████  | 20000/25000 [00:14<00:03, 1407.95 examples/s]Running tokenizer on train dataset:  84%|████████▍ | 21000/25000 [00:14<00:02, 1414.59 examples/s]Running tokenizer on train dataset:  88%|████████▊ | 22000/25000 [00:15<00:02, 1415.96 examples/s]Running tokenizer on train dataset:  92%|█████████▏| 23000/25000 [00:16<00:01, 1415.40 examples/s]Running tokenizer on train dataset:  96%|█████████▌| 24000/25000 [00:17<00:00, 1415.92 examples/s]Running tokenizer on train dataset: 100%|██████████| 25000/25000 [00:17<00:00, 1403.78 examples/s]Running tokenizer on train dataset: 100%|██████████| 25000/25000 [00:18<00:00, 1379.64 examples/s]
+[INFO|configuration_utils.py:715] 2023-09-21 08:38:16,064 >> loading configuration file config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/config.json
+[INFO|configuration_utils.py:775] 2023-09-21 08:38:16,073 >> Model config T5Config {
+  "_name_or_path": "google/flan-t5-xl",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 5120,
+  "d_kv": 64,
+  "d_model": 2048,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.34.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|modeling_utils.py:2892] 2023-09-21 08:38:16,101 >> loading weights file pytorch_model.bin from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/pytorch_model.bin.index.json
+[INFO|configuration_utils.py:770] 2023-09-21 08:38:16,125 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+-------------------preparing features
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.04s/it]
+[INFO|modeling_utils.py:3671] 2023-09-21 08:38:34,343 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:3679] 2023-09-21 08:38:34,343 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at google/flan-t5-xl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:730] 2023-09-21 08:38:34,576 >> loading configuration file generation_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/generation_config.json
+[INFO|configuration_utils.py:770] 2023-09-21 08:38:34,576 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+[WARNING|modeling_utils.py:1535] 2023-09-21 08:38:34,584 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 32100. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|trainer.py:2121] 2023-09-21 08:38:38,918 >> Loading model from /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/checkpoint-6000.
+[INFO|trainer.py:1758] 2023-09-21 08:38:39,588 >> ***** Running training *****
+[INFO|trainer.py:1759] 2023-09-21 08:38:39,588 >>   Num examples = 25,000
+[INFO|trainer.py:1760] 2023-09-21 08:38:39,588 >>   Num Epochs = 1
+[INFO|trainer.py:1761] 2023-09-21 08:38:39,588 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1764] 2023-09-21 08:38:39,588 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1765] 2023-09-21 08:38:39,588 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1766] 2023-09-21 08:38:39,588 >>   Total optimization steps = 12,500
+[INFO|trainer.py:1767] 2023-09-21 08:38:39,591 >>   Number of trainable parameters = 4,718,592
+[INFO|trainer.py:1787] 2023-09-21 08:38:39,612 >>   Continuing training from checkpoint, will skip to saved global_step
+[INFO|trainer.py:1788] 2023-09-21 08:38:39,612 >>   Continuing training from epoch 0
+[INFO|trainer.py:1789] 2023-09-21 08:38:39,612 >>   Continuing training from global step 6000
+[INFO|trainer.py:1791] 2023-09-21 08:38:39,612 >>   Will skip the first 0 epochs then the first 6000 batches in the first epoch.
+trainable params: 4,718,592 || all params: 2,854,361,088 || trainable%: 0.1653116706164963
+-------------------traing-model
+  0%|          | 0/12500 [00:00<?, ?it/s][WARNING|logging.py:290] 2023-09-21 08:38:39,620 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ 48%|████▊     | 6001/12500 [00:04<00:04, 1462.51it/s] 48%|████▊     | 6003/12500 [00:17<00:04, 1462.51it/s] 48%|████▊     | 6004/12500 [00:18<00:27, 238.87it/s]  48%|████▊     | 6005/12500 [00:21<00:32, 197.72it/s] 48%|████▊     | 6008/12500 [00:37<00:32, 197.72it/s] 48%|████▊     | 6009/12500 [00:39<01:28, 73.36it/s]  48%|████▊     | 6010/12500 [00:41<01:38, 66.22it/s]                                                     48%|████▊     | 6010/12500 [00:41<01:38, 66.22it/s] 48%|████▊     | 6015/12500 [00:57<01:37, 66.22it/s] 48%|████▊     | 6016/12500 [00:58<03:24, 31.70it/s] 48%|████▊     | 6017/12500 [01:01<03:52, 27.83it/s]                                                     48%|████▊     | 6020/12500 [01:11<03:52, 27.83it/s] 48%|████▊     | 6021/12500 [01:17<03:52, 27.83it/s] 48%|████▊     | 6022/12500 [01:17<07:16, 14.82it/s] 48%|████▊     | 6023/12500 [01:19<08:01, 13.46it/s] 48%|████▊     | 6028/12500 [01:37<08:00, 13.46it/s] 48%|████▊     | 6029/12500 [01:38<15:57,  6.76it/s] 48%|████▊     | 6030/12500 [01:41<17:32,  6.15it/s]                                                     48%|████▊     | 6030/12500 [01:41<17:32,  6.15it/s] 48%|████▊     | 6036/12500 [01:57<17:31,  6.15it/s] 48%|████▊     | 6037/12500 [02:00<31:57,  3.37it/s] 48%|████▊     | 6038/12500 [02:03<34:40,  3.11it/s]                                                     48%|████▊     | 6040/12500 [02:08<34:40,  3.11it/s] 48%|████▊     | 6042/12500 [02:17<34:39,  3.11it/s] 48%|████▊     | 6043/12500 [02:19<56:20,  1.91it/s] 48%|████▊     | 6044/12500 [02:22<1:02:19,  1.73it/s] 48%|████▊     | 6048/12500 [02:34<1:28:36,  1.21it/s] 48%|████▊     | 6049/12500 [02:38<1:40:45,  1.07it/s]                                                       48%|████▊     | 6050/12500 [02:43<1:40:44,  1.07it/s] 48%|████▊     | 6052/12500 [02:48<2:14:39,  1.25s/it] 48%|████▊     | 6053/12500 [02:50<2:21:55,  1.32s/it] 48%|████▊     | 6055/12500 [02:56<2:47:07,  1.56s/it] 48%|████▊     | 6057/12500 [03:03<3:21:53,  1.88s/it] 48%|████▊     | 6058/12500 [03:06<3:32:31,  1.98s/it] 48%|████▊     | 6059/12500 [03:09<3:41:51,  2.07s/it] 48%|████▊     | 6060/12500 [03:11<3:42:00,  2.07s/it]                                                       48%|████▊     | 6060/12500 [03:11<3:42:00,  2.07s/it] 48%|████▊     | 6061/12500 [03:13<3:50:49,  2.15s/it] 48%|████▊     | 6062/12500 [03:16<4:16:50,  2.39s/it] 49%|████▊     | 6063/12500 [03:20<4:47:38,  2.68s/it] 49%|████▊     | 6064/12500 [03:22<4:19:50,  2.42s/it] 49%|████▊     | 6065/12500 [03:24<4:18:20,  2.41s/it] 49%|████▊     | 6066/12500 [03:27<4:26:13,  2.48s/it] 49%|████▊     | 6067/12500 [03:29<4:22:25,  2.45s/it] 49%|████▊     | 6068/12500 [03:32<4:34:28,  2.56s/it] 49%|████▊     | 6069/12500 [03:34<4:11:51,  2.35s/it] 49%|████▊     | 6070/12500 [03:36<4:18:41,  2.41s/it]                                                       49%|████▊     | 6070/12500 [03:36<4:18:41,  2.41s/it] 49%|████▊     | 6071/12500 [03:38<3:46:22,  2.11s/it] 49%|████▊     | 6072/12500 [03:40<4:02:26,  2.26s/it] 49%|████▊     | 6073/12500 [03:43<3:56:45,  2.21s/it] 49%|████▊     | 6074/12500 [03:45<4:15:17,  2.38s/it] 49%|████▊     | 6075/12500 [03:48<4:39:09,  2.61s/it] 49%|████▊     | 6076/12500 [03:51<4:25:43,  2.48s/it] 49%|████▊     | 6077/12500 [03:53<4:13:36,  2.37s/it] 49%|████▊     | 6078/12500 [03:56<4:29:08,  2.51s/it] 49%|████▊     | 6079/12500 [03:58<4:29:37,  2.52s/it] 49%|████▊     | 6080/12500 [04:01<4:38:47,  2.61s/it]                                                       49%|████▊     | 6080/12500 [04:01<4:38:47,  2.61s/it] 49%|████▊     | 6081/12500 [04:03<4:16:38,  2.40s/it] 49%|████▊     | 6082/12500 [04:04<3:45:28,  2.11s/it] 49%|████▊     | 6083/12500 [04:08<4:32:08,  2.54s/it] 49%|████▊     | 6084/12500 [04:10<4:26:20,  2.49s/it] 49%|████▊     | 6085/12500 [04:13<4:31:06,  2.54s/it] 49%|████▊     | 6086/12500 [04:17<5:28:04,  3.07s/it] 49%|████▊     | 6087/12500 [04:20<5:27:32,  3.06s/it] 49%|████▊     | 6088/12500 [04:23<5:11:31,  2.92s/it] 49%|████▊     | 6089/12500 [04:25<5:00:43,  2.81s/it] 49%|████▊     | 6090/12500 [04:28<4:50:59,  2.72s/it]                                                       49%|████▊     | 6090/12500 [04:28<4:50:59,  2.72s/it] 49%|████▊     | 6091/12500 [04:30<4:25:19,  2.48s/it] 49%|████▊     | 6092/12500 [04:33<4:56:34,  2.78s/it] 49%|████▊     | 6093/12500 [04:36<4:59:13,  2.80s/it] 49%|████▉     | 6094/12500 [04:40<5:29:53,  3.09s/it] 49%|████▉     | 6095/12500 [04:44<5:55:45,  3.33s/it] 49%|████▉     | 6096/12500 [04:47<5:37:06,  3.16s/it] 49%|████▉     | 6097/12500 [04:49<5:17:49,  2.98s/it] 49%|████▉     | 6098/12500 [04:52<5:01:18,  2.82s/it] 49%|████▉     | 6099/12500 [04:55<5:35:48,  3.15s/it] 49%|████▉     | 6100/12500 [04:57<4:36:41,  2.59s/it]                                                       49%|████▉     | 6100/12500 [04:57<4:36:41,  2.59s/it] 49%|████▉     | 6101/12500 [04:59<4:31:34,  2.55s/it] 49%|████▉     | 6102/12500 [05:02<4:36:58,  2.60s/it] 49%|████▉     | 6103/12500 [05:05<4:56:35,  2.78s/it] 49%|████▉     | 6104/12500 [05:07<4:31:11,  2.54s/it] 49%|████▉     | 6105/12500 [05:10<4:53:35,  2.75s/it] 49%|████▉     | 6106/12500 [05:13<4:49:17,  2.71s/it] 49%|████▉     | 6107/12500 [05:15<4:35:30,  2.59s/it] 49%|████▉     | 6108/12500 [05:19<5:05:25,  2.87s/it] 49%|████▉     | 6109/12500 [05:20<4:19:48,  2.44s/it] 49%|████▉     | 6110/12500 [05:23<4:21:27,  2.45s/it]                                                       49%|████▉     | 6110/12500 [05:23<4:21:27,  2.45s/it] 49%|████▉     | 6111/12500 [05:25<4:25:26,  2.49s/it] 49%|████▉     | 6112/12500 [05:28<4:30:45,  2.54s/it] 49%|████▉     | 6113/12500 [05:31<4:36:32,  2.60s/it] 49%|████▉     | 6114/12500 [05:34<4:48:10,  2.71s/it] 49%|████▉     | 6115/12500 [05:35<4:13:01,  2.38s/it] 49%|████▉     | 6116/12500 [05:38<4:38:49,  2.62s/it] 49%|████▉     | 6117/12500 [05:41<4:47:21,  2.70s/it] 49%|████▉     | 6118/12500 [05:44<4:32:40,  2.56s/it] 49%|████▉     | 6119/12500 [05:47<4:57:41,  2.80s/it]slurmstepd-idc-beta-batch-pvc-node-05: error: *** JOB 20036 ON idc-beta-batch-pvc-node-05 CANCELLED AT 2023-09-21T08:44:28 ***

@@ -2,6 +2,7 @@ data/submission.csv
 data/test.csv
 data/train.csv
 data/_MACOSX/*
+data/*
 
 model/intel-extension-for-transformers
 model/formatted_traind.csv
