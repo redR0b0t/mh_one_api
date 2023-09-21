@@ -4,12 +4,13 @@ import pandas as pd
 import torch
 
 
-batch_process=2
+batch_process=1
 
 
 # specify start index for continuing...
-start_index=[0,10000,20000]
-end_index=[10000,20000,30000]
+start_index=[0,19380,20000]
+# start_index=[0,10000,20000]
+end_index=[10000,20000,28548]
 file_name=['0_10k.csv','10_20k.csv','20_30k.csv']
 
 

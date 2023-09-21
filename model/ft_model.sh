@@ -1,10 +1,10 @@
 #!/bin/sh
-echo "starting fine tuning model on mutliple nodes"
+echo "starting fine tuning model"
 cd "/home/u131168/mh_one_api/model/intel-extension-for-transformers/workflows/chatbot/fine_tuning"
 pip install -r "requirements.txt"
 cd "/home/u131168/mh_one_api/model/intel-extension-for-transformers/workflows/chatbot/fine_tuning/instruction_tuning_pipeline"
 
-export train_file="/home/u131168/mh_one_api/data/train_split/0_25k.csv"
+export train_file="/home/u131168/mh_one_api/data/train_split/25_50k.csv"
 export model_path="google/flan-t5-xl"
 export output_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model"
 

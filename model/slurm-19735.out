@@ -41,3 +41,4 @@ Requirement already satisfied: urllib3<1.27,>=1.21.1 in /opt/miniconda/lib/pytho
 Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers) (3.4)
 Requirement already satisfied: charset-normalizer<3,>=2 in /opt/miniconda/lib/python3.10/site-packages (from requests->transformers) (2.0.4)
 Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:19<00:19, 19.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 10.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:23<00:00, 11.87s/it]
+slurmstepd-idc-beta-batch-pvc-node-07: error: *** JOB 19735 ON idc-beta-batch-pvc-node-07 CANCELLED AT 2023-09-20T07:36:03 DUE TO TIME LIMIT ***
