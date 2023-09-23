@@ -3,6 +3,7 @@ echo "staring prediction"
 # conda acti
 pip install torch
 pip install transformers
+pip install peft
 
 python /home/u131168/mh_one_api/model/p_custom.py
 
