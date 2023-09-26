@@ -15,3 +15,5 @@ model/ft_models/*
 # git filter-branch --tree-filter 'rm -f model/formatted_td.csv' HEAD
 # find ./ -size +100M 
 # git remote add origin https://github.com/redR0b0t/mh_one_api.git
+
+# git remote add origin https://github.com/blur0b0t/mh_shell.git
