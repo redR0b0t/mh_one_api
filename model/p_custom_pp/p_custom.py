@@ -17,8 +17,8 @@ pred_file_path=f"/home/u131168/{mh_dir}/data/custom_pred/{pred_file_name}"
 # start_index=subprocess.get_output("tail {} -n 1 | awk -F' ' '{print $1}'".format(file_name))
 start_index=subprocess.check_output("tail "+pred_file_path+" -n 1 | awk -F' ' '{print $1}'",shell=True)
 print(start_index)
-start_index=int(start_index)
-end_index=2900
+start_index=int(start_index)+1
+end_index=29000
 
 print(f"---------------got start index============{start_index}")
 

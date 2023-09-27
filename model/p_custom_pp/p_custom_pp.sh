@@ -4,14 +4,14 @@
 # export jid1=$(sbatch --cpus-per-task=4 ft_mod1.sh | sed -n 's/.*job //p')
 # export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20] ft_mod1.sh | sed -n 's/.*job //p')
 # export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20] --priority 0 --job-name pcs1 --dependency=afterany:22088 p_custom.sh | sed -n 's/.*job //p')
-export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20] --priority 0 --job-name pci1 p_custom.sh | sed -n 's/.*job //p')
+export jid1=$(sbatch -x idc-beta-batch-pvc-node-[05] --priority 0 --job-name pci1 p_custom.sh | sed -n 's/.*job //p')
 
 
 echo $jid1
 # multiple jobs can depend on a single job
-export jid2=$(sbatch  -x idc-beta-batch-pvc-node-[03,20] --priority 0 --job-name pci2 --dependency=afterany:$jid1  p_custom.sh | sed -n 's/.*job //p')
-export jid3=$(sbatch  -x idc-beta-batch-pvc-node-[03,20] --priority 0 --job-name pci3 --dependency=afterany:$jid2  p_custom.sh | sed -n 's/.*job //p')
-export jid4=$(sbatch  -x idc-beta-batch-pvc-node-[03,20] --priority 0 --job-name pci4 --dependency=afterany:$jid3  p_custom.sh | sed -n 's/.*job //p')
+export jid2=$(sbatch  -w idc-beta-batch-pvc-node-[05] --priority 0 --job-name pci2 --dependency=afterany:$jid1  p_custom.sh | sed -n 's/.*job //p')
+export jid3=$(sbatch  -w idc-beta-batch-pvc-node-[05] --priority 0 --job-name pci3 --dependency=afterany:$jid2  p_custom.sh | sed -n 's/.*job //p')
+export jid4=$(sbatch  -w idc-beta-batch-pvc-node-[05] --priority 0 --job-name pci4 --dependency=afterany:$jid3  p_custom.sh | sed -n 's/.*job //p')
 
 
 # show dependencies in squeue output:
