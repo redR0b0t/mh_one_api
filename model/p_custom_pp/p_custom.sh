@@ -1,9 +1,25 @@
 #!/bin/sh
+
+# sbatch -x idc-beta-batch-pvc-node-[03,20,21] --priority 0 --job-name pci1 p_custom.sh
+export batch_script="p_custom.sh"
+# -----------set new job dep--------------
+echo "got current job name=$SLURM_JOB_NAME"
+export cji=$(echo -n $SLURM_JOB_NAME | tail -c 1)
+export nji=$(( cji + 1 ))
+export njname="pci$nji"
+echo "new job name=$njname"
+export njid=$(sbatch -x idc-beta-batch-pvc-node-[03,20,21] --priority 0 --job-name $njname --begin=now+60 --dependency=afterany:$SLURM_JOB_ID $batch_script | sed -n 's/.*job //p')
+echo "new job created with id: $njid"
+# -------------------end------------------
+
+
 echo "staring prediction"
 # conda acti
 pip install torch
 pip install transformers
 pip install peft
+
+
 
 python /home/u131168/mh_one_api/model/p_custom_pp/p_custom.py
 

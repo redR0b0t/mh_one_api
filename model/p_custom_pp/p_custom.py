@@ -44,10 +44,11 @@ tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
 model = AutoPeftModelForSeq2SeqLM.from_pretrained(model_path, )
 
 # ------predict--------------
-for i in range(start_index,end_index,1):
-    print(f"predicting {i} prompt")
-    prompts = test_data.loc[i,['Story','Question']].values.tolist()
-    prompts=[prompts]
+bs=10
+for i in range(start_index,end_index,bs):
+    print(f"predicting {i} to {i+bs-1} prompt")
+    prompts = test_data.loc[i:i+bs-1,['Story','Question']].values.tolist()
+    prompts=prompts
     t_prompts=[]
     for p in prompts:
         context=str(p[0]).replace(r"\n",'.')
@@ -67,6 +68,6 @@ for i in range(start_index,end_index,1):
     # Writing data to a file
     with open(pred_file_path, "a+") as file1:
         file1.writelines(f"{i+i1} $$ {res[i1]}\n" for i1 in range(len(res)))
-    print(f"-------------wrote {i} to {i} preds")
+    print(f"\n-------------wrote {i} to {i+bs-1} preds")
 
 
