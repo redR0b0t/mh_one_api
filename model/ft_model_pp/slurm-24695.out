@@ -1,0 +1,347 @@
+got current job name=fti5
+new job name=fti6
+new job created with id: 24815
+starting fine tuning model
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: datasets in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 1)) (2.14.5)
+Requirement already satisfied: torch in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 2)) (2.0.1)
+Requirement already satisfied: transformers>=4.32.0 in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 3)) (4.34.0.dev0)
+Requirement already satisfied: sentencepiece in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 4)) (0.1.99)
+Requirement already satisfied: peft in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 5)) (0.5.0)
+Requirement already satisfied: evaluate in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 6)) (0.4.0)
+Requirement already satisfied: nltk in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 7)) (3.8.1)
+Requirement already satisfied: rouge_score in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 8)) (0.1.2)
+Requirement already satisfied: einops in /home/u131168/.local/lib/python3.10/site-packages (from -r requirements.txt (line 9)) (0.6.1)
+Requirement already satisfied: tqdm>=4.62.1 in /home/common/miniconda3/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (4.65.0)
+Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2023.6.0)
+Requirement already satisfied: packaging in /home/common/miniconda3/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (23.0)
+Requirement already satisfied: pandas in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (1.26.0)
+Requirement already satisfied: requests>=2.19.0 in /home/common/miniconda3/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (2.28.1)
+Requirement already satisfied: multiprocess in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.70.15)
+Requirement already satisfied: xxhash in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (3.3.0)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.3.7)
+Requirement already satisfied: aiohttp in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (3.8.5)
+Requirement already satisfied: pyarrow>=8.0.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (13.0.0)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (0.16.4)
+Requirement already satisfied: pyyaml>=5.1 in /home/u131168/.local/lib/python3.10/site-packages (from datasets->-r requirements.txt (line 1)) (6.0.1)
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.12.4)
+Requirement already satisfied: networkx in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.1)
+Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.99)
+Requirement already satisfied: nvidia-curand-cu11==10.2.10.91 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (10.2.10.91)
+Requirement already satisfied: nvidia-cufft-cu11==10.9.0.58 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (10.9.0.58)
+Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.10.3.66)
+Requirement already satisfied: nvidia-nvtx-cu11==11.7.91 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.91)
+Requirement already satisfied: nvidia-cusolver-cu11==11.4.0.1 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.4.0.1)
+Requirement already satisfied: nvidia-cuda-cupti-cu11==11.7.101 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.101)
+Requirement already satisfied: sympy in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (1.12)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.99)
+Requirement already satisfied: nvidia-cusparse-cu11==11.7.4.91 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (11.7.4.91)
+Requirement already satisfied: nvidia-nccl-cu11==2.14.3 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (2.14.3)
+Requirement already satisfied: jinja2 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: typing-extensions in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (4.8.0)
+Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (8.5.0.96)
+Requirement already satisfied: triton==2.0.0 in /home/u131168/.local/lib/python3.10/site-packages (from torch->-r requirements.txt (line 2)) (2.0.0)
+Requirement already satisfied: setuptools in /home/common/miniconda3/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r requirements.txt (line 2)) (65.6.3)
+Requirement already satisfied: wheel in /home/common/miniconda3/lib/python3.10/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r requirements.txt (line 2)) (0.38.4)
+Requirement already satisfied: cmake in /home/u131168/.local/lib/python3.10/site-packages (from triton==2.0.0->torch->-r requirements.txt (line 2)) (3.27.5)
+Requirement already satisfied: lit in /home/u131168/.local/lib/python3.10/site-packages (from triton==2.0.0->torch->-r requirements.txt (line 2)) (16.0.6)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (2023.8.8)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.14.0)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.3.3)
+Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.10/site-packages (from peft->-r requirements.txt (line 5)) (0.23.0)
+Requirement already satisfied: psutil in /home/u131168/.local/lib/python3.10/site-packages (from peft->-r requirements.txt (line 5)) (5.9.5)
+Requirement already satisfied: responses<0.19 in /home/u131168/.local/lib/python3.10/site-packages (from evaluate->-r requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: joblib in /home/u131168/.local/lib/python3.10/site-packages (from nltk->-r requirements.txt (line 7)) (1.3.2)
+Requirement already satisfied: click in /home/u131168/.local/lib/python3.10/site-packages (from nltk->-r requirements.txt (line 7)) (8.1.7)
+Requirement already satisfied: absl-py in /home/u131168/.local/lib/python3.10/site-packages (from rouge_score->-r requirements.txt (line 8)) (2.0.0)
+Requirement already satisfied: six>=1.14.0 in /home/common/miniconda3/lib/python3.10/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.16.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.4.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /home/common/miniconda3/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (2.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (4.0.3)
+Requirement already satisfied: attrs>=17.3.0 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (23.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/u131168/.local/lib/python3.10/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/common/miniconda3/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (1.26.15)
+Requirement already satisfied: certifi>=2017.4.17 in /home/common/miniconda3/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2022.12.7)
+Requirement already satisfied: idna<4,>=2.5 in /home/common/miniconda3/lib/python3.10/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (3.4)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/u131168/.local/lib/python3.10/site-packages (from jinja2->torch->-r requirements.txt (line 2)) (2.1.3)
+Requirement already satisfied: pytz>=2020.1 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3.post1)
+Requirement already satisfied: tzdata>=2022.1 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /home/u131168/.local/lib/python3.10/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.10/site-packages (from sympy->torch->-r requirements.txt (line 2)) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting git+https://github.com/huggingface/transformers
+  Cloning https://github.com/huggingface/transformers to /tmp/pip-req-build-am40pdn6
+  Running command git clone --filter=blob:none --quiet https://github.com/huggingface/transformers /tmp/pip-req-build-am40pdn6
+  Resolved https://github.com/huggingface/transformers to commit 0b192de1f353b0e04dad4813e02e2c672de077be
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (3.12.4)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (0.14.0)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (2023.8.8)
+Requirement already satisfied: requests in /home/common/miniconda3/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (2.28.1)
+Requirement already satisfied: huggingface-hub<1.0,>=0.16.4 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (0.16.4)
+Requirement already satisfied: pyyaml>=5.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (6.0.1)
+Requirement already satisfied: packaging>=20.0 in /home/common/miniconda3/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (23.0)
+Requirement already satisfied: tqdm>=4.27 in /home/common/miniconda3/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (4.65.0)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (0.3.3)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.10/site-packages (from transformers==4.34.0.dev0) (1.26.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/u131168/.local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.34.0.dev0) (4.8.0)
+Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.10/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.34.0.dev0) (2023.6.0)
+Requirement already satisfied: idna<4,>=2.5 in /home/common/miniconda3/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (3.4)
+Requirement already satisfied: certifi>=2017.4.17 in /home/common/miniconda3/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (2022.12.7)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/common/miniconda3/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (1.26.15)
+Requirement already satisfied: charset-normalizer<3,>=2 in /home/common/miniconda3/lib/python3.10/site-packages (from requests->transformers==4.34.0.dev0) (2.0.4)
+/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1/checkpoint-5900
+-------------------starting-script
+-------------------setting up-logging
+09/30/2023 18:15:04 - WARNING - __main__ - Process rank: 0, device: cpu, n_gpu: 0distributed training: True, 16-bits training: False
+09/30/2023 18:15:04 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=0,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1/runs/Sep30_18-15-04_idc-beta-batch-pvc-node-18,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=5.0,
+optim=adamw_torch,
+optim_args=None,
+output_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1/checkpoint-5900,
+run_name=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=100,
+save_strategy=steps,
+save_total_limit=2,
+seed=42,
+sharded_ddp=[],
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+/home/u131168/.local/lib/python3.10/site-packages/datasets/load.py:2089: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=None' instead.
+  warnings.warn(
+Using custom data configuration default-afae70ba31c3c808
+----------------------detecting checkpoint
+09/30/2023 18:15:04 - INFO - datasets.builder - Using custom data configuration default-afae70ba31c3c808
+Loading Dataset Infos from /home/u131168/.local/lib/python3.10/site-packages/datasets/packaged_modules/csv
+09/30/2023 18:15:04 - INFO - datasets.info - Loading Dataset Infos from /home/u131168/.local/lib/python3.10/site-packages/datasets/packaged_modules/csv
+Overwrite dataset info from restored data version if exists.
+09/30/2023 18:15:04 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+09/30/2023 18:15:04 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+09/30/2023 18:15:04 - INFO - datasets.builder - Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+09/30/2023 18:15:04 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+[INFO|tokenization_utils_base.py:2040] 2023-09-30 18:15:04,688 >> loading file spiece.model from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/spiece.model
+[INFO|tokenization_utils_base.py:2040] 2023-09-30 18:15:04,688 >> loading file tokenizer.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer.json
+[INFO|tokenization_utils_base.py:2040] 2023-09-30 18:15:04,688 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2040] 2023-09-30 18:15:04,688 >> loading file special_tokens_map.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2040] 2023-09-30 18:15:04,688 >> loading file tokenizer_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer_config.json
+[WARNING|logging.py:305] 2023-09-30 18:15:04,689 >> Loading the tokenizer from the `special_tokens_map.json` and the `added_tokens.json` will be removed in `transformers 5`,  it is kept for forward compatibility, but it is recommended to update your `tokenizer_config.json` by uploading it again. You will see the new `added_tokens_decoder` attribute that will store the relevant information.
+Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-c61befd7f089dc67.arrow
+09/30/2023 18:15:04 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-afae70ba31c3c808/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-c61befd7f089dc67.arrow
+[INFO|configuration_utils.py:715] 2023-09-30 18:15:05,528 >> loading configuration file config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/config.json
+[INFO|configuration_utils.py:775] 2023-09-30 18:15:05,545 >> Model config T5Config {
+  "_name_or_path": "google/flan-t5-xl",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 5120,
+  "d_kv": 64,
+  "d_model": 2048,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.34.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|modeling_utils.py:2987] 2023-09-30 18:15:05,632 >> loading weights file pytorch_model.bin from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/pytorch_model.bin.index.json
+[INFO|configuration_utils.py:770] 2023-09-30 18:15:05,652 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:07<01:07, 67.06s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:25<00:00, 38.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:25<00:00, 42.92s/it]
+[INFO|modeling_utils.py:3769] 2023-09-30 18:17:03,539 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:3777] 2023-09-30 18:17:03,540 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at google/flan-t5-xl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:730] 2023-09-30 18:17:03,728 >> loading configuration file generation_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/generation_config.json
+[INFO|configuration_utils.py:770] 2023-09-30 18:17:03,728 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+[WARNING|modeling_utils.py:1617] 2023-09-30 18:17:03,765 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 32100. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|trainer.py:2123] 2023-09-30 18:17:56,608 >> Loading model from /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft1/checkpoint-5900.
+[INFO|trainer.py:1760] 2023-09-30 18:19:18,155 >> ***** Running training *****
+[INFO|trainer.py:1761] 2023-09-30 18:19:18,156 >>   Num examples = 65,847
+[INFO|trainer.py:1762] 2023-09-30 18:19:18,156 >>   Num Epochs = 5
+[INFO|trainer.py:1763] 2023-09-30 18:19:18,156 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1766] 2023-09-30 18:19:18,156 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1767] 2023-09-30 18:19:18,156 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1768] 2023-09-30 18:19:18,157 >>   Total optimization steps = 164,620
+[INFO|trainer.py:1769] 2023-09-30 18:19:18,168 >>   Number of trainable parameters = 4,718,592
+[INFO|trainer.py:1789] 2023-09-30 18:19:18,183 >>   Continuing training from checkpoint, will skip to saved global_step
+[INFO|trainer.py:1790] 2023-09-30 18:19:18,183 >>   Continuing training from epoch 0
+[INFO|trainer.py:1791] 2023-09-30 18:19:18,183 >>   Continuing training from global step 5900
+[INFO|trainer.py:1793] 2023-09-30 18:19:18,183 >>   Will skip the first 0 epochs then the first 5900 batches in the first epoch.
+trainable params: 4,718,592 || all params: 2,854,361,088 || trainable%: 0.1653116706164963
+-------------------traing-model
+  0%|          | 0/164620 [00:00<?, ?it/s][WARNING|logging.py:290] 2023-09-30 18:19:18,331 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+  4%|▎         | 5901/164620 [08:52<3:58:38, 11.08it/s]  4%|▎         | 5901/164620 [09:08<3:58:38, 11.08it/s]  4%|▎         | 5902/164620 [13:21<6:50:59,  6.44it/s]  4%|▎         | 5903/164620 [18:17<11:21:02,  3.88it/s]  4%|▎         | 5904/164620 [24:03<18:52:49,  2.34it/s]  4%|▎         | 5905/164620 [30:17<30:29:43,  1.45it/s]  4%|▎         | 5906/164620 [33:16<38:23:37,  1.15it/s]  4%|▎         | 5907/164620 [37:11<53:11:35,  1.21s/it]  4%|▎         | 5908/164620 [43:36<87:45:41,  1.99s/it]  4%|▎         | 5909/164620 [48:39<126:27:08,  2.87s/it]  4%|▎         | 5910/164620 [52:11<164:43:24,  3.74s/it]                                                           4%|▎         | 5910/164620 [52:11<164:43:24,  3.74s/it]  4%|▎         | 5911/164620 [58:58<269:07:25,  6.10s/it]  4%|▎         | 5912/164620 [1:05:19<406:52:35,  9.23s/it]  4%|▎         | 5913/164620 [1:10:55<576:35:35, 13.08s/it]  4%|▎         | 5914/164620 [1:17:49<869:12:55, 19.72s/it]  4%|▎         | 5915/164620 [1:22:34<1138:46:01, 25.83s/it]  4%|▎         | 5916/164620 [1:28:14<1581:09:15, 35.87s/it]  4%|▎         | 5917/164620 [1:32:24<1992:14:25, 45.19s/it]  4%|▎         | 5918/164620 [1:39:39<3001:06:39, 68.08s/it]  4%|▎         | 5919/164620 [1:45:11<3899:22:55, 88.45s/it]  4%|▎         | 5920/164620 [1:54:14<5892:41:35, 133.67s/it]                                                               4%|▎         | 5920/164620 [1:54:14<5892:41:35, 133.67s/it]  4%|▎         | 5921/164620 [2:00:54<7351:12:19, 166.76s/it]  4%|▎         | 5922/164620 [2:05:29<8072:36:10, 183.12s/it]  4%|▎         | 5923/164620 [2:05:56<6852:23:09, 155.44s/it]  4%|▎         | 5924/164620 [2:14:01<9784:29:02, 221.96s/it]  4%|▎         | 5925/164620 [2:20:09<11233:33:52, 254.83s/it]  4%|▎         | 5926/164620 [2:27:45<13382:44:37, 303.59s/it]  4%|▎         | 5927/164620 [2:31:58<12804:05:21, 290.46s/it]  4%|▎         | 5928/164620 [2:39:03<14401:10:21, 326.70s/it]  4%|▎         | 5929/164620 [2:43:30<13667:19:34, 310.05s/it]  4%|▎         | 5930/164620 [2:48:06<13237:27:34, 300.30s/it]                                                                4%|▎         | 5930/164620 [2:48:06<13237:27:34, 300.30s/it]  4%|▎         | 5931/164620 [2:53:02<13186:01:49, 299.14s/it]  4%|▎         | 5932/164620 [2:58:36<13634:24:01, 309.31s/it]  4%|▎         | 5933/164620 [3:04:52<14495:21:10, 328.84s/it]  4%|▎         | 5934/164620 [3:09:44<14023:08:16, 318.13s/it]  4%|▎         | 5935/164620 [3:13:22<12707:53:09, 288.30s/it]  4%|▎         | 5936/164620 [3:18:09<12695:56:35, 288.03s/it]  4%|▎         | 5937/164620 [3:22:05<12004:04:35, 272.33s/it]  4%|▎         | 5938/164620 [3:27:14<12485:22:47, 283.25s/it]  4%|▎         | 5939/164620 [3:32:14<12709:27:58, 288.34s/it]  4%|▎         | 5940/164620 [3:37:45<13278:56:46, 301.26s/it]                                                                4%|▎         | 5940/164620 [3:37:45<13278:56:46, 301.26s/it]  4%|▎         | 5941/164620 [3:40:54<11797:30:51, 267.65s/it]  4%|▎         | 5942/164620 [3:49:28<15043:19:56, 341.29s/it]  4%|▎         | 5943/164620 [3:50:56<11699:00:24, 265.42s/it]slurmstepd-idc-beta-batch-pvc-node-18: error: *** JOB 24695 ON idc-beta-batch-pvc-node-18 CANCELLED AT 2023-09-30T22:14:47 DUE TO TIME LIMIT ***

@@ -51,9 +51,10 @@ for i in range(start_index,end_index,bs):
     prompts=prompts
     t_prompts=[]
     for p in prompts:
-        context=str(p[0]).replace(r"\n",'.')
+        # context=str(p[0]).replace(r"\n",'.')
+        context=str(p[0])
         question=p[1]
-        t_prompts+=[f"paragraph: {context}\n\n Answer the following question from the above paragraph: {question}"]
+        t_prompts.append([f"paragraph:  {context}",f"Answer the following question from the paragraph : Question: {question}"])
         # t_prompts+=[f"input: {context}\n\ninstruction: {question}"]
     prompts=t_prompts
         
@@ -62,7 +63,7 @@ for i in range(start_index,end_index,bs):
     input_ids = tokenizer(prompts, return_tensors="pt" ,padding=True,truncation=True, max_length=512).input_ids
     # sample up to 30 tokens
     torch.manual_seed(0)  # doctest: +IGNORE_RESULT
-    outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=20)
+    outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=100)
     res+=tokenizer.batch_decode(outputs, skip_special_tokens=True)
         
     # Writing data to a file
@@ -71,3 +72,5 @@ for i in range(start_index,end_index,bs):
     print(f"\n-------------wrote {i} to {i+bs-1} preds")
 
 
+print("-----------------Prediction_finished-----------------------")
+print(subprocess.check_output("scancel $((SLURM_JOB_ID+1))"))

@@ -1,6 +1,0 @@
-starting fine tuning model
-Traceback (most recent call last):
-  File "/home/u131168/mh_one_api/model/intel-extension-for-transformers/workflows/chatbot/fine_tuning/instruction_tuning_pipeline/finetune_seq2seq.py", line 28, in <module>
-    import datasets
-ModuleNotFoundError: No module named 'datasets'
-finished fine tuning model

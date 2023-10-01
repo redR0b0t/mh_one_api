@@ -3,7 +3,7 @@
 # first job - no dependencies
 # export jid1=$(sbatch --cpus-per-task=4 ft_mod1.sh | sed -n 's/.*job //p')
 # export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20] ft_mod1.sh | sed -n 's/.*job //p')
-export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20] --job-name fti1 ft_mod1.sh | sed -n 's/.*job //p')
+export jid1=$(sbatch -x idc-beta-batch-pvc-node-[03,20,21] --job-priority 0 --job-name fti1 ft_mod1.sh | sed -n 's/.*job //p')
 
 # -w idc-beta-batch-pvc-node-[05,08]
 
