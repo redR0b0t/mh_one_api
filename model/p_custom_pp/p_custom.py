@@ -84,4 +84,4 @@ for i in range(start_index,end_index,bs):
 
 
 print("-----------------Prediction_finished-----------------------")
-print(subprocess.check_output("scancel $((SLURM_JOB_ID+1))"))
+print(subprocess.check_output("scancel $((SLURM_JOB_ID+1))",shell=True))
