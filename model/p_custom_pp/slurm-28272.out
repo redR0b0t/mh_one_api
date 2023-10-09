@@ -92,3 +92,4 @@ b'12548\n'
 ---------------got start index============12549
 /opt/miniconda/lib/python3.10/site-packages/bitsandbytes/libbitsandbytes_cpu.so: undefined symbol: cadam32bit_grad_fp32
 Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.95s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:30<00:00, 13.25s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:30<00:00, 15.00s/it]
+slurmstepd-idc-beta-batch-pvc-node-17: error: *** JOB 28272 ON idc-beta-batch-pvc-node-17 CANCELLED AT 2023-10-09T04:50:35 DUE TO TIME LIMIT ***
