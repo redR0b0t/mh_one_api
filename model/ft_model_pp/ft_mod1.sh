@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 
 # sbatch -x idc-beta-batch-pvc-node-[03,09,20,21] --priority 0 --job-name fti1 ft_mod1.sh
 # sbatch -x idc-beta-batch-pvc-node-[03,09,20,21] --priority 0 --job-name fti2 --dependency=afterany:26371 ft_mod1.sh
@@ -14,6 +15,29 @@ echo "new job name=$njname"
 export njid=$(sbatch -x idc-beta-batch-pvc-node-[03,09,20,21] --priority 0 --job-name $njname --begin=now+60 --dependency=afterany:$SLURM_JOB_ID $batch_script | sed -n 's/.*job //p')
 echo "new job created with id: $njid"
 # -------------------end------------------
+
+
+
+
+echo "----------checking if gpu available on current job-----------------"
+# oneapi env and checking gpu
+echo "-------------------------------------------"
+groups  # Key group is render, PVC access is unavailable if you do not have render group present.
+source /opt/intel/oneapi/setvars.sh --force
+sycl-ls
+export num_gpu="$(sycl-ls |grep "GPU" |wc -l)"
+echo "num_gpu=$num_gpu\n"
+export num_cpu="$(sycl-ls |grep "Xeon" |wc -l)"
+echo "num_cpu=$num_cpu\n"
+if [ $num_gpu == 0 && $num_cpu == 1] 
+then 
+    echo "---GPU not available exiting--------"
+    scancel $SLURM_JOB_ID
+fi 
+echo "-------------------------------------------"
+
+
+
 
 echo "starting fine tuning model"
 cd "/home/u131168/mh_one_api/model/intel-extension-for-transformers/workflows/chatbot/fine_tuning"
