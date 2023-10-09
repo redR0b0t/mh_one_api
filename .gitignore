@@ -1,19 +1,31 @@
-data/submission.csv
-data/test.csv
+model/intel-extension-for-transformers/.git/objects/pack/pack-9fa0101321c4373ba02f4e1a26eb3b7c1546f9ef.pack
+data/train_split/full_traind1.csv
+data/train_split/f_traind_v1.csv
+data/train_split/full_traind.csv
 data/train.csv
-data/_MACOSX/*
-data/*
+data/train_split/*
 
-model/intel-extension-for-transformers
-model/formatted_traind.csv
-model/ft_models/*
+
+# data/submission.csv
+# data/test.csv
+# data/train.csv
+# data/_MACOSX/*
+# data/*
+
+# model/intel-extension-for-transformers
+# model/formatted_traind.csv
+# model/ft_models/*
 
 # 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
 
 
-# git rm -rf --cached
+# git rm -rf --cached ./
 # git filter-branch --tree-filter 'rm -f model/formatted_td.csv' HEAD
-# find ./ -size +100M 
+# find ./ -size +50M 
+# git config http.postBuffer 524288000
+
 # git remote add origin https://github.com/redR0b0t/mh_one_api.git
 
 # git remote add origin https://github.com/blur0b0t/mh_shell.git
+
+# git reset commit_id_for_origin/dev-red

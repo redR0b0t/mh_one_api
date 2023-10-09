@@ -36,7 +36,9 @@ export checkpoint_name=$(ls $checkpoint_dir | grep checkpoint | tail -1)
 export checkpoint_path="$checkpoint_dir$checkpoint_name"
 echo $checkpoint_path
 
-export output_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v1"
+# export output_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v1"
+export output_dir="$checkpoint_dir"
+
 
 
 

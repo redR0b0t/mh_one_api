@@ -56,6 +56,7 @@ model = AutoPeftModelForSeq2SeqLM.from_pretrained(model_path, )
 
 # ------predict--------------
 bs=1
+end_index=len(test_data)
 for i in range(start_index,end_index,bs):
     print(f"predicting {i} to {i+bs-1} prompt")
     prompts = test_data.loc[i:i+bs-1,['Story','Question']].values.tolist()
