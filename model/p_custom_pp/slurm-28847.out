@@ -1,6 +1,6 @@
-got current job name=pci8
-new job name=pci9
------------------new job created with id: 28803
+got current job name=pci10
+new job name=pci1
+-----------------new job created with id: 28923
 ----------checking if gpu available on current job-----------------
 -------------------------------------------
 users render freetier premium
@@ -114,7 +114,7 @@ Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl
 To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
 
 num_cpu=2\n
-/var/spool/slurmd/job28770/slurm_script: line 28: [: missing `]'
+/var/spool/slurmd/job28847/slurm_script: line 28: [: missing `]'
 -------------------------------------------
 staring prediction
 Defaulting to user installation because normal site-packages is not writeable
@@ -198,7 +198,6 @@ Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/pyt
 Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2.0.3)
 Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2023.7.22)
 Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch>=1.13.0->peft) (1.3.0)
-b'27321\n'
----------------got start index============27322
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:47<00:47, 47.40s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:56<00:00, 24.73s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:56<00:00, 28.14s/it]
-slurmstepd-idc-beta-batch-pvc-node-15: error: *** JOB 28770 ON idc-beta-batch-pvc-node-15 CANCELLED AT 2023-10-10T01:00:43 DUE TO TIME LIMIT ***
+b'27776\n'
+---------------got start index============27777
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:00<01:00, 60.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 28.84s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 33.66s/it]
