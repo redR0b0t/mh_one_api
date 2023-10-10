@@ -1,6 +1,6 @@
-got current job name=pci10
-new job name=pci1
------------------new job created with id: 28923
+got current job name=pci2
+new job name=pci3
+-----------------new job created with id: 29031
 ----------checking if gpu available on current job-----------------
 -------------------------------------------
 users render freetier premium
@@ -114,7 +114,7 @@ Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl
 To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
 
 num_cpu=2\n
-/var/spool/slurmd/job28847/slurm_script: line 28: [: missing `]'
+/var/spool/slurmd/job29029/slurm_script: line 28: [: missing `]'
 -------------------------------------------
 staring prediction
 Defaulting to user installation because normal site-packages is not writeable
@@ -151,7 +151,7 @@ Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/pyt
 Requirement already satisfied: requests in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers) (2.31.0)
 Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (0.14.1)
 Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (0.4.0)
-Requirement already satisfied: tqdm>=4.27 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers) (4.65.0)
+Requirement already satisfied: tqdm>=4.27 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (4.66.1)
 Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers) (2023.6.0)
 Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers) (4.6.3)
 Requirement already satisfied: charset-normalizer<4,>=2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers) (3.1.0)
@@ -166,7 +166,7 @@ Requirement already satisfied: psutil in /home/u131168/.local/lib/python3.9/site
 Requirement already satisfied: pyyaml in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft) (6.0)
 Requirement already satisfied: torch>=1.13.0 in /home/u131168/.local/lib/python3.9/site-packages (from peft) (2.1.0)
 Requirement already satisfied: transformers in /home/u131168/.local/lib/python3.9/site-packages (from peft) (4.35.0.dev0)
-Requirement already satisfied: tqdm in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft) (4.65.0)
+Requirement already satisfied: tqdm in /home/u131168/.local/lib/python3.9/site-packages (from peft) (4.66.1)
 Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.9/site-packages (from peft) (0.23.0)
 Requirement already satisfied: safetensors in /home/u131168/.local/lib/python3.9/site-packages (from peft) (0.4.0)
 Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from torch>=1.13.0->peft) (3.12.4)
@@ -198,7 +198,17 @@ Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/pyt
 Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2.0.3)
 Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2023.7.22)
 Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch>=1.13.0->peft) (1.3.0)
-b'27776\n'
----------------got start index============27777
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:00<01:00, 60.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 28.84s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 33.66s/it]
-slurmstepd-idc-beta-batch-pvc-node-15: error: *** JOB 28847 ON idc-beta-batch-pvc-node-15 CANCELLED AT 2023-10-10T09:01:48 DUE TO TIME LIMIT ***
+b'28547\n'
+---------------got start index============28548
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.99s/it]
+scancel: error: Kill job error on job id 29030: Access/permission denied
+-----------------Prediction_finished-----------------------
+Traceback (most recent call last):
+  File "/home/u131168/mh_one_api/model/p_custom_pp/p_custom.py", line 88, in <module>
+    print(subprocess.check_output("scancel $((SLURM_JOB_ID+1))",shell=True))
+  File "/opt/intel/oneapi/intelpython/latest/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/opt/intel/oneapi/intelpython/latest/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'scancel $((SLURM_JOB_ID+1))' returned non-zero exit status 210.
+finished precition

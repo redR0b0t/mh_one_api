@@ -1,6 +1,6 @@
-got current job name=pci10
-new job name=pci1
------------------new job created with id: 28923
+got current job name=pci1
+new job name=pci2
+-----------------new job created with id: 29029
 ----------checking if gpu available on current job-----------------
 -------------------------------------------
 users render freetier premium
@@ -114,7 +114,7 @@ Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl
 To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
 
 num_cpu=2\n
-/var/spool/slurmd/job28847/slurm_script: line 28: [: missing `]'
+/var/spool/slurmd/job28923/slurm_script: line 28: [: missing `]'
 -------------------------------------------
 staring prediction
 Defaulting to user installation because normal site-packages is not writeable
@@ -151,7 +151,7 @@ Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/pyt
 Requirement already satisfied: requests in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers) (2.31.0)
 Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (0.14.1)
 Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (0.4.0)
-Requirement already satisfied: tqdm>=4.27 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers) (4.65.0)
+Requirement already satisfied: tqdm>=4.27 in /home/u131168/.local/lib/python3.9/site-packages (from transformers) (4.66.1)
 Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers) (2023.6.0)
 Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers) (4.6.3)
 Requirement already satisfied: charset-normalizer<4,>=2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers) (3.1.0)
@@ -166,7 +166,7 @@ Requirement already satisfied: psutil in /home/u131168/.local/lib/python3.9/site
 Requirement already satisfied: pyyaml in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft) (6.0)
 Requirement already satisfied: torch>=1.13.0 in /home/u131168/.local/lib/python3.9/site-packages (from peft) (2.1.0)
 Requirement already satisfied: transformers in /home/u131168/.local/lib/python3.9/site-packages (from peft) (4.35.0.dev0)
-Requirement already satisfied: tqdm in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft) (4.65.0)
+Requirement already satisfied: tqdm in /home/u131168/.local/lib/python3.9/site-packages (from peft) (4.66.1)
 Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.9/site-packages (from peft) (0.23.0)
 Requirement already satisfied: safetensors in /home/u131168/.local/lib/python3.9/site-packages (from peft) (0.4.0)
 Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from torch>=1.13.0->peft) (3.12.4)
@@ -198,7 +198,96 @@ Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/pyt
 Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2.0.3)
 Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers->peft) (2023.7.22)
 Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch>=1.13.0->peft) (1.3.0)
-b'27776\n'
----------------got start index============27777
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:00<01:00, 60.96s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 28.84s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:07<00:00, 33.66s/it]
-slurmstepd-idc-beta-batch-pvc-node-15: error: *** JOB 28847 ON idc-beta-batch-pvc-node-15 CANCELLED AT 2023-10-10T09:01:48 DUE TO TIME LIMIT ***
+b'28522\n'
+---------------got start index============28523
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:36<00:36, 36.78s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:46<00:00, 20.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:46<00:00, 23.34s/it]
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+scancel: error: Kill job error on job id 28924: Access/permission denied
+predicting 28523 to 28523 prompt
+
+-------------wrote 28523 to 28523 preds
+predicting 28524 to 28524 prompt
+
+-------------wrote 28524 to 28524 preds
+predicting 28525 to 28525 prompt
+
+-------------wrote 28525 to 28525 preds
+predicting 28526 to 28526 prompt
+
+-------------wrote 28526 to 28526 preds
+predicting 28527 to 28527 prompt
+
+-------------wrote 28527 to 28527 preds
+predicting 28528 to 28528 prompt
+
+-------------wrote 28528 to 28528 preds
+predicting 28529 to 28529 prompt
+
+-------------wrote 28529 to 28529 preds
+predicting 28530 to 28530 prompt
+
+-------------wrote 28530 to 28530 preds
+predicting 28531 to 28531 prompt
+
+-------------wrote 28531 to 28531 preds
+predicting 28532 to 28532 prompt
+
+-------------wrote 28532 to 28532 preds
+predicting 28533 to 28533 prompt
+
+-------------wrote 28533 to 28533 preds
+predicting 28534 to 28534 prompt
+
+-------------wrote 28534 to 28534 preds
+predicting 28535 to 28535 prompt
+
+-------------wrote 28535 to 28535 preds
+predicting 28536 to 28536 prompt
+
+-------------wrote 28536 to 28536 preds
+predicting 28537 to 28537 prompt
+
+-------------wrote 28537 to 28537 preds
+predicting 28538 to 28538 prompt
+
+-------------wrote 28538 to 28538 preds
+predicting 28539 to 28539 prompt
+
+-------------wrote 28539 to 28539 preds
+predicting 28540 to 28540 prompt
+
+-------------wrote 28540 to 28540 preds
+predicting 28541 to 28541 prompt
+
+-------------wrote 28541 to 28541 preds
+predicting 28542 to 28542 prompt
+
+-------------wrote 28542 to 28542 preds
+predicting 28543 to 28543 prompt
+
+-------------wrote 28543 to 28543 preds
+predicting 28544 to 28544 prompt
+
+-------------wrote 28544 to 28544 preds
+predicting 28545 to 28545 prompt
+
+-------------wrote 28545 to 28545 preds
+predicting 28546 to 28546 prompt
+
+-------------wrote 28546 to 28546 preds
+predicting 28547 to 28547 prompt
+
+-------------wrote 28547 to 28547 preds
+-----------------Prediction_finished-----------------------
+Traceback (most recent call last):
+  File "/home/u131168/mh_one_api/model/p_custom_pp/p_custom.py", line 88, in <module>
+    print(subprocess.check_output("scancel $((SLURM_JOB_ID+1))",shell=True))
+  File "/opt/intel/oneapi/intelpython/latest/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/opt/intel/oneapi/intelpython/latest/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'scancel $((SLURM_JOB_ID+1))' returned non-zero exit status 210.
+finished precition

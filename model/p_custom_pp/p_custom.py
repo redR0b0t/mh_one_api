@@ -12,7 +12,7 @@ mh_dir='mh_one_api'
 # start_index=[0,9500,19000]
 # end_index=[9500,19000,29000]
 # file_name=['0_10k.csv','10_20k.csv','20_30k.csv']
-pred_file_name="full_pred2.csv"
+pred_file_name="full_pred3.csv"
 pred_file_path=f"/home/u131168/{mh_dir}/data/custom_pred/{pred_file_name}"
 # start_index=subprocess.get_output("tail {} -n 1 | awk -F' ' '{print $1}'".format(file_name))
 start_index=subprocess.check_output("tail "+pred_file_path+" -n 1 | awk -F' ' '{print $1}'",shell=True)
@@ -42,9 +42,9 @@ from peft import AutoPeftModelForSeq2SeqLM
 from transformers import AutoTokenizer
 import torch
 
-checkpoint_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/"
+# checkpoint_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_finetuned_model/"
 
-# checkpoint_dir=f"/home/u131168/{mh_dir}/model/ft_models/flan-t5-xl_peft_ft1/"
+checkpoint_dir=f"/home/u131168/{mh_dir}/model/ft_models/flan-t5-xl_peft_ft_v1/"
 checkpoint_name=subprocess.check_output(f"ls {checkpoint_dir} | grep checkpoint | tail -1",shell=True)
 checkpoint_name=str(checkpoint_name).replace("b'","").replace("\\n'","")
 checkpoint_path=checkpoint_dir+checkpoint_name
