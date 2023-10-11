@@ -3,7 +3,10 @@ data/train_split/full_traind1.csv
 data/train_split/f_traind_v1.csv
 data/train_split/full_traind.csv
 data/train.csv
-data/train_split/*
+data/f_traind_v1.csv
+
+
+# data/train_split/*
 
 
 # data/submission.csv

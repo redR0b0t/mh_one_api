@@ -28,8 +28,8 @@ print(f"---------------got start index============{start_index}")
 
 
 
-test_path=f"/home/u131168/{mh_dir}/data/test.csv"
-test_data=pd.read_csv(test_path)
+f_test_path=f"/home/u131168/{mh_dir}/data/f_testd.csv"
+f_test_data=pd.read_csv(f_test_path)
 
 
 
@@ -56,17 +56,17 @@ model = AutoPeftModelForSeq2SeqLM.from_pretrained(model_path, )
 
 # ------predict--------------
 bs=1
-end_index=len(test_data)
+end_index=len(f_test_data)
 for i in range(start_index,end_index,bs):
     print(f"predicting {i} to {i+bs-1} prompt")
-    prompts = test_data.loc[i:i+bs-1,['Story','Question']].values.tolist()
+    prompts = f_test_data.loc[i:i+bs-1,['input','instruction']].values.tolist()
     prompts=prompts
     t_prompts=[]
     for p in prompts:
-        context=str(p[0]).replace(r"\n",'.')
+        context=str(p[0])
         # context=str(p[0])
         question=p[1]
-        t_prompts.append([f"paragraph:  {context}\n\n\n",f"Answer the following question from the paragraph : Question: {question}"])
+        t_prompts.append([context,question])
         # t_prompts+=[f"input: {context}\n\ninstruction: {question}"]
     prompts=t_prompts
         
