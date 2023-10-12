@@ -1,0 +1,470 @@
+got current job name=fti1
+new job name=fti2
+new job created with id: 29836
+----------checking if gpu available on current job-----------------
+no change     /opt/intel/oneapi/intelpython/latest/condabin/conda
+no change     /opt/intel/oneapi/intelpython/latest/bin/conda
+no change     /opt/intel/oneapi/intelpython/latest/bin/conda-env
+no change     /opt/intel/oneapi/intelpython/latest/bin/activate
+no change     /opt/intel/oneapi/intelpython/latest/bin/deactivate
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.sh
+no change     /opt/intel/oneapi/intelpython/latest/etc/fish/conf.d/conda.fish
+no change     /opt/intel/oneapi/intelpython/latest/shell/condabin/Conda.psm1
+no change     /opt/intel/oneapi/intelpython/latest/shell/condabin/conda-hook.ps1
+no change     /opt/intel/oneapi/intelpython/latest/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.csh
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.ksh
+no change     /home/u131168/.bashrc
+No action taken.
+-------------------------------------------
+users render freetier premium
+ 
+:: initializing oneAPI environment ...
+   slurm_script: BASH_VERSION = 5.1.16(1)-release
+   args: Using "$@" for setvars.sh arguments: --force
+:: advisor -- latest
+:: ccl -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: embree -- latest
+:: inspector -- latest
+:: intelpython -- latest
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+:: ipp -- latest
+:: ippcp -- latest
+:: ispc -- latest
+:: itac -- latest
+:: mkl -- latest
+:: modelzoo -- latest
+:: modin -- latest
+:: mpi -- latest
+:: neural-compressor -- latest
+:: oidn -- latest
+:: openpgl -- latest
+:: openvkl -- latest
+:: ospray -- latest
+:: ospray_studio -- latest
+:: pytorch -- latest
+:: rkcommon -- latest
+:: rkutil -- latest
+:: tbb -- latest
+:: tensorflow -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:1.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+[opencl:cpu:0] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
+[opencl:acc:1] Intel(R) FPGA Emulation Platform for OpenCL(TM), Intel(R) FPGA Emulation Device 1.2 [2023.16.7.0.21_160000]
+[opencl:cpu:2] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
+[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.26516]
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:1.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+num_gpu=1\n
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:1.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+num_cpu=2\n
+/var/spool/slurmd/job29835/slurm_script: line 33: [: missing `]'
+-------------------------------------------
+starting fine tuning model
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: datasets in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.14.5)
+Requirement already satisfied: torch in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (2.0.1+cpu)
+Requirement already satisfied: transformers>=4.32.0 in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (4.35.0.dev0)
+Requirement already satisfied: sentencepiece in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (0.1.99)
+Requirement already satisfied: peft in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (0.5.0)
+Requirement already satisfied: evaluate in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 6)) (0.4.0)
+Requirement already satisfied: nltk in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (3.8.1)
+Requirement already satisfied: rouge_score in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 8)) (0.1.2)
+Requirement already satisfied: einops in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 9)) (0.7.0)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (1.23.5)
+Requirement already satisfied: pyarrow>=8.0.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (13.0.0)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.3.4)
+Requirement already satisfied: pandas in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.0.3)
+Requirement already satisfied: requests>=2.19.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.31.0)
+Requirement already satisfied: tqdm>=4.62.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (4.65.0)
+Requirement already satisfied: xxhash in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.4.1)
+Requirement already satisfied: multiprocess in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.70.12.2)
+Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2023.6.0)
+Requirement already satisfied: aiohttp in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.8.6)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.17.3)
+Requirement already satisfied: packaging in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (6.0)
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.12.4)
+Requirement already satisfied: typing-extensions in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (4.6.3)
+Requirement already satisfied: sympy in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (1.12)
+Requirement already satisfied: networkx in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1)
+Requirement already satisfied: jinja2 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (2023.10.3)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.14.1)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.4.0)
+Requirement already satisfied: psutil in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (5.9.0)
+Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (0.23.0)
+Requirement already satisfied: responses<0.19 in /home/u131168/.local/lib/python3.9/site-packages (from evaluate->-r requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: click in /home/u131168/.local/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (8.1.7)
+Requirement already satisfied: joblib in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: absl-py in /home/u131168/.local/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (2.0.0)
+Requirement already satisfied: six>=1.14.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.16.0)
+Requirement already satisfied: attrs>=17.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (3.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (4.0.3)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/u131168/.local/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2023.7.22)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/u131168/.local/lib/python3.9/site-packages (from jinja2->torch->-r requirements.txt (line 2)) (2.1.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch->-r requirements.txt (line 2)) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: https://developer.intel.com/ipex-whl-stable-cpu
+Requirement already satisfied: oneccl_bind_pt in /home/u131168/.local/lib/python3.9/site-packages (2.0.0+cpu)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting git+https://github.com/huggingface/transformers
+  Cloning https://github.com/huggingface/transformers to /tmp/pip-req-build-rpsecf8e
+  Running command git clone --filter=blob:none --quiet https://github.com/huggingface/transformers /tmp/pip-req-build-rpsecf8e
+  Resolved https://github.com/huggingface/transformers to commit 40ea9ab2a1ad99f12e71c3a26215ad33df082ef9
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (3.12.4)
+Requirement already satisfied: huggingface-hub<1.0,>=0.16.4 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.17.3)
+Requirement already satisfied: numpy>=1.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (1.23.5)
+Requirement already satisfied: packaging>=20.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2023.10.3)
+Requirement already satisfied: requests in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2.31.0)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.14.1)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.4.0)
+Requirement already satisfied: tqdm>=4.27 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (4.65.0)
+Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (2023.6.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (4.6.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.1.0)
+Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /home/u131168/.local/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (1.26.17)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (2023.7.22)
+/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-44900
+2023-10-12 01:47:19,484 - __main__ - WARNING - Process rank: 0, device: cpu, n_gpu: 0distributed training: True, 16-bits training: False
+2023-10-12 01:47:19,485 - __main__ - INFO - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=0,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/runs/Oct12_01-47-16_idc-beta-batch-pvc-node-10,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=adamw_torch,
+optim_args=None,
+output_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-44900,
+run_name=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=100,
+save_strategy=steps,
+save_total_limit=2,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+/home/u131168/.local/lib/python3.9/site-packages/datasets/load.py:2089: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=None' instead.
+  warnings.warn(
+Using custom data configuration default-247a45c04f8ed0d6
+2023-10-12 01:47:19,825 - datasets.builder - INFO - Using custom data configuration default-247a45c04f8ed0d6
+Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
+2023-10-12 01:47:19,825 - datasets.info - INFO - Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
+Generating dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+2023-10-12 01:47:19,844 - datasets.builder - INFO - Generating dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+Downloading and preparing dataset csv/default to /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d...
+2023-10-12 01:47:19,845 - datasets.builder - INFO - Downloading and preparing dataset csv/default to /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d...
+Downloading data files:   0%|          | 0/1 [00:00<?, ?it/s]Downloading data files: 100%|██████████| 1/1 [00:00<00:00, 16008.79it/s]
+Downloading took 0.0 min
+2023-10-12 01:47:19,849 - datasets.download.download_manager - INFO - Downloading took 0.0 min
+Checksum Computation took 0.0 min
+2023-10-12 01:47:19,849 - datasets.download.download_manager - INFO - Checksum Computation took 0.0 min
+Extracting data files:   0%|          | 0/1 [00:00<?, ?it/s]Extracting data files: 100%|██████████| 1/1 [00:00<00:00, 86.38it/s]
+Generating train split
+2023-10-12 01:47:19,861 - datasets.builder - INFO - Generating train split
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 10000 examples [00:00, 45249.12 examples/s]Generating train split: 20000 examples [00:00, 48586.69 examples/s]Generating train split: 30000 examples [00:00, 44529.74 examples/s]Generating train split: 40000 examples [00:00, 49331.18 examples/s]Generating train split: 50000 examples [00:01, 51709.78 examples/s]Generating train split: 60000 examples [00:01, 53780.66 examples/s]Generating train split: 70000 examples [00:01, 54875.66 examples/s]Generating train split: 80000 examples [00:01, 56294.65 examples/s]Generating train split: 90000 examples [00:01, 56813.71 examples/s]Generating train split: 100000 examples [00:01, 55731.46 examples/s]Generating train split: 110000 examples [00:02, 56906.27 examples/s]Generating train split: 120000 examples [00:02, 57535.32 examples/s]Generating train split: 130000 examples [00:02, 55922.77 examples/s]Generating train split: 140000 examples [00:02, 55916.24 examples/s]Generating train split: 150000 examples [00:02, 56839.20 examples/s]Generating train split: 160000 examples [00:02, 56427.67 examples/s]Generating train split: 170000 examples [00:03, 56561.69 examples/s]Generating train split: 180000 examples [00:03, 56192.13 examples/s]Generating train split: 190000 examples [00:03, 56555.60 examples/s]Generating train split: 197541 examples [00:03, 56117.58 examples/s]Generating train split: 197541 examples [00:04, 46065.13 examples/s]
+Unable to verify splits sizes.
+2023-10-12 01:47:24,152 - datasets.utils.info_utils - INFO - Unable to verify splits sizes.
+Dataset csv downloaded and prepared to /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d. Subsequent calls will reuse this data.
+2023-10-12 01:47:24,159 - datasets.builder - INFO - Dataset csv downloaded and prepared to /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d. Subsequent calls will reuse this data.
+[INFO|tokenization_utils_base.py:2053] 2023-10-12 01:47:24,853 >> loading file spiece.model from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/spiece.model
+[INFO|tokenization_utils_base.py:2053] 2023-10-12 01:47:24,853 >> loading file tokenizer.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer.json
+[INFO|tokenization_utils_base.py:2053] 2023-10-12 01:47:24,853 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2053] 2023-10-12 01:47:24,853 >> loading file special_tokens_map.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2053] 2023-10-12 01:47:24,853 >> loading file tokenizer_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer_config.json
+Running tokenizer on train dataset:   0%|          | 0/197541 [00:00<?, ? examples/s]Caching processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-a0d411e0177d82ca.arrow
+2023-10-12 01:47:25,634 - datasets.arrow_dataset - INFO - Caching processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-247a45c04f8ed0d6/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-a0d411e0177d82ca.arrow
+Running tokenizer on train dataset:   1%|          | 1000/197541 [00:00<02:23, 1367.33 examples/s]Running tokenizer on train dataset:   1%|          | 2000/197541 [00:01<02:21, 1381.12 examples/s]Running tokenizer on train dataset:   2%|▏         | 3000/197541 [00:02<02:21, 1377.58 examples/s]Running tokenizer on train dataset:   2%|▏         | 4000/197541 [00:02<02:19, 1385.46 examples/s]Running tokenizer on train dataset:   3%|▎         | 5000/197541 [00:03<02:18, 1388.29 examples/s]Running tokenizer on train dataset:   3%|▎         | 6000/197541 [00:04<02:16, 1400.61 examples/s]Running tokenizer on train dataset:   4%|▎         | 7000/197541 [00:05<02:16, 1400.41 examples/s]Running tokenizer on train dataset:   4%|▍         | 8000/197541 [00:05<02:14, 1404.95 examples/s]Running tokenizer on train dataset:   5%|▍         | 9000/197541 [00:06<02:14, 1404.23 examples/s]Running tokenizer on train dataset:   5%|▌         | 10000/197541 [00:07<02:13, 1402.73 examples/s]Running tokenizer on train dataset:   6%|▌         | 11000/197541 [00:07<02:13, 1398.62 examples/s]Running tokenizer on train dataset:   6%|▌         | 12000/197541 [00:08<02:12, 1398.67 examples/s]Running tokenizer on train dataset:   7%|▋         | 13000/197541 [00:09<02:11, 1400.61 examples/s]Running tokenizer on train dataset:   7%|▋         | 14000/197541 [00:10<02:10, 1402.07 examples/s]Running tokenizer on train dataset:   8%|▊         | 15000/197541 [00:10<02:10, 1399.56 examples/s]Running tokenizer on train dataset:   8%|▊         | 16000/197541 [00:11<02:10, 1393.51 examples/s]Running tokenizer on train dataset:   9%|▊         | 17000/197541 [00:12<02:11, 1373.77 examples/s]Running tokenizer on train dataset:   9%|▉         | 18000/197541 [00:12<02:10, 1375.11 examples/s]Running tokenizer on train dataset:  10%|▉         | 19000/197541 [00:13<02:09, 1377.80 examples/s]Running tokenizer on train dataset:  10%|█         | 20000/197541 [00:14<02:08, 1384.28 examples/s]Running tokenizer on train dataset:  11%|█         | 21000/197541 [00:15<02:07, 1387.99 examples/s]Running tokenizer on train dataset:  11%|█         | 22000/197541 [00:15<02:06, 1390.87 examples/s]Running tokenizer on train dataset:  12%|█▏        | 23000/197541 [00:16<02:05, 1390.88 examples/s]Running tokenizer on train dataset:  12%|█▏        | 24000/197541 [00:17<02:04, 1395.77 examples/s]Running tokenizer on train dataset:  13%|█▎        | 25000/197541 [00:17<02:03, 1396.85 examples/s]Running tokenizer on train dataset:  13%|█▎        | 26000/197541 [00:18<02:02, 1399.06 examples/s]Running tokenizer on train dataset:  14%|█▎        | 27000/197541 [00:19<02:02, 1397.04 examples/s]Running tokenizer on train dataset:  14%|█▍        | 28000/197541 [00:20<02:01, 1395.36 examples/s]Running tokenizer on train dataset:  15%|█▍        | 29000/197541 [00:20<02:01, 1392.34 examples/s]Running tokenizer on train dataset:  15%|█▌        | 30000/197541 [00:21<01:59, 1398.31 examples/s]Running tokenizer on train dataset:  16%|█▌        | 31000/197541 [00:22<01:59, 1398.89 examples/s]Running tokenizer on train dataset:  16%|█▌        | 32000/197541 [00:22<01:58, 1395.65 examples/s]Running tokenizer on train dataset:  17%|█▋        | 33000/197541 [00:23<01:58, 1392.91 examples/s]Running tokenizer on train dataset:  17%|█▋        | 34000/197541 [00:24<01:57, 1388.60 examples/s]Running tokenizer on train dataset:  18%|█▊        | 35000/197541 [00:25<01:56, 1392.87 examples/s]Running tokenizer on train dataset:  18%|█▊        | 36000/197541 [00:25<01:56, 1390.89 examples/s]Running tokenizer on train dataset:  19%|█▊        | 37000/197541 [00:26<01:55, 1394.56 examples/s]Running tokenizer on train dataset:  19%|█▉        | 38000/197541 [00:27<01:56, 1372.98 examples/s]Running tokenizer on train dataset:  20%|█▉        | 39000/197541 [00:28<01:54, 1378.64 examples/s]Running tokenizer on train dataset:  20%|██        | 40000/197541 [00:28<01:53, 1386.50 examples/s]Running tokenizer on train dataset:  21%|██        | 41000/197541 [00:29<01:52, 1389.76 examples/s]Running tokenizer on train dataset:  21%|██▏       | 42000/197541 [00:30<01:51, 1393.45 examples/s]Running tokenizer on train dataset:  22%|██▏       | 43000/197541 [00:30<01:50, 1397.59 examples/s]Running tokenizer on train dataset:  22%|██▏       | 44000/197541 [00:31<01:50, 1395.43 examples/s]Running tokenizer on train dataset:  23%|██▎       | 45000/197541 [00:32<01:49, 1394.27 examples/s]Running tokenizer on train dataset:  23%|██▎       | 46000/197541 [00:33<01:48, 1395.07 examples/s]Running tokenizer on train dataset:  24%|██▍       | 47000/197541 [00:33<01:47, 1393.93 examples/s]Running tokenizer on train dataset:  24%|██▍       | 48000/197541 [00:34<01:47, 1397.12 examples/s]Running tokenizer on train dataset:  25%|██▍       | 49000/197541 [00:35<01:46, 1395.09 examples/s]Running tokenizer on train dataset:  25%|██▌       | 50000/197541 [00:35<01:45, 1398.97 examples/s]Running tokenizer on train dataset:  26%|██▌       | 51000/197541 [00:36<01:44, 1399.46 examples/s]Running tokenizer on train dataset:  26%|██▋       | 52000/197541 [00:37<01:43, 1403.77 examples/s]Running tokenizer on train dataset:  27%|██▋       | 53000/197541 [00:38<01:43, 1398.10 examples/s]Running tokenizer on train dataset:  27%|██▋       | 54000/197541 [00:38<01:42, 1395.11 examples/s]Running tokenizer on train dataset:  28%|██▊       | 55000/197541 [00:39<01:42, 1395.76 examples/s]Running tokenizer on train dataset:  28%|██▊       | 56000/197541 [00:40<01:41, 1397.35 examples/s]Running tokenizer on train dataset:  29%|██▉       | 57000/197541 [00:40<01:40, 1402.97 examples/s]Running tokenizer on train dataset:  29%|██▉       | 58000/197541 [00:41<01:39, 1401.56 examples/s]Running tokenizer on train dataset:  30%|██▉       | 59000/197541 [00:42<01:40, 1382.73 examples/s]Running tokenizer on train dataset:  30%|███       | 60000/197541 [00:43<01:38, 1390.02 examples/s]Running tokenizer on train dataset:  31%|███       | 61000/197541 [00:43<01:37, 1393.98 examples/s]Running tokenizer on train dataset:  31%|███▏      | 62000/197541 [00:44<01:37, 1396.33 examples/s]Running tokenizer on train dataset:  32%|███▏      | 63000/197541 [00:45<01:36, 1397.27 examples/s]Running tokenizer on train dataset:  32%|███▏      | 64000/197541 [00:45<01:35, 1396.10 examples/s]Running tokenizer on train dataset:  33%|███▎      | 65000/197541 [00:46<01:34, 1396.30 examples/s]Running tokenizer on train dataset:  33%|███▎      | 66000/197541 [00:47<01:32, 1414.73 examples/s]Running tokenizer on train dataset:  34%|███▍      | 67000/197541 [00:48<01:32, 1409.04 examples/s]Running tokenizer on train dataset:  34%|███▍      | 68000/197541 [00:48<01:31, 1408.79 examples/s]Running tokenizer on train dataset:  35%|███▍      | 69000/197541 [00:49<01:31, 1403.03 examples/s]Running tokenizer on train dataset:  35%|███▌      | 70000/197541 [00:50<01:30, 1409.12 examples/s]Running tokenizer on train dataset:  36%|███▌      | 71000/197541 [00:50<01:30, 1403.50 examples/s]Running tokenizer on train dataset:  36%|███▋      | 72000/197541 [00:51<01:29, 1404.38 examples/s]Running tokenizer on train dataset:  37%|███▋      | 73000/197541 [00:52<01:28, 1405.54 examples/s]Running tokenizer on train dataset:  37%|███▋      | 74000/197541 [00:53<01:27, 1406.23 examples/s]Running tokenizer on train dataset:  38%|███▊      | 75000/197541 [00:53<01:27, 1405.08 examples/s]Running tokenizer on train dataset:  38%|███▊      | 76000/197541 [00:54<01:26, 1403.99 examples/s]Running tokenizer on train dataset:  39%|███▉      | 77000/197541 [00:55<01:25, 1401.88 examples/s]Running tokenizer on train dataset:  39%|███▉      | 78000/197541 [00:55<01:25, 1405.15 examples/s]Running tokenizer on train dataset:  40%|███▉      | 79000/197541 [00:56<01:24, 1407.82 examples/s]Running tokenizer on train dataset:  40%|████      | 80000/197541 [00:57<01:24, 1392.85 examples/s]Running tokenizer on train dataset:  41%|████      | 81000/197541 [00:58<01:23, 1396.24 examples/s]Running tokenizer on train dataset:  42%|████▏     | 82000/197541 [00:58<01:22, 1395.56 examples/s]Running tokenizer on train dataset:  42%|████▏     | 83000/197541 [00:59<01:22, 1393.29 examples/s]Running tokenizer on train dataset:  43%|████▎     | 84000/197541 [01:00<01:21, 1391.78 examples/s]Running tokenizer on train dataset:  43%|████▎     | 85000/197541 [01:00<01:20, 1394.42 examples/s]Running tokenizer on train dataset:  44%|████▎     | 86000/197541 [01:01<01:19, 1399.79 examples/s]Running tokenizer on train dataset:  44%|████▍     | 87000/197541 [01:02<01:18, 1401.44 examples/s]Running tokenizer on train dataset:  45%|████▍     | 88000/197541 [01:03<01:18, 1403.34 examples/s]Running tokenizer on train dataset:  45%|████▌     | 89000/197541 [01:03<01:17, 1400.78 examples/s]Running tokenizer on train dataset:  46%|████▌     | 90000/197541 [01:04<01:16, 1396.69 examples/s]Running tokenizer on train dataset:  46%|████▌     | 91000/197541 [01:05<01:16, 1398.48 examples/s]Running tokenizer on train dataset:  47%|████▋     | 92000/197541 [01:05<01:15, 1403.66 examples/s]Running tokenizer on train dataset:  47%|████▋     | 93000/197541 [01:06<01:14, 1406.98 examples/s]Running tokenizer on train dataset:  48%|████▊     | 94000/197541 [01:07<01:13, 1400.86 examples/s]Running tokenizer on train dataset:  48%|████▊     | 95000/197541 [01:08<01:13, 1398.92 examples/s]Running tokenizer on train dataset:  49%|████▊     | 96000/197541 [01:08<01:12, 1400.15 examples/s]Running tokenizer on train dataset:  49%|████▉     | 97000/197541 [01:09<01:11, 1401.11 examples/s]Running tokenizer on train dataset:  50%|████▉     | 98000/197541 [01:10<01:11, 1401.87 examples/s]Running tokenizer on train dataset:  50%|█████     | 99000/197541 [01:10<01:10, 1399.62 examples/s]Running tokenizer on train dataset:  51%|█████     | 100000/197541 [01:11<01:09, 1398.99 examples/s]Running tokenizer on train dataset:  51%|█████     | 101000/197541 [01:12<01:09, 1387.85 examples/s]Running tokenizer on train dataset:  52%|█████▏    | 102000/197541 [01:13<01:08, 1389.91 examples/s]Running tokenizer on train dataset:  52%|█████▏    | 103000/197541 [01:13<01:07, 1393.50 examples/s]Running tokenizer on train dataset:  53%|█████▎    | 104000/197541 [01:14<01:06, 1396.43 examples/s]Running tokenizer on train dataset:  53%|█████▎    | 105000/197541 [01:15<01:06, 1396.66 examples/s]Running tokenizer on train dataset:  54%|█████▎    | 106000/197541 [01:15<01:05, 1399.01 examples/s]Running tokenizer on train dataset:  54%|█████▍    | 107000/197541 [01:16<01:04, 1402.86 examples/s]Running tokenizer on train dataset:  55%|█████▍    | 108000/197541 [01:17<01:03, 1399.60 examples/s]Running tokenizer on train dataset:  55%|█████▌    | 109000/197541 [01:18<01:03, 1402.53 examples/s]Running tokenizer on train dataset:  56%|█████▌    | 110000/197541 [01:18<01:02, 1400.52 examples/s]Running tokenizer on train dataset:  56%|█████▌    | 111000/197541 [01:19<01:01, 1399.84 examples/s]Running tokenizer on train dataset:  57%|█████▋    | 112000/197541 [01:20<01:01, 1401.48 examples/s]Running tokenizer on train dataset:  57%|█████▋    | 113000/197541 [01:20<01:00, 1397.80 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 114000/197541 [01:21<00:59, 1396.91 examples/s]Running tokenizer on train dataset:  58%|█████▊    | 115000/197541 [01:22<00:58, 1402.50 examples/s]Running tokenizer on train dataset:  59%|█████▊    | 116000/197541 [01:23<00:58, 1402.39 examples/s]Running tokenizer on train dataset:  59%|█████▉    | 117000/197541 [01:23<00:57, 1402.46 examples/s]Running tokenizer on train dataset:  60%|█████▉    | 118000/197541 [01:24<00:56, 1405.89 examples/s]Running tokenizer on train dataset:  60%|██████    | 119000/197541 [01:25<00:55, 1405.74 examples/s]Running tokenizer on train dataset:  61%|██████    | 120000/197541 [01:25<00:55, 1404.97 examples/s]Running tokenizer on train dataset:  61%|██████▏   | 121000/197541 [01:26<00:54, 1404.43 examples/s]Running tokenizer on train dataset:  62%|██████▏   | 122000/197541 [01:27<00:54, 1388.34 examples/s]Running tokenizer on train dataset:  62%|██████▏   | 123000/197541 [01:28<00:53, 1391.42 examples/s]Running tokenizer on train dataset:  63%|██████▎   | 124000/197541 [01:28<00:52, 1395.15 examples/s]Running tokenizer on train dataset:  63%|██████▎   | 125000/197541 [01:29<00:52, 1394.04 examples/s]Running tokenizer on train dataset:  64%|██████▍   | 126000/197541 [01:30<00:51, 1399.89 examples/s]Running tokenizer on train dataset:  64%|██████▍   | 127000/197541 [01:30<00:50, 1398.15 examples/s]Running tokenizer on train dataset:  65%|██████▍   | 128000/197541 [01:31<00:49, 1401.62 examples/s]Running tokenizer on train dataset:  65%|██████▌   | 129000/197541 [01:32<00:49, 1398.75 examples/s]Running tokenizer on train dataset:  66%|██████▌   | 130000/197541 [01:33<00:48, 1401.80 examples/s]Running tokenizer on train dataset:  66%|██████▋   | 131000/197541 [01:33<00:47, 1400.39 examples/s]Running tokenizer on train dataset:  67%|██████▋   | 132000/197541 [01:34<00:46, 1415.79 examples/s]Running tokenizer on train dataset:  67%|██████▋   | 133000/197541 [01:35<00:45, 1411.49 examples/s]Running tokenizer on train dataset:  68%|██████▊   | 134000/197541 [01:35<00:45, 1409.66 examples/s]Running tokenizer on train dataset:  68%|██████▊   | 135000/197541 [01:36<00:44, 1402.20 examples/s]Running tokenizer on train dataset:  69%|██████▉   | 136000/197541 [01:37<00:43, 1406.42 examples/s]Running tokenizer on train dataset:  69%|██████▉   | 137000/197541 [01:38<00:43, 1404.36 examples/s]Running tokenizer on train dataset:  70%|██████▉   | 138000/197541 [01:38<00:42, 1406.41 examples/s]Running tokenizer on train dataset:  70%|███████   | 139000/197541 [01:39<00:41, 1409.23 examples/s]Running tokenizer on train dataset:  71%|███████   | 140000/197541 [01:40<00:40, 1406.14 examples/s]Running tokenizer on train dataset:  71%|███████▏  | 141000/197541 [01:40<00:40, 1407.46 examples/s]Running tokenizer on train dataset:  72%|███████▏  | 142000/197541 [01:41<00:39, 1406.43 examples/s]Running tokenizer on train dataset:  72%|███████▏  | 143000/197541 [01:42<00:39, 1388.84 examples/s]Running tokenizer on train dataset:  73%|███████▎  | 144000/197541 [01:43<00:38, 1399.96 examples/s]Running tokenizer on train dataset:  73%|███████▎  | 145000/197541 [01:43<00:37, 1401.51 examples/s]Running tokenizer on train dataset:  74%|███████▍  | 146000/197541 [01:44<00:36, 1405.86 examples/s]Running tokenizer on train dataset:  74%|███████▍  | 147000/197541 [01:45<00:35, 1404.13 examples/s]Running tokenizer on train dataset:  75%|███████▍  | 148000/197541 [01:45<00:35, 1402.66 examples/s]Running tokenizer on train dataset:  75%|███████▌  | 149000/197541 [01:46<00:34, 1402.32 examples/s]Running tokenizer on train dataset:  76%|███████▌  | 150000/197541 [01:47<00:34, 1397.17 examples/s]Running tokenizer on train dataset:  76%|███████▋  | 151000/197541 [01:48<00:33, 1398.36 examples/s]Running tokenizer on train dataset:  77%|███████▋  | 152000/197541 [01:48<00:32, 1400.33 examples/s]Running tokenizer on train dataset:  77%|███████▋  | 153000/197541 [01:49<00:31, 1399.51 examples/s]Running tokenizer on train dataset:  78%|███████▊  | 154000/197541 [01:50<00:31, 1400.09 examples/s]Running tokenizer on train dataset:  78%|███████▊  | 155000/197541 [01:50<00:30, 1401.16 examples/s]Running tokenizer on train dataset:  79%|███████▉  | 156000/197541 [01:51<00:29, 1399.72 examples/s]Running tokenizer on train dataset:  79%|███████▉  | 157000/197541 [01:52<00:28, 1401.16 examples/s]Running tokenizer on train dataset:  80%|███████▉  | 158000/197541 [01:52<00:28, 1404.88 examples/s]Running tokenizer on train dataset:  80%|████████  | 159000/197541 [01:53<00:27, 1407.37 examples/s]Running tokenizer on train dataset:  81%|████████  | 160000/197541 [01:54<00:26, 1402.39 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 161000/197541 [01:55<00:26, 1401.51 examples/s]Running tokenizer on train dataset:  82%|████████▏ | 162000/197541 [01:55<00:25, 1407.14 examples/s]Running tokenizer on train dataset:  83%|████████▎ | 163000/197541 [01:56<00:24, 1404.44 examples/s]Running tokenizer on train dataset:  83%|████████▎ | 164000/197541 [01:57<00:24, 1395.31 examples/s]Running tokenizer on train dataset:  84%|████████▎ | 165000/197541 [01:58<00:23, 1395.67 examples/s]Running tokenizer on train dataset:  84%|████████▍ | 166000/197541 [01:58<00:22, 1395.30 examples/s]Running tokenizer on train dataset:  85%|████████▍ | 167000/197541 [01:59<00:21, 1399.69 examples/s]Running tokenizer on train dataset:  85%|████████▌ | 168000/197541 [02:00<00:21, 1402.22 examples/s]Running tokenizer on train dataset:  86%|████████▌ | 169000/197541 [02:00<00:20, 1403.13 examples/s]Running tokenizer on train dataset:  86%|████████▌ | 170000/197541 [02:01<00:19, 1399.89 examples/s]Running tokenizer on train dataset:  87%|████████▋ | 171000/197541 [02:02<00:18, 1398.53 examples/s]Running tokenizer on train dataset:  87%|████████▋ | 172000/197541 [02:03<00:18, 1397.99 examples/s]Running tokenizer on train dataset:  88%|████████▊ | 173000/197541 [02:03<00:17, 1405.43 examples/s]Running tokenizer on train dataset:  88%|████████▊ | 174000/197541 [02:04<00:16, 1402.72 examples/s]Running tokenizer on train dataset:  89%|████████▊ | 175000/197541 [02:05<00:16, 1401.01 examples/s]Running tokenizer on train dataset:  89%|████████▉ | 176000/197541 [02:05<00:15, 1397.45 examples/s]Running tokenizer on train dataset:  90%|████████▉ | 177000/197541 [02:06<00:14, 1399.11 examples/s]Running tokenizer on train dataset:  90%|█████████ | 178000/197541 [02:07<00:13, 1396.02 examples/s]Running tokenizer on train dataset:  91%|█████████ | 179000/197541 [02:08<00:13, 1394.99 examples/s]Running tokenizer on train dataset:  91%|█████████ | 180000/197541 [02:08<00:12, 1396.80 examples/s]Running tokenizer on train dataset:  92%|█████████▏| 181000/197541 [02:09<00:11, 1400.67 examples/s]Running tokenizer on train dataset:  92%|█████████▏| 182000/197541 [02:10<00:11, 1400.57 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 183000/197541 [02:10<00:10, 1405.87 examples/s]Running tokenizer on train dataset:  93%|█████████▎| 184000/197541 [02:11<00:09, 1407.69 examples/s]Running tokenizer on train dataset:  94%|█████████▎| 185000/197541 [02:12<00:09, 1390.25 examples/s]Running tokenizer on train dataset:  94%|█████████▍| 186000/197541 [02:13<00:08, 1392.17 examples/s]Running tokenizer on train dataset:  95%|█████████▍| 187000/197541 [02:13<00:07, 1393.25 examples/s]Running tokenizer on train dataset:  95%|█████████▌| 188000/197541 [02:14<00:06, 1396.11 examples/s]Running tokenizer on train dataset:  96%|█████████▌| 189000/197541 [02:15<00:06, 1400.88 examples/s]Running tokenizer on train dataset:  96%|█████████▌| 190000/197541 [02:15<00:05, 1403.20 examples/s]Running tokenizer on train dataset:  97%|█████████▋| 191000/197541 [02:16<00:04, 1397.63 examples/s]Running tokenizer on train dataset:  97%|█████████▋| 192000/197541 [02:17<00:03, 1402.05 examples/s]Running tokenizer on train dataset:  98%|█████████▊| 193000/197541 [02:18<00:03, 1400.79 examples/s]Running tokenizer on train dataset:  98%|█████████▊| 194000/197541 [02:18<00:02, 1403.73 examples/s]Running tokenizer on train dataset:  99%|█████████▊| 195000/197541 [02:19<00:01, 1406.44 examples/s]Running tokenizer on train dataset:  99%|█████████▉| 196000/197541 [02:20<00:01, 1405.48 examples/s]Running tokenizer on train dataset: 100%|█████████▉| 197000/197541 [02:20<00:00, 1404.84 examples/s]Running tokenizer on train dataset: 100%|██████████| 197541/197541 [02:21<00:00, 1403.95 examples/s]Running tokenizer on train dataset: 100%|██████████| 197541/197541 [02:21<00:00, 1391.99 examples/s]
+[INFO|configuration_utils.py:716] 2023-10-12 01:49:47,558 >> loading configuration file config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/config.json
+[INFO|configuration_utils.py:776] 2023-10-12 01:49:47,582 >> Model config T5Config {
+  "_name_or_path": "google/flan-t5-xl",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 5120,
+  "d_kv": 64,
+  "d_model": 2048,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.35.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|modeling_utils.py:2995] 2023-10-12 01:49:47,805 >> loading weights file pytorch_model.bin from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/pytorch_model.bin.index.json
+[INFO|configuration_utils.py:789] 2023-10-12 01:49:47,817 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:14<00:14, 14.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.62s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.60s/it]
+[INFO|modeling_utils.py:3779] 2023-10-12 01:50:17,192 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:3787] 2023-10-12 01:50:17,192 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at google/flan-t5-xl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:749] 2023-10-12 01:50:17,289 >> loading configuration file generation_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/generation_config.json
+[INFO|configuration_utils.py:789] 2023-10-12 01:50:17,289 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+[INFO|modeling_utils.py:1619] 2023-10-12 01:50:17,297 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 32100. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|trainer.py:584] 2023-10-12 01:50:21,631 >> Using cpu_amp half precision backend
+[INFO|trainer.py:2008] 2023-10-12 01:50:21,636 >> Loading model from /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-44900.
+[INFO|trainer.py:1669] 2023-10-12 01:50:22,022 >> ***** Running training *****
+[INFO|trainer.py:1670] 2023-10-12 01:50:22,023 >>   Num examples = 197,541
+[INFO|trainer.py:1671] 2023-10-12 01:50:22,023 >>   Num Epochs = 1
+[INFO|trainer.py:1672] 2023-10-12 01:50:22,023 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1675] 2023-10-12 01:50:22,023 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1676] 2023-10-12 01:50:22,023 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1677] 2023-10-12 01:50:22,023 >>   Total optimization steps = 98,771
+[INFO|trainer.py:1678] 2023-10-12 01:50:22,026 >>   Number of trainable parameters = 4,718,592
+[INFO|trainer.py:1698] 2023-10-12 01:50:22,034 >>   Continuing training from checkpoint, will skip to saved global_step
+[INFO|trainer.py:1699] 2023-10-12 01:50:22,034 >>   Continuing training from epoch 0
+[INFO|trainer.py:1700] 2023-10-12 01:50:22,034 >>   Continuing training from global step 44900
+[INFO|trainer.py:1702] 2023-10-12 01:50:22,034 >>   Will skip the first 0 epochs then the first 44900 batches in the first epoch.
+trainable params: 4,718,592 || all params: 2,854,361,088 || trainable%: 0.1653116706164963
+  0%|          | 0/98771 [00:00<?, ?it/s][WARNING|logging.py:290] 2023-10-12 01:50:22,063 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ 45%|████▌     | 44901/98771 [00:12<00:15, 3479.15it/s] 45%|████▌     | 44905/98771 [00:27<00:15, 3479.15it/s] 45%|████▌     | 44906/98771 [00:28<00:42, 1273.43it/s] 45%|████▌     | 44907/98771 [00:30<00:47, 1123.04it/s] 45%|████▌     | 44908/98771 [00:33<00:56, 960.83it/s]  45%|████▌     | 44909/98771 [00:35<01:09, 779.57it/s] 45%|████▌     | 44910/98771 [00:37<01:24, 636.06it/s]                                                       45%|████▌     | 44910/98771 [00:37<01:24, 636.06it/s] 45%|████▌     | 44911/98771 [00:40<01:47, 499.18it/s] 45%|████▌     | 44912/98771 [00:44<02:50, 315.57it/s] 45%|████▌     | 44913/98771 [00:48<04:10, 214.82it/s] 45%|████▌     | 44914/98771 [00:51<05:29, 163.62it/s] 45%|████▌     | 44915/98771 [00:53<07:31, 119.26it/s] 45%|████▌     | 44916/98771 [00:57<11:02, 81.23it/s]  45%|████▌     | 44917/98771 [01:02<18:38, 48.16it/s] 45%|████▌     | 44918/98771 [01:07<27:14, 32.95it/s] 45%|████▌     | 44919/98771 [01:10<38:25, 23.36it/s] 45%|████▌     | 44920/98771 [01:15<56:02, 16.02it/s]                                                      45%|████▌     | 44920/98771 [01:15<56:02, 16.02it/s] 45%|████▌     | 44921/98771 [01:19<1:20:28, 11.15it/s] 45%|████▌     | 44922/98771 [01:21<1:41:01,  8.88it/s] 45%|████▌     | 44923/98771 [01:25<2:26:19,  6.13it/s] 45%|████▌     | 44924/98771 [01:29<3:29:24,  4.29it/s] 45%|████▌     | 44925/98771 [01:33<4:41:25,  3.19it/s] 45%|████▌     | 44926/98771 [01:37<6:39:01,  2.25it/s] 45%|████▌     | 44927/98771 [01:41<9:09:18,  1.63it/s] 45%|████▌     | 44928/98771 [01:43<10:21:30,  1.44it/s] 45%|████▌     | 44929/98771 [01:44<11:29:32,  1.30it/s] 45%|████▌     | 44930/98771 [01:47<14:24:38,  1.04it/s]                                                         45%|████▌     | 44930/98771 [01:47<14:24:38,  1.04it/s] 45%|████▌     | 44931/98771 [01:50<18:33:14,  1.24s/it] 45%|████▌     | 44932/98771 [01:53<22:47:47,  1.52s/it] 45%|████▌     | 44933/98771 [01:58<32:45:28,  2.19s/it] 45%|████▌     | 44934/98771 [02:02<37:46:21,  2.53s/it] 45%|████▌     | 44935/98771 [02:06<42:14:12,  2.82s/it] 45%|████▌     | 44936/98771 [02:08<42:13:32,  2.82s/it] 45%|████▌     | 44937/98771 [02:12<45:29:06,  3.04s/it] 45%|████▌     | 44938/98771 [02:15<44:55:37,  3.00s/it] 45%|████▌     | 44939/98771 [02:19<49:34:33,  3.32s/it] 45%|████▌     | 44940/98771 [02:22<45:52:32,  3.07s/it]                                                         45%|████▌     | 44940/98771 [02:22<45:52:32,  3.07s/it] 46%|████▌     | 44941/98771 [02:25<49:04:29,  3.28s/it] 46%|████▌     | 44942/98771 [02:27<42:27:05,  2.84s/it] 46%|████▌     | 44943/98771 [02:30<42:21:46,  2.83s/it] 46%|████▌     | 44944/98771 [02:33<42:31:37,  2.84s/it] 46%|████▌     | 44945/98771 [02:35<39:17:38,  2.63s/it] 46%|████▌     | 44946/98771 [02:38<43:00:10,  2.88s/it] 46%|████▌     | 44947/98771 [02:40<36:18:47,  2.43s/it] 46%|████▌     | 44948/98771 [02:43<37:52:18,  2.53s/it] 46%|████▌     | 44949/98771 [02:45<38:20:27,  2.56s/it] 46%|████▌     | 44950/98771 [02:48<37:23:42,  2.50s/it]                                                         46%|████▌     | 44950/98771 [02:48<37:23:42,  2.50s/it] 46%|████▌     | 44951/98771 [02:50<36:24:13,  2.44s/it] 46%|████▌     | 44952/98771 [02:52<36:48:55,  2.46s/it] 46%|████▌     | 44953/98771 [02:55<35:20:46,  2.36s/it] 46%|████▌     | 44954/98771 [02:57<35:05:42,  2.35s/it] 46%|████▌     | 44955/98771 [02:59<34:47:56,  2.33s/it] 46%|████▌     | 44956/98771 [03:02<36:31:45,  2.44s/it] 46%|████▌     | 44957/98771 [03:04<35:43:43,  2.39s/it] 46%|████▌     | 44958/98771 [03:08<42:10:09,  2.82s/it] 46%|████▌     | 44959/98771 [03:10<40:12:26,  2.69s/it] 46%|████▌     | 44960/98771 [03:13<39:26:47,  2.64s/it]                                                         46%|████▌     | 44960/98771 [03:13<39:26:47,  2.64s/it] 46%|████▌     | 44961/98771 [03:16<40:24:23,  2.70s/it] 46%|████▌     | 44962/98771 [03:19<43:50:53,  2.93s/it] 46%|████▌     | 44963/98771 [03:22<43:46:17,  2.93s/it] 46%|████▌     | 44964/98771 [03:26<46:35:27,  3.12s/it] 46%|████▌     | 44965/98771 [03:28<43:45:51,  2.93s/it] 46%|████▌     | 44966/98771 [03:32<46:35:47,  3.12s/it] 46%|████▌     | 44967/98771 [03:34<43:42:43,  2.92s/it] 46%|████▌     | 44968/98771 [03:36<37:48:16,  2.53s/it] 46%|████▌     | 44969/98771 [03:38<35:51:35,  2.40s/it] 46%|████▌     | 44970/98771 [03:40<36:10:26,  2.42s/it]                                                         46%|████▌     | 44970/98771 [03:40<36:10:26,  2.42s/it] 46%|████▌     | 44971/98771 [03:43<36:31:38,  2.44s/it] 46%|████▌     | 44972/98771 [03:45<36:37:54,  2.45s/it] 46%|████▌     | 44973/98771 [03:49<42:40:20,  2.86s/it] 46%|████▌     | 44974/98771 [03:53<45:59:40,  3.08s/it] 46%|████▌     | 44975/98771 [03:56<48:53:13,  3.27s/it] 46%|████▌     | 44976/98771 [04:00<49:33:45,  3.32s/it] 46%|████▌     | 44977/98771 [04:02<45:24:21,  3.04s/it] 46%|████▌     | 44978/98771 [04:05<42:20:11,  2.83s/it] 46%|████▌     | 44979/98771 [04:07<41:14:31,  2.76s/it] 46%|████▌     | 44980/98771 [04:10<41:54:36,  2.80s/it]                                                         46%|████▌     | 44980/98771 [04:10<41:54:36,  2.80s/it] 46%|████▌     | 44981/98771 [04:14<45:46:34,  3.06s/it] 46%|████▌     | 44982/98771 [04:16<43:46:52,  2.93s/it] 46%|████▌     | 44983/98771 [04:19<42:21:30,  2.84s/it] 46%|████▌     | 44984/98771 [04:23<47:05:57,  3.15s/it] 46%|████▌     | 44985/98771 [04:25<43:56:33,  2.94s/it] 46%|████▌     | 44986/98771 [04:28<41:59:23,  2.81s/it] 46%|████▌     | 44987/98771 [04:30<41:03:22,  2.75s/it] 46%|████▌     | 44988/98771 [04:34<44:30:15,  2.98s/it] 46%|████▌     | 44989/98771 [04:38<48:16:24,  3.23s/it] 46%|████▌     | 44990/98771 [04:40<43:45:39,  2.93s/it]                                                         46%|████▌     | 44990/98771 [04:40<43:45:39,  2.93s/it] 46%|████▌     | 44991/98771 [04:43<43:25:53,  2.91s/it] 46%|████▌     | 44992/98771 [04:46<42:44:13,  2.86s/it] 46%|████▌     | 44993/98771 [04:48<42:52:01,  2.87s/it] 46%|████▌     | 44994/98771 [04:52<43:43:24,  2.93s/it] 46%|████▌     | 44995/98771 [04:55<44:35:34,  2.99s/it] 46%|████▌     | 44996/98771 [04:58<44:53:56,  3.01s/it] 46%|████▌     | 44997/98771 [05:02<49:40:28,  3.33s/it] 46%|████▌     | 44998/98771 [05:04<46:52:13,  3.14s/it] 46%|████▌     | 44999/98771 [05:07<46:02:11,  3.08s/it] 46%|████▌     | 45000/98771 [05:10<44:20:45,  2.97s/it]                                                         46%|████▌     | 45000/98771 [05:10<44:20:45,  2.97s/it][INFO|trainer.py:2806] 2023-10-12 01:55:32,688 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-45000
+[INFO|trainer.py:2893] 2023-10-12 01:55:32,991 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-44800] due to args.save_total_limit
+ 46%|████▌     | 45001/98771 [05:13<43:45:54,  2.93s/it] 46%|████▌     | 45002/98771 [05:15<41:47:01,  2.80s/it] 46%|████▌     | 45003/98771 [05:18<39:54:48,  2.67s/it] 46%|████▌     | 45004/98771 [05:20<39:07:20,  2.62s/it] 46%|████▌     | 45005/98771 [05:23<37:17:22,  2.50s/it] 46%|████▌     | 45006/98771 [05:24<34:44:51,  2.33s/it] 46%|████▌     | 45007/98771 [05:28<39:42:47,  2.66s/it] 46%|████▌     | 45008/98771 [05:31<43:44:57,  2.93s/it] 46%|████▌     | 45009/98771 [05:34<40:44:49,  2.73s/it] 46%|████▌     | 45010/98771 [05:38<46:14:24,  3.10s/it]                                                         46%|████▌     | 45010/98771 [05:38<46:14:24,  3.10s/it] 46%|████▌     | 45011/98771 [05:40<44:54:17,  3.01s/it] 46%|████▌     | 45012/98771 [05:43<41:24:46,  2.77s/it] 46%|████▌     | 45013/98771 [05:46<42:44:29,  2.86s/it] 46%|████▌     | 45014/98771 [05:48<41:31:39,  2.78s/it] 46%|████▌     | 45015/98771 [05:51<39:19:10,  2.63s/it] 46%|████▌     | 45016/98771 [05:53<38:32:59,  2.58s/it] 46%|████▌     | 45017/98771 [05:55<37:26:28,  2.51s/it] 46%|████▌     | 45018/98771 [05:57<33:58:17,  2.28s/it] 46%|████▌     | 45019/98771 [06:00<34:28:06,  2.31s/it] 46%|████▌     | 45020/98771 [06:03<38:58:16,  2.61s/it]                                                         46%|████▌     | 45020/98771 [06:03<38:58:16,  2.61s/it] 46%|████▌     | 45021/98771 [06:05<37:15:44,  2.50s/it] 46%|████▌     | 45022/98771 [06:07<36:12:20,  2.42s/it] 46%|████▌     | 45023/98771 [06:10<35:54:00,  2.40s/it] 46%|████▌     | 45024/98771 [06:13<38:34:47,  2.58s/it] 46%|████▌     | 45025/98771 [06:15<37:16:30,  2.50s/it] 46%|████▌     | 45026/98771 [06:17<32:46:15,  2.20s/it] 46%|████▌     | 45027/98771 [06:19<33:51:20,  2.27s/it] 46%|████▌     | 45028/98771 [06:21<34:52:34,  2.34s/it] 46%|████▌     | 45029/98771 [06:24<36:20:22,  2.43s/it] 46%|████▌     | 45030/98771 [06:28<40:33:07,  2.72s/it]                                                         46%|████▌     | 45030/98771 [06:28<40:33:07,  2.72s/it] 46%|████▌     | 45031/98771 [06:30<40:23:50,  2.71s/it] 46%|████▌     | 45032/98771 [06:33<40:04:53,  2.69s/it] 46%|████▌     | 45033/98771 [06:36<43:27:16,  2.91s/it] 46%|████▌     | 45034/98771 [06:39<40:45:02,  2.73s/it] 46%|████▌     | 45035/98771 [06:43<46:08:28,  3.09s/it] 46%|████▌     | 45036/98771 [06:45<44:05:04,  2.95s/it] 46%|████▌     | 45037/98771 [06:48<42:24:03,  2.84s/it] 46%|████▌     | 45038/98771 [06:52<46:58:41,  3.15s/it] 46%|████▌     | 45039/98771 [06:54<43:35:48,  2.92s/it] 46%|████▌     | 45040/98771 [06:55<36:21:41,  2.44s/it]                                                         46%|████▌     | 45040/98771 [06:55<36:21:41,  2.44s/it] 46%|████▌     | 45041/98771 [06:57<34:48:37,  2.33s/it] 46%|████▌     | 45042/98771 [07:00<35:45:02,  2.40s/it] 46%|████▌     | 45043/98771 [07:04<42:22:06,  2.84s/it] 46%|████▌     | 45044/98771 [07:05<35:59:37,  2.41s/it] 46%|████▌     | 45045/98771 [07:07<33:40:46,  2.26s/it] 46%|████▌     | 45046/98771 [07:09<30:37:27,  2.05s/it] 46%|████▌     | 45047/98771 [07:12<38:03:19,  2.55s/it] 46%|████▌     | 45048/98771 [07:15<37:20:42,  2.50s/it] 46%|████▌     | 45049/98771 [07:17<37:04:45,  2.48s/it] 46%|████▌     | 45050/98771 [07:19<36:07:14,  2.42s/it]                                                         46%|████▌     | 45050/98771 [07:19<36:07:14,  2.42s/it] 46%|████▌     | 45051/98771 [07:21<32:27:57,  2.18s/it] 46%|████▌     | 45052/98771 [07:23<33:19:29,  2.23s/it] 46%|████▌     | 45053/98771 [07:26<36:16:42,  2.43s/it]
