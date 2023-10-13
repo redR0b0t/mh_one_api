@@ -32,3 +32,7 @@ data/f_traind_v1.csv
 # git remote add origin https://github.com/blur0b0t/mh_shell.git
 
 # git reset commit_id_for_origin/dev-red
+
+
+# git config --global user.email "jatin.gcp@gmail.com"
+# git config --global user.name "blur0b0t"
