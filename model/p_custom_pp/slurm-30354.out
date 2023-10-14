@@ -182,3 +182,4 @@ Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.
 b'0\n'
 ---------------got start index============1
 Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:13<00:13, 13.90s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  7.43s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.40s/it]
+slurmstepd-idc-beta-batch-pvc-node-08: error: *** JOB 30354 ON idc-beta-batch-pvc-node-08 CANCELLED AT 2023-10-13T11:52:39 ***
