@@ -2,3 +2,5 @@
 git clone https://github.com/flutter/flutter.git
 
 echo 'export PATH="$PATH:~/flutter/bin"' >> $HOME/.bashrc
+
+echo 'export PATH="$PATH:/workspaces/flutter/bin"' >> $HOME/.bashrc
