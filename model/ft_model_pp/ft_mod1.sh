@@ -60,7 +60,7 @@ export train_file="/home/u131168/mh_one_api/data/f_traind_v1.csv"
 export model_path="google/flan-t5-xl"
 
 export checkpoint_dir="/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/"
-export checkpoint_name=$(ls $checkpoint_dir | grep checkpoint | tail -1)
+export checkpoint_name=$(ls $checkpoint_dir | grep checkpoint | tail -2)
 export checkpoint_path="$checkpoint_dir$checkpoint_name"
 echo $checkpoint_path
 
