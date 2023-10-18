@@ -1,429 +1,0 @@
-got current job name=fti3
-new job name=fti4
-new job created with id: 31262
-----------checking if gpu available on current job-----------------
-no change     /home/common/miniconda3/condabin/conda
-no change     /home/common/miniconda3/bin/conda
-no change     /home/common/miniconda3/bin/conda-env
-no change     /home/common/miniconda3/bin/activate
-no change     /home/common/miniconda3/bin/deactivate
-no change     /home/common/miniconda3/etc/profile.d/conda.sh
-no change     /home/common/miniconda3/etc/fish/conf.d/conda.fish
-no change     /home/common/miniconda3/shell/condabin/Conda.psm1
-no change     /home/common/miniconda3/shell/condabin/conda-hook.ps1
-no change     /home/common/miniconda3/lib/python3.10/site-packages/xontrib/conda.xsh
-no change     /home/common/miniconda3/etc/profile.d/conda.csh
-no change     /home/u131168/.bashrc
-No action taken.
--------------------------------------------
-users render freetier premium
- 
-:: initializing oneAPI environment ...
-   slurm_script: BASH_VERSION = 5.1.16(1)-release
-   args: Using "$@" for setvars.sh arguments: --force
-:: advisor -- latest
-:: ccl -- latest
-:: compiler -- latest
-:: dal -- latest
-:: debugger -- latest
-:: dev-utilities -- latest
-:: dnnl -- latest
-:: dpcpp-ct -- latest
-:: dpl -- latest
-:: embree -- latest
-:: inspector -- latest
-:: intelpython -- latest
-
-CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
-To initialize your shell, run
-
-    $ conda init <SHELL_NAME>
-
-Currently supported shells are:
-  - bash
-  - fish
-  - tcsh
-  - xonsh
-  - zsh
-  - powershell
-
-See 'conda init --help' for more information and options.
-
-IMPORTANT: You may need to close and restart your shell after running 'conda init'.
-
-
-
-CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
-To initialize your shell, run
-
-    $ conda init <SHELL_NAME>
-
-Currently supported shells are:
-  - bash
-  - fish
-  - tcsh
-  - xonsh
-  - zsh
-  - powershell
-
-See 'conda init --help' for more information and options.
-
-IMPORTANT: You may need to close and restart your shell after running 'conda init'.
-
-
-:: ipp -- latest
-:: ippcp -- latest
-:: ispc -- latest
-:: itac -- latest
-:: mkl -- latest
-:: modelzoo -- latest
-:: modin -- latest
-:: mpi -- latest
-:: neural-compressor -- latest
-:: oidn -- latest
-:: openpgl -- latest
-:: openvkl -- latest
-:: ospray -- latest
-:: ospray_studio -- latest
-:: pytorch -- latest
-:: rkcommon -- latest
-:: rkutil -- latest
-:: tbb -- latest
-:: tensorflow -- latest
-:: vtune -- latest
-:: oneAPI environment initialized ::
- 
-Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:0.
-To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
-
-[opencl:cpu:0] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
-[opencl:acc:1] Intel(R) FPGA Emulation Platform for OpenCL(TM), Intel(R) FPGA Emulation Device 1.2 [2023.16.7.0.21_160000]
-[opencl:cpu:2] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
-[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.26516]
-Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:0.
-To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
-
-num_gpu=1\n
-Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:0.
-To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
-
-num_cpu=2\n
-/var/spool/slurmd/job31243/slurm_script: line 33: [: missing `]'
--------------------------------------------
-starting fine tuning model
-Defaulting to user installation because normal site-packages is not writeable
-Requirement already satisfied: datasets in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.14.5)
-Requirement already satisfied: torch in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (2.1.0)
-Requirement already satisfied: transformers>=4.32.0 in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (4.35.0.dev0)
-Requirement already satisfied: sentencepiece in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (0.1.99)
-Requirement already satisfied: peft in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (0.5.0)
-Requirement already satisfied: evaluate in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 6)) (0.4.0)
-Requirement already satisfied: nltk in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (3.8.1)
-Requirement already satisfied: rouge_score in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 8)) (0.1.2)
-Requirement already satisfied: einops in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 9)) (0.7.0)
-Requirement already satisfied: numpy>=1.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (1.24.3)
-Requirement already satisfied: pyarrow>=8.0.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (13.0.0)
-Requirement already satisfied: dill<0.3.8,>=0.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.3.7)
-Requirement already satisfied: pandas in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.0.3)
-Requirement already satisfied: requests>=2.19.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.31.0)
-Requirement already satisfied: tqdm>=4.62.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (4.65.0)
-Requirement already satisfied: xxhash in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.4.1)
-Requirement already satisfied: multiprocess in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.70.15)
-Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2023.6.0)
-Requirement already satisfied: aiohttp in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.8.6)
-Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.17.3)
-Requirement already satisfied: packaging in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (23.1)
-Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (6.0)
-Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.12.4)
-Requirement already satisfied: typing-extensions in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (4.6.3)
-Requirement already satisfied: sympy in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (1.12)
-Requirement already satisfied: networkx in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1)
-Requirement already satisfied: jinja2 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1.2)
-Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
-Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
-Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
-Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (8.9.2.26)
-Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.3.1)
-Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (11.0.2.54)
-Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (10.3.2.106)
-Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (11.4.5.107)
-Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.0.106)
-Requirement already satisfied: nvidia-nccl-cu12==2.18.1 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (2.18.1)
-Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
-Requirement already satisfied: triton==2.1.0 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (2.1.0)
-Requirement already satisfied: nvidia-nvjitlink-cu12 in /home/u131168/.local/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch->-r requirements.txt (line 2)) (12.2.140)
-Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (2023.10.3)
-Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.14.1)
-Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.4.0)
-Requirement already satisfied: psutil in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (5.9.0)
-Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (0.23.0)
-Requirement already satisfied: responses<0.19 in /home/u131168/.local/lib/python3.9/site-packages (from evaluate->-r requirements.txt (line 6)) (0.18.0)
-Requirement already satisfied: click in /home/u131168/.local/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (8.1.7)
-Requirement already satisfied: joblib in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (1.2.0)
-Requirement already satisfied: absl-py in /home/u131168/.local/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (2.0.0)
-Requirement already satisfied: six>=1.14.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.16.0)
-Requirement already satisfied: attrs>=17.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (23.1.0)
-Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (3.1.0)
-Requirement already satisfied: multidict<7.0,>=4.5 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (6.0.4)
-Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (4.0.3)
-Requirement already satisfied: yarl<2.0,>=1.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.9.2)
-Requirement already satisfied: frozenlist>=1.1.1 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.4.0)
-Requirement already satisfied: aiosignal>=1.1.2 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.3.1)
-Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (3.4)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2.0.3)
-Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2023.7.22)
-Requirement already satisfied: MarkupSafe>=2.0 in /home/u131168/.local/lib/python3.9/site-packages (from jinja2->torch->-r requirements.txt (line 2)) (2.1.3)
-Requirement already satisfied: python-dateutil>=2.8.2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2.8.2)
-Requirement already satisfied: pytz>=2020.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
-Requirement already satisfied: tzdata>=2022.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
-Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch->-r requirements.txt (line 2)) (1.3.0)
-Defaulting to user installation because normal site-packages is not writeable
-Looking in links: https://developer.intel.com/ipex-whl-stable-cpu
-Requirement already satisfied: oneccl_bind_pt in /home/u131168/.local/lib/python3.9/site-packages (2.0.0+cpu)
-Defaulting to user installation because normal site-packages is not writeable
-Collecting git+https://github.com/huggingface/transformers
-  Cloning https://github.com/huggingface/transformers to /tmp/pip-req-build-5vy5gx7k
-  Running command git clone --filter=blob:none --quiet https://github.com/huggingface/transformers /tmp/pip-req-build-5vy5gx7k
-  Resolved https://github.com/huggingface/transformers to commit ef42cb62744e2be04f5b41b7e36dd1d609734675
-  Installing build dependencies: started
-  Installing build dependencies: finished with status 'done'
-  Getting requirements to build wheel: started
-  Getting requirements to build wheel: finished with status 'done'
-  Preparing metadata (pyproject.toml): started
-  Preparing metadata (pyproject.toml): finished with status 'done'
-Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (3.12.4)
-Requirement already satisfied: huggingface-hub<1.0,>=0.16.4 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.17.3)
-Requirement already satisfied: numpy>=1.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (1.24.3)
-Requirement already satisfied: packaging>=20.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (23.1)
-Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (6.0)
-Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2023.10.3)
-Requirement already satisfied: requests in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2.31.0)
-Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.14.1)
-Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.4.0)
-Requirement already satisfied: tqdm>=4.27 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (4.65.0)
-Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (2023.6.0)
-Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (4.6.3)
-Requirement already satisfied: charset-normalizer<4,>=2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.1.0)
-Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.4)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (2.0.3)
-Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (2023.7.22)
-/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20900
-10/17/2023 22:54:55 - WARNING - __main__ - Process rank: 0, device: cpu, n_gpu: 0distributed training: True, 16-bits training: False
-10/17/2023 22:54:55 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
-_n_gpu=0,
-adafactor=False,
-adam_beta1=0.9,
-adam_beta2=0.999,
-adam_epsilon=1e-08,
-auto_find_batch_size=False,
-bf16=True,
-bf16_full_eval=False,
-data_seed=None,
-dataloader_drop_last=False,
-dataloader_num_workers=0,
-dataloader_pin_memory=True,
-ddp_backend=None,
-ddp_broadcast_buffers=None,
-ddp_bucket_cap_mb=None,
-ddp_find_unused_parameters=None,
-ddp_timeout=1800,
-debug=[],
-deepspeed=None,
-disable_tqdm=False,
-dispatch_batches=None,
-do_eval=False,
-do_predict=False,
-do_train=True,
-eval_accumulation_steps=None,
-eval_delay=0,
-eval_steps=None,
-evaluation_strategy=no,
-fp16=False,
-fp16_backend=auto,
-fp16_full_eval=False,
-fp16_opt_level=O1,
-fsdp=[],
-fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
-fsdp_min_num_params=0,
-fsdp_transformer_layer_cls_to_wrap=None,
-full_determinism=False,
-generation_config=None,
-generation_max_length=None,
-generation_num_beams=None,
-gradient_accumulation_steps=1,
-gradient_checkpointing=False,
-greater_is_better=None,
-group_by_length=False,
-half_precision_backend=auto,
-hub_always_push=False,
-hub_model_id=None,
-hub_private_repo=False,
-hub_strategy=every_save,
-hub_token=<HUB_TOKEN>,
-ignore_data_skip=False,
-include_inputs_for_metrics=False,
-include_tokens_per_second=False,
-jit_mode_eval=False,
-label_names=None,
-label_smoothing_factor=0.0,
-learning_rate=1e-05,
-length_column_name=length,
-load_best_model_at_end=False,
-local_rank=0,
-log_level=passive,
-log_level_replica=warning,
-log_on_each_node=True,
-logging_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/runs/Oct17_22-54-55_idc-beta-batch-pvc-node-14,
-logging_first_step=False,
-logging_nan_inf_filter=True,
-logging_steps=10,
-logging_strategy=steps,
-lr_scheduler_type=linear,
-max_grad_norm=1.0,
-max_steps=-1,
-metric_for_best_model=None,
-mp_parameters=,
-no_cuda=False,
-num_train_epochs=1.0,
-optim=adamw_torch,
-optim_args=None,
-output_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/,
-overwrite_output_dir=True,
-past_index=-1,
-per_device_eval_batch_size=2,
-per_device_train_batch_size=2,
-predict_with_generate=False,
-prediction_loss_only=False,
-push_to_hub=False,
-push_to_hub_model_id=None,
-push_to_hub_organization=None,
-push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
-ray_scope=last,
-remove_unused_columns=True,
-report_to=[],
-resume_from_checkpoint=/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20900,
-run_name=/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/,
-save_on_each_node=False,
-save_safetensors=False,
-save_steps=100,
-save_strategy=steps,
-save_total_limit=2,
-seed=42,
-skip_memory_metrics=True,
-sortish_sampler=False,
-tf32=None,
-torch_compile=False,
-torch_compile_backend=None,
-torch_compile_mode=None,
-torchdynamo=None,
-tpu_metrics_debug=False,
-tpu_num_cores=None,
-use_cpu=False,
-use_ipex=False,
-use_legacy_prediction_loop=False,
-use_mps_device=False,
-warmup_ratio=0.03,
-warmup_steps=0,
-weight_decay=0.0,
-)
-/home/u131168/.local/lib/python3.9/site-packages/datasets/load.py:2089: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
-You can remove this warning by passing 'token=None' instead.
-  warnings.warn(
-Using custom data configuration default-811e5d4ae3966906
-10/17/2023 22:54:55 - INFO - datasets.builder - Using custom data configuration default-811e5d4ae3966906
-Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
-10/17/2023 22:54:55 - INFO - datasets.info - Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
-Overwrite dataset info from restored data version if exists.
-10/17/2023 22:54:55 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
-Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
-10/17/2023 22:54:55 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
-Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
-10/17/2023 22:54:55 - INFO - datasets.builder - Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
-Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
-10/17/2023 22:54:55 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
-[INFO|tokenization_utils_base.py:2053] 2023-10-17 22:54:57,086 >> loading file spiece.model from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/spiece.model
-[INFO|tokenization_utils_base.py:2053] 2023-10-17 22:54:57,086 >> loading file tokenizer.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/tokenizer.json
-[INFO|tokenization_utils_base.py:2053] 2023-10-17 22:54:57,086 >> loading file added_tokens.json from cache at None
-[INFO|tokenization_utils_base.py:2053] 2023-10-17 22:54:57,086 >> loading file special_tokens_map.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/special_tokens_map.json
-[INFO|tokenization_utils_base.py:2053] 2023-10-17 22:54:57,086 >> loading file tokenizer_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/tokenizer_config.json
-Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-2354c4cd0981b741.arrow
-10/17/2023 22:54:58 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-811e5d4ae3966906/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-2354c4cd0981b741.arrow
-[INFO|configuration_utils.py:716] 2023-10-17 22:54:59,099 >> loading configuration file config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/config.json
-[INFO|configuration_utils.py:776] 2023-10-17 22:54:59,114 >> Model config T5Config {
-  "_name_or_path": "google/flan-t5-xxl",
-  "architectures": [
-    "T5ForConditionalGeneration"
-  ],
-  "classifier_dropout": 0.0,
-  "d_ff": 10240,
-  "d_kv": 64,
-  "d_model": 4096,
-  "decoder_start_token_id": 0,
-  "dense_act_fn": "gelu_new",
-  "dropout_rate": 0.1,
-  "eos_token_id": 1,
-  "feed_forward_proj": "gated-gelu",
-  "initializer_factor": 1.0,
-  "is_encoder_decoder": true,
-  "is_gated_act": true,
-  "layer_norm_epsilon": 1e-06,
-  "model_type": "t5",
-  "num_decoder_layers": 24,
-  "num_heads": 64,
-  "num_layers": 24,
-  "output_past": true,
-  "pad_token_id": 0,
-  "relative_attention_max_distance": 128,
-  "relative_attention_num_buckets": 32,
-  "tie_word_embeddings": false,
-  "torch_dtype": "float32",
-  "transformers_version": "4.35.0.dev0",
-  "use_cache": true,
-  "vocab_size": 32128
-}
-
-[INFO|modeling_utils.py:2995] 2023-10-17 22:54:59,185 >> loading weights file model.safetensors from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/model.safetensors.index.json
-[INFO|configuration_utils.py:789] 2023-10-17 22:54:59,201 >> Generate config GenerationConfig {
-  "decoder_start_token_id": 0,
-  "eos_token_id": 1,
-  "pad_token_id": 0
-}
-
-Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:18<01:13, 18.33s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:36<00:54, 18.10s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:55<00:37, 18.52s/it]Loading checkpoint shards:  80%|████████  | 4/5 [01:15<00:19, 19.05s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:26<00:00, 16.39s/it]Loading checkpoint shards: 100%|██████████| 5/5 [01:26<00:00, 17.37s/it]
-[INFO|modeling_utils.py:3779] 2023-10-17 22:57:12,463 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
-
-[INFO|modeling_utils.py:3787] 2023-10-17 22:57:12,463 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at google/flan-t5-xxl.
-If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
-[INFO|configuration_utils.py:749] 2023-10-17 22:57:12,561 >> loading configuration file generation_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xxl/snapshots/ae7c9136adc7555eeccc78cdd960dfd60fb346ce/generation_config.json
-[INFO|configuration_utils.py:789] 2023-10-17 22:57:12,561 >> Generate config GenerationConfig {
-  "decoder_start_token_id": 0,
-  "eos_token_id": 1,
-  "pad_token_id": 0
-}
-
-[INFO|modeling_utils.py:1619] 2023-10-17 22:57:12,569 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 32100. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
-[INFO|trainer.py:584] 2023-10-17 22:57:30,468 >> Using cpu_amp half precision backend
-[INFO|trainer.py:2008] 2023-10-17 22:57:30,474 >> Loading model from /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20900.
-[INFO|trainer.py:1669] 2023-10-17 22:57:30,792 >> ***** Running training *****
-[INFO|trainer.py:1670] 2023-10-17 22:57:30,792 >>   Num examples = 395,082
-[INFO|trainer.py:1671] 2023-10-17 22:57:30,792 >>   Num Epochs = 1
-[INFO|trainer.py:1672] 2023-10-17 22:57:30,792 >>   Instantaneous batch size per device = 2
-[INFO|trainer.py:1675] 2023-10-17 22:57:30,792 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
-[INFO|trainer.py:1676] 2023-10-17 22:57:30,792 >>   Gradient Accumulation steps = 1
-[INFO|trainer.py:1677] 2023-10-17 22:57:30,792 >>   Total optimization steps = 197,541
-[INFO|trainer.py:1678] 2023-10-17 22:57:30,795 >>   Number of trainable parameters = 9,437,184
-trainable params: 9,437,184 || all params: 11,144,540,160 || trainable%: 0.08467988687296363
-  0%|          | 0/197541 [00:00<?, ?it/s][INFO|trainer.py:2244] 2023-10-17 22:57:30,800 >> Didn't find an RNG file, if you are resuming a training that was launched in a distributed fashion, reproducibility is not guaranteed.
-[WARNING|logging.py:316] 2023-10-17 22:57:30,819 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
-  0%|          | 1/197541 [00:15<876:37:24, 15.98s/it]  0%|          | 2/197541 [00:30<844:22:10, 15.39s/it]  0%|          | 3/197541 [00:37<612:46:26, 11.17s/it]  0%|          | 4/197541 [00:44<541:18:14,  9.86s/it]  0%|          | 5/197541 [00:57<592:42:18, 10.80s/it]  0%|          | 6/197541 [01:11<658:33:13, 12.00s/it]  0%|          | 7/197541 [01:26<705:02:43, 12.85s/it]  0%|          | 8/197541 [01:37<676:40:58, 12.33s/it]  0%|          | 9/197541 [01:48<655:13:43, 11.94s/it]  0%|          | 10/197541 [01:59<635:43:47, 11.59s/it]                                                         0%|          | 10/197541 [01:59<635:43:47, 11.59s/it]  0%|          | 11/197541 [02:10<634:45:05, 11.57s/it]  0%|          | 12/197541 [02:20<602:07:17, 10.97s/it]  0%|          | 13/197541 [02:32<621:30:29, 11.33s/it]  0%|          | 14/197541 [02:43<616:20:35, 11.23s/it]  0%|          | 15/197541 [02:55<629:27:31, 11.47s/it]  0%|          | 16/197541 [03:08<643:55:03, 11.74s/it]  0%|          | 17/197541 [03:19<640:49:50, 11.68s/it]  0%|          | 18/197541 [03:31<648:50:20, 11.83s/it]  0%|          | 19/197541 [03:41<613:02:35, 11.17s/it]  0%|          | 20/197541 [03:50<584:38:28, 10.66s/it]                                                         0%|          | 20/197541 [03:50<584:38:28, 10.66s/it]  0%|          | 21/197541 [04:00<570:01:22, 10.39s/it]  0%|          | 22/197541 [04:10<558:54:36, 10.19s/it]  0%|          | 23/197541 [04:19<544:56:26,  9.93s/it]  0%|          | 24/197541 [04:31<568:28:44, 10.36s/it]  0%|          | 25/197541 [04:40<552:57:41, 10.08s/it]  0%|          | 26/197541 [04:44<453:36:28,  8.27s/it]  0%|          | 27/197541 [04:54<484:40:02,  8.83s/it]  0%|          | 28/197541 [05:00<426:11:22,  7.77s/it]  0%|          | 29/197541 [05:09<449:45:37,  8.20s/it]  0%|          | 30/197541 [05:20<503:02:30,  9.17s/it]                                                         0%|          | 30/197541 [05:20<503:02:30,  9.17s/it]  0%|          | 31/197541 [05:29<492:43:56,  8.98s/it]  0%|          | 32/197541 [05:38<502:54:15,  9.17s/it]  0%|          | 33/197541 [05:47<491:41:19,  8.96s/it]  0%|          | 34/197541 [05:52<425:39:22,  7.76s/it]  0%|          | 35/197541 [05:56<373:59:24,  6.82s/it]  0%|          | 36/197541 [06:01<341:28:26,  6.22s/it]  0%|          | 37/197541 [06:11<397:07:00,  7.24s/it]  0%|          | 38/197541 [06:21<440:53:18,  8.04s/it]  0%|          | 39/197541 [06:31<475:58:52,  8.68s/it]  0%|          | 40/197541 [06:37<431:22:41,  7.86s/it]                                                         0%|          | 40/197541 [06:37<431:22:41,  7.86s/it]  0%|          | 41/197541 [06:42<387:49:23,  7.07s/it]  0%|          | 42/197541 [06:49<388:10:54,  7.08s/it]  0%|          | 43/197541 [06:59<427:47:35,  7.80s/it]  0%|          | 44/197541 [07:06<419:02:51,  7.64s/it]  0%|          | 45/197541 [07:10<368:22:47,  6.71s/it]  0%|          | 46/197541 [07:20<416:23:57,  7.59s/it]  0%|          | 47/197541 [07:24<364:07:39,  6.64s/it]  0%|          | 48/197541 [07:28<315:13:05,  5.75s/it]  0%|          | 49/197541 [07:32<290:16:23,  5.29s/it]  0%|          | 50/197541 [07:42<359:21:59,  6.55s/it]                                                         0%|          | 50/197541 [07:42<359:21:59,  6.55s/it]  0%|          | 51/197541 [07:51<405:37:53,  7.39s/it]  0%|          | 52/197541 [07:54<334:27:16,  6.10s/it]  0%|          | 53/197541 [08:03<380:35:56,  6.94s/it]  0%|          | 54/197541 [08:12<414:56:07,  7.56s/it]  0%|          | 55/197541 [08:15<342:38:22,  6.25s/it]  0%|          | 56/197541 [08:26<416:22:05,  7.59s/it]  0%|          | 57/197541 [08:35<431:09:04,  7.86s/it]  0%|          | 58/197541 [08:38<365:27:28,  6.66s/it]  0%|          | 59/197541 [08:42<313:25:30,  5.71s/it]  0%|          | 60/197541 [08:49<329:49:06,  6.01s/it]                                                         0%|          | 60/197541 [08:49<329:49:06,  6.01s/it]  0%|          | 61/197541 [08:53<308:54:40,  5.63s/it]  0%|          | 62/197541 [09:02<364:20:29,  6.64s/it]  0%|          | 63/197541 [09:05<300:00:00,  5.47s/it]  0%|          | 64/197541 [09:10<285:51:20,  5.21s/it]  0%|          | 65/197541 [09:14<276:34:03,  5.04s/it]  0%|          | 66/197541 [09:18<244:58:55,  4.47s/it]  0%|          | 67/197541 [09:24<280:09:03,  5.11s/it]  0%|          | 68/197541 [09:28<255:10:15,  4.65s/it]  0%|          | 69/197541 [09:31<230:39:20,  4.20s/it]  0%|          | 70/197541 [09:42<339:53:41,  6.20s/it]                                                         0%|          | 70/197541 [09:42<339:53:41,  6.20s/it]  0%|          | 71/197541 [09:48<340:54:57,  6.22s/it]  0%|          | 72/197541 [09:57<378:57:03,  6.91s/it]  0%|          | 73/197541 [10:06<416:34:34,  7.59s/it]  0%|          | 74/197541 [10:14<429:34:32,  7.83s/it]  0%|          | 75/197541 [10:18<362:18:54,  6.61s/it]  0%|          | 76/197541 [10:25<366:34:46,  6.68s/it]  0%|          | 77/197541 [10:34<407:01:47,  7.42s/it]  0%|          | 78/197541 [10:43<438:03:55,  7.99s/it]  0%|          | 79/197541 [10:48<383:23:59,  6.99s/it]  0%|          | 80/197541 [10:58<430:20:40,  7.85s/it]                                                         0%|          | 80/197541 [10:58<430:20:40,  7.85s/it]  0%|          | 81/197541 [11:01<354:44:38,  6.47s/it]  0%|          | 82/197541 [11:07<351:01:26,  6.40s/it]  0%|          | 83/197541 [11:16<396:14:42,  7.22s/it]  0%|          | 84/197541 [11:26<434:18:49,  7.92s/it]  0%|          | 85/197541 [11:29<356:54:50,  6.51s/it]  0%|          | 86/197541 [11:33<310:41:16,  5.66s/it]  0%|          | 87/197541 [11:41<354:59:09,  6.47s/it]  0%|          | 88/197541 [11:48<361:15:54,  6.59s/it]  0%|          | 89/197541 [11:58<409:43:46,  7.47s/it]  0%|          | 90/197541 [12:07<441:12:29,  8.04s/it]                                                         0%|          | 90/197541 [12:07<441:12:29,  8.04s/it]  0%|          | 91/197541 [12:11<380:04:58,  6.93s/it]  0%|          | 92/197541 [12:15<320:37:37,  5.85s/it]  0%|          | 93/197541 [12:26<406:06:03,  7.40s/it]  0%|          | 94/197541 [12:35<442:13:51,  8.06s/it]  0%|          | 95/197541 [12:45<474:14:33,  8.65s/it]  0%|          | 96/197541 [12:54<477:16:46,  8.70s/it]  0%|          | 97/197541 [13:04<492:24:06,  8.98s/it]  0%|          | 98/197541 [13:13<500:31:11,  9.13s/it]  0%|          | 99/197541 [13:23<511:09:35,  9.32s/it]  0%|          | 100/197541 [13:28<446:05:11,  8.13s/it]                                                          0%|          | 100/197541 [13:28<446:05:11,  8.13s/it][INFO|trainer.py:2806] 2023-10-17 23:10:59,572 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-100
-[INFO|trainer.py:2893] 2023-10-17 23:11:00,920 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20700] due to args.save_total_limit
-[INFO|trainer.py:2893] 2023-10-17 23:11:01,029 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20800] due to args.save_total_limit
-  0%|          | 101/197541 [13:41<529:44:16,  9.66s/it]  0%|          | 102/197541 [13:51<530:19:36,  9.67s/it]  0%|          | 103/197541 [14:02<551:31:05, 10.06s/it]  0%|          | 104/197541 [14:06<455:41:49,  8.31s/it]  0%|          | 105/197541 [14:12<410:15:40,  7.48s/it]  0%|          | 106/197541 [14:21<442:32:06,  8.07s/it]  0%|          | 107/197541 [14:31<463:07:42,  8.44s/it]  0%|          | 108/197541 [14:36<408:54:51,  7.46s/it]  0%|          | 109/197541 [14:47<474:22:47,  8.65s/it]  0%|          | 110/197541 [14:57<488:40:48,  8.91s/it]                                                          0%|          | 110/197541 [14:57<488:40:48,  8.91s/it]  0%|          | 111/197541 [15:05<483:13:26,  8.81s/it]  0%|          | 112/197541 [15:16<519:50:39,  9.48s/it]  0%|          | 113/197541 [15:21<432:50:25,  7.89s/it]  0%|          | 114/197541 [15:30<460:05:46,  8.39s/it]  0%|          | 115/197541 [15:40<478:39:32,  8.73s/it]  0%|          | 116/197541 [15:51<522:17:04,  9.52s/it]  0%|          | 117/197541 [15:58<480:03:18,  8.75s/it]  0%|          | 118/197541 [16:07<485:43:11,  8.86s/it]  0%|          | 119/197541 [16:17<498:58:22,  9.10s/it]  0%|          | 120/197541 [16:22<434:46:42,  7.93s/it]                                                          0%|          | 120/197541 [16:22<434:46:42,  7.93s/it]  0%|          | 121/197541 [16:29<418:22:31,  7.63s/it]  0%|          | 122/197541 [16:38<438:28:52,  8.00s/it]  0%|          | 123/197541 [16:49<495:25:01,  9.03s/it]  0%|          | 124/197541 [16:53<410:51:50,  7.49s/it]  0%|          | 125/197541 [16:56<331:38:11,  6.05s/it]  0%|          | 126/197541 [17:05<383:16:19,  6.99s/it]  0%|          | 127/197541 [17:14<422:46:59,  7.71s/it]  0%|          | 128/197541 [17:24<454:21:59,  8.29s/it]  0%|          | 129/197541 [17:29<399:03:48,  7.28s/it]  0%|          | 130/197541 [17:36<391:48:32,  7.15s/it]                                                          0%|          | 130/197541 [17:36<391:48:32,  7.15s/it]  0%|          | 131/197541 [17:39<334:48:51,  6.11s/it]  0%|          | 132/197541 [17:45<320:06:17,  5.84s/it]  0%|          | 133/197541 [17:48<284:40:57,  5.19s/it]  0%|          | 134/197541 [17:53<280:49:40,  5.12s/it]  0%|          | 135/197541 [17:57<253:09:42,  4.62s/it]  0%|          | 136/197541 [18:08<366:41:44,  6.69s/it]  0%|          | 137/197541 [18:13<336:02:59,  6.13s/it]  0%|          | 138/197541 [18:18<322:49:24,  5.89s/it]  0%|          | 139/197541 [18:28<380:30:34,  6.94s/it]  0%|          | 140/197541 [18:31<311:29:56,  5.68s/it]                                                          0%|          | 140/197541 [18:31<311:29:56,  5.68s/it]  0%|          | 141/197541 [18:40<373:57:14,  6.82s/it]  0%|          | 142/197541 [18:51<445:25:16,  8.12s/it]  0%|          | 143/197541 [19:00<464:27:03,  8.47s/it]  0%|          | 144/197541 [19:06<414:29:24,  7.56s/it]  0%|          | 145/197541 [19:15<435:58:52,  7.95s/it]  0%|          | 146/197541 [19:26<490:09:13,  8.94s/it]  0%|          | 147/197541 [19:37<527:36:54,  9.62s/it]  0%|          | 148/197541 [19:47<526:26:46,  9.60s/it]  0%|          | 149/197541 [19:57<532:19:43,  9.71s/it]  0%|          | 150/197541 [20:06<524:22:56,  9.56s/it]                                                          0%|          | 150/197541 [20:06<524:22:56,  9.56s/it]  0%|          | 151/197541 [20:10<427:38:43,  7.80s/it]  0%|          | 152/197541 [20:19<452:13:13,  8.25s/it]  0%|          | 153/197541 [20:28<473:08:50,  8.63s/it]  0%|          | 154/197541 [20:38<487:56:28,  8.90s/it]  0%|          | 155/197541 [20:47<493:15:59,  9.00s/it]  0%|          | 156/197541 [20:57<498:52:42,  9.10s/it]  0%|          | 157/197541 [21:00<410:29:49,  7.49s/it]  0%|          | 158/197541 [21:03<331:54:25,  6.05s/it]  0%|          | 159/197541 [21:08<313:33:38,  5.72s/it]  0%|          | 160/197541 [21:18<380:23:46,  6.94s/it]                                                          0%|          | 160/197541 [21:18<380:23:46,  6.94s/it]  0%|          | 161/197541 [21:29<454:17:16,  8.29s/it]  0%|          | 162/197541 [21:32<372:29:33,  6.79s/it]  0%|          | 163/197541 [21:42<415:43:09,  7.58s/it]  0%|          | 164/197541 [21:46<361:21:18,  6.59s/it]  0%|          | 165/197541 [21:56<417:36:33,  7.62s/it]  0%|          | 166/197541 [22:06<451:37:50,  8.24s/it]  0%|          | 167/197541 [22:16<477:01:02,  8.70s/it]  0%|          | 168/197541 [22:25<488:41:11,  8.91s/it]  0%|          | 169/197541 [22:35<504:39:17,  9.20s/it]  0%|          | 170/197541 [22:45<516:44:07,  9.43s/it]                                                          0%|          | 170/197541 [22:45<516:44:07,  9.43s/it]  0%|          | 171/197541 [22:54<519:53:26,  9.48s/it]  0%|          | 172/197541 [23:01<478:25:41,  8.73s/it]  0%|          | 173/197541 [23:11<497:00:47,  9.07s/it]  0%|          | 174/197541 [23:21<504:28:20,  9.20s/it]  0%|          | 175/197541 [23:24<406:44:14,  7.42s/it]  0%|          | 176/197541 [23:33<438:44:55,  8.00s/it]  0%|          | 177/197541 [23:38<380:40:17,  6.94s/it]  0%|          | 178/197541 [23:47<422:41:30,  7.71s/it]  0%|          | 179/197541 [23:57<452:22:27,  8.25s/it]  0%|          | 180/197541 [24:01<384:18:28,  7.01s/it]                                                          0%|          | 180/197541 [24:01<384:18:28,  7.01s/it]  0%|          | 181/197541 [24:12<457:57:12,  8.35s/it]  0%|          | 182/197541 [24:22<481:16:03,  8.78s/it]  0%|          | 183/197541 [24:32<501:39:08,  9.15s/it]  0%|          | 184/197541 [24:43<534:43:19,  9.75s/it]  0%|          | 185/197541 [24:52<517:42:18,  9.44s/it]  0%|          | 186/197541 [25:03<548:32:56, 10.01s/it]  0%|          | 187/197541 [25:13<543:50:35,  9.92s/it]  0%|          | 188/197541 [25:23<536:32:46,  9.79s/it]  0%|          | 189/197541 [25:26<429:14:39,  7.83s/it]  0%|          | 190/197541 [25:29<354:45:44,  6.47s/it]                                                          0%|          | 190/197541 [25:29<354:45:44,  6.47s/it]  0%|          | 191/197541 [25:33<310:27:57,  5.66s/it]  0%|          | 192/197541 [25:37<287:11:10,  5.24s/it]  0%|          | 193/197541 [25:41<264:18:23,  4.82s/it]  0%|          | 194/197541 [25:51<347:11:29,  6.33s/it]  0%|          | 195/197541 [26:00<386:24:21,  7.05s/it]  0%|          | 196/197541 [26:08<414:37:19,  7.56s/it]  0%|          | 197/197541 [26:20<479:37:47,  8.75s/it]  0%|          | 198/197541 [26:31<520:17:59,  9.49s/it]  0%|          | 199/197541 [26:41<520:23:37,  9.49s/it]  0%|          | 200/197541 [26:50<522:48:54,  9.54s/it]                                                          0%|          | 200/197541 [26:50<522:48:54,  9.54s/it][INFO|trainer.py:2806] 2023-10-17 23:24:21,638 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-200
-[INFO|trainer.py:2893] 2023-10-17 23:24:22,788 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-20900] due to args.save_total_limit
-  0%|          | 201/197541 [26:56<451:16:14,  8.23s/it]  0%|          | 202/197541 [27:00<386:47:44,  7.06s/it]  0%|          | 203/197541 [27:09<428:57:21,  7.83s/it]  0%|          | 204/197541 [27:13<362:08:59,  6.61s/it]  0%|          | 205/197541 [27:19<343:11:44,  6.26s/it]  0%|          | 206/197541 [27:23<308:53:27,  5.64s/it]  0%|          | 207/197541 [27:32<369:33:11,  6.74s/it]  0%|          | 208/197541 [27:36<321:47:30,  5.87s/it]  0%|          | 209/197541 [27:47<412:35:21,  7.53s/it]  0%|          | 210/197541 [27:57<450:32:42,  8.22s/it]                                                          0%|          | 210/197541 [27:57<450:32:42,  8.22s/it]  0%|          | 211/197541 [28:07<473:03:04,  8.63s/it]  0%|          | 212/197541 [28:11<396:39:17,  7.24s/it]  0%|          | 213/197541 [28:16<370:19:18,  6.76s/it]  0%|          | 214/197541 [28:20<325:19:26,  5.94s/it]  0%|          | 215/197541 [28:30<381:26:51,  6.96s/it]  0%|          | 216/197541 [28:39<422:05:09,  7.70s/it]  0%|          | 217/197541 [28:44<366:53:51,  6.69s/it]  0%|          | 218/197541 [28:52<402:23:46,  7.34s/it]  0%|          | 219/197541 [28:58<369:12:14,  6.74s/it]  0%|          | 220/197541 [29:07<414:46:32,  7.57s/it]                                                          0%|          | 220/197541 [29:07<414:46:32,  7.57s/it]  0%|          | 221/197541 [29:13<378:09:31,  6.90s/it]  0%|          | 222/197541 [29:18<354:24:53,  6.47s/it]  0%|          | 223/197541 [29:27<390:14:21,  7.12s/it]  0%|          | 224/197541 [29:36<427:20:45,  7.80s/it]  0%|          | 225/197541 [29:45<447:53:55,  8.17s/it]  0%|          | 226/197541 [29:55<474:25:15,  8.66s/it]  0%|          | 227/197541 [29:58<378:12:30,  6.90s/it]  0%|          | 228/197541 [30:02<330:57:37,  6.04s/it]  0%|          | 229/197541 [30:05<291:46:37,  5.32s/it]  0%|          | 230/197541 [30:15<369:11:16,  6.74s/it]                                                          0%|          | 230/197541 [30:15<369:11:16,  6.74s/it]  0%|          | 231/197541 [30:20<327:52:01,  5.98s/it]  0%|          | 232/197541 [30:29<388:40:04,  7.09s/it]  0%|          | 233/197541 [30:39<426:02:37,  7.77s/it]  0%|          | 234/197541 [30:48<453:29:25,  8.27s/it]  0%|          | 235/197541 [30:58<472:52:06,  8.63s/it]  0%|          | 236/197541 [31:07<486:12:10,  8.87s/it]  0%|          | 237/197541 [31:18<525:37:49,  9.59s/it]  0%|          | 238/197541 [31:28<523:23:57,  9.55s/it]  0%|          | 239/197541 [31:32<429:59:31,  7.85s/it]  0%|          | 240/197541 [31:40<446:46:42,  8.15s/it]                                                          0%|          | 240/197541 [31:41<446:46:42,  8.15s/it]  0%|          | 241/197541 [31:50<470:15:39,  8.58s/it]  0%|          | 242/197541 [32:00<489:00:20,  8.92s/it]  0%|          | 243/197541 [32:10<503:19:33,  9.18s/it]  0%|          | 244/197541 [32:19<506:38:22,  9.24s/it]  0%|          | 245/197541 [32:23<421:14:09,  7.69s/it]  0%|          | 246/197541 [32:32<438:35:32,  8.00s/it]  0%|          | 247/197541 [32:41<465:51:20,  8.50s/it]  0%|          | 248/197541 [32:46<407:52:33,  7.44s/it]  0%|          | 249/197541 [32:53<399:50:10,  7.30s/it]  0%|          | 250/197541 [33:03<436:41:26,  7.97s/it]                                                          0%|          | 250/197541 [33:03<436:41:26,  7.97s/it]  0%|          | 251/197541 [33:12<462:45:07,  8.44s/it]  0%|          | 252/197541 [33:23<499:52:55,  9.12s/it]  0%|          | 253/197541 [33:33<505:27:14,  9.22s/it]  0%|          | 254/197541 [33:38<443:50:03,  8.10s/it]  0%|          | 255/197541 [33:48<465:29:06,  8.49s/it]  0%|          | 256/197541 [33:57<481:51:20,  8.79s/it]  0%|          | 257/197541 [34:08<516:07:50,  9.42s/it]  0%|          | 258/197541 [34:18<523:21:58,  9.55s/it]  0%|          | 259/197541 [34:21<421:40:32,  7.69s/it]  0%|          | 260/197541 [34:30<435:54:27,  7.95s/it]                                                          0%|          | 260/197541 [34:30<435:54:27,  7.95s/it]  0%|          | 261/197541 [34:33<367:03:31,  6.70s/it]  0%|          | 262/197541 [34:45<445:18:57,  8.13s/it]  0%|          | 263/197541 [34:50<403:55:43,  7.37s/it]  0%|          | 264/197541 [35:00<440:32:40,  8.04s/it]  0%|          | 265/197541 [35:10<468:11:24,  8.54s/it]  0%|          | 266/197541 [35:13<383:16:39,  6.99s/it]  0%|          | 267/197541 [35:25<455:09:27,  8.31s/it]  0%|          | 268/197541 [35:34<473:20:33,  8.64s/it]  0%|          | 269/197541 [35:38<392:00:59,  7.15s/it]  0%|          | 270/197541 [35:41<330:18:15,  6.03s/it]                                                          0%|          | 270/197541 [35:41<330:18:15,  6.03s/it]  0%|          | 271/197541 [35:50<370:53:58,  6.77s/it]  0%|          | 272/197541 [35:59<420:11:43,  7.67s/it]  0%|          | 273/197541 [36:09<451:18:03,  8.24s/it]  0%|          | 274/197541 [36:19<475:43:17,  8.68s/it]  0%|          | 275/197541 [36:30<521:42:26,  9.52s/it]  0%|          | 276/197541 [36:40<521:24:17,  9.52s/it]  0%|          | 277/197541 [36:49<521:56:36,  9.53s/it]  0%|          | 278/197541 [36:59<531:01:50,  9.69s/it]  0%|          | 279/197541 [37:02<425:31:30,  7.77s/it]  0%|          | 280/197541 [37:06<361:37:22,  6.60s/it]                                                          0%|          | 280/197541 [37:06<361:37:22,  6.60s/it]  0%|          | 281/197541 [37:10<314:55:24,  5.75s/it]  0%|          | 282/197541 [37:14<285:27:22,  5.21s/it]  0%|          | 283/197541 [37:24<357:29:37,  6.52s/it]  0%|          | 284/197541 [37:29<339:26:26,  6.19s/it]  0%|          | 285/197541 [37:38<392:02:39,  7.15s/it]  0%|          | 286/197541 [37:47<418:40:19,  7.64s/it]  0%|          | 287/197541 [37:51<356:27:04,  6.51s/it]  0%|          | 288/197541 [38:03<437:41:03,  7.99s/it]  0%|          | 289/197541 [38:08<391:04:57,  7.14s/it]  0%|          | 290/197541 [38:11<320:54:57,  5.86s/it]                                                          0%|          | 290/197541 [38:11<320:54:57,  5.86s/it]  0%|          | 291/197541 [38:20<375:06:59,  6.85s/it]  0%|          | 292/197541 [38:22<306:29:15,  5.59s/it]  0%|          | 293/197541 [38:28<300:41:12,  5.49s/it]  0%|          | 294/197541 [38:37<366:07:47,  6.68s/it]  0%|          | 295/197541 [38:48<439:21:14,  8.02s/it]  0%|          | 296/197541 [38:59<480:25:53,  8.77s/it]  0%|          | 297/197541 [39:08<492:20:50,  8.99s/it]  0%|          | 298/197541 [39:20<530:34:10,  9.68s/it]  0%|          | 299/197541 [39:30<548:50:20, 10.02s/it]  0%|          | 300/197541 [39:40<541:54:06,  9.89s/it]                                                          0%|          | 300/197541 [39:40<541:54:06,  9.89s/it][INFO|trainer.py:2806] 2023-10-17 23:37:11,286 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-300
-[INFO|trainer.py:2893] 2023-10-17 23:37:11,732 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-100] due to args.save_total_limit
-  0%|          | 301/197541 [39:51<555:11:24, 10.13s/it]  0%|          | 302/197541 [40:00<545:47:11,  9.96s/it]  0%|          | 303/197541 [40:03<431:09:22,  7.87s/it]  0%|          | 304/197541 [40:13<458:17:55,  8.36s/it]  0%|          | 305/197541 [40:23<481:39:27,  8.79s/it]  0%|          | 306/197541 [40:32<498:39:57,  9.10s/it]  0%|          | 307/197541 [40:36<412:59:14,  7.54s/it]  0%|          | 308/197541 [40:46<445:13:11,  8.13s/it]  0%|          | 309/197541 [40:55<470:24:09,  8.59s/it]  0%|          | 310/197541 [41:08<537:41:02,  9.81s/it]                                                          0%|          | 310/197541 [41:08<537:41:02,  9.81s/it]  0%|          | 311/197541 [41:19<558:10:29, 10.19s/it]  0%|          | 312/197541 [41:29<555:01:47, 10.13s/it]  0%|          | 313/197541 [41:33<452:37:40,  8.26s/it]  0%|          | 314/197541 [41:43<475:33:48,  8.68s/it]  0%|          | 315/197541 [41:47<398:58:05,  7.28s/it]  0%|          | 316/197541 [41:56<436:01:57,  7.96s/it]  0%|          | 317/197541 [42:06<460:18:24,  8.40s/it]  0%|          | 318/197541 [42:16<483:23:41,  8.82s/it]  0%|          | 319/197541 [42:25<496:09:30,  9.06s/it]  0%|          | 320/197541 [42:35<505:15:45,  9.22s/it]                                                          0%|          | 320/197541 [42:35<505:15:45,  9.22s/it]  0%|          | 321/197541 [42:45<515:21:12,  9.41s/it]  0%|          | 322/197541 [42:53<503:30:55,  9.19s/it]  0%|          | 323/197541 [43:03<508:37:29,  9.28s/it]  0%|          | 324/197541 [43:12<511:54:23,  9.34s/it]  0%|          | 325/197541 [43:15<400:43:22,  7.31s/it]  0%|          | 326/197541 [43:18<341:00:40,  6.22s/it]  0%|          | 327/197541 [43:28<401:10:31,  7.32s/it]  0%|          | 328/197541 [43:37<427:08:18,  7.80s/it]  0%|          | 329/197541 [43:49<487:36:13,  8.90s/it]  0%|          | 330/197541 [43:59<503:11:11,  9.19s/it]                                                          0%|          | 330/197541 [43:59<503:11:11,  9.19s/it]  0%|          | 331/197541 [44:08<506:03:39,  9.24s/it]  0%|          | 332/197541 [44:13<442:56:53,  8.09s/it]  0%|          | 333/197541 [44:17<371:25:52,  6.78s/it]  0%|          | 334/197541 [44:29<448:10:16,  8.18s/it]  0%|          | 335/197541 [44:38<470:15:11,  8.58s/it]  0%|          | 336/197541 [44:45<441:38:52,  8.06s/it]  0%|          | 337/197541 [44:54<463:32:48,  8.46s/it]  0%|          | 338/197541 [45:04<481:10:39,  8.78s/it]  0%|          | 339/197541 [45:08<405:17:39,  7.40s/it]  0%|          | 340/197541 [45:12<344:58:53,  6.30s/it]                                                          0%|          | 340/197541 [45:12<344:58:53,  6.30s/it]  0%|          | 341/197541 [45:15<290:19:06,  5.30s/it]  0%|          | 342/197541 [45:25<379:19:44,  6.92s/it]  0%|          | 343/197541 [45:37<454:26:28,  8.30s/it]  0%|          | 344/197541 [45:48<502:20:27,  9.17s/it]  0%|          | 345/197541 [45:58<507:27:04,  9.26s/it]  0%|          | 346/197541 [46:02<418:58:56,  7.65s/it]  0%|          | 347/197541 [46:11<444:31:20,  8.12s/it]  0%|          | 348/197541 [46:21<472:49:46,  8.63s/it]  0%|          | 349/197541 [46:32<514:33:38,  9.39s/it]  0%|          | 350/197541 [46:41<517:13:37,  9.44s/it]                                                          0%|          | 350/197541 [46:41<517:13:37,  9.44s/it]  0%|          | 351/197541 [46:51<519:04:35,  9.48s/it]  0%|          | 352/197541 [47:00<516:59:19,  9.44s/it]  0%|          | 353/197541 [47:10<520:55:26,  9.51s/it]  0%|          | 354/197541 [47:19<520:49:18,  9.51s/it]  0%|          | 355/197541 [47:24<436:00:06,  7.96s/it]  0%|          | 356/197541 [47:33<453:01:59,  8.27s/it]  0%|          | 357/197541 [47:43<480:26:05,  8.77s/it]  0%|          | 358/197541 [47:53<504:24:23,  9.21s/it]  0%|          | 359/197541 [48:03<512:15:19,  9.35s/it]  0%|          | 360/197541 [48:08<447:19:37,  8.17s/it]                                                          0%|          | 360/197541 [48:08<447:19:37,  8.17s/it]  0%|          | 361/197541 [48:18<477:12:51,  8.71s/it]  0%|          | 362/197541 [48:26<474:03:27,  8.66s/it]  0%|          | 363/197541 [48:36<493:51:36,  9.02s/it]  0%|          | 364/197541 [48:46<503:09:11,  9.19s/it]  0%|          | 365/197541 [48:56<512:52:16,  9.36s/it]  0%|          | 366/197541 [49:07<543:33:03,  9.92s/it]  0%|          | 367/197541 [49:16<535:41:39,  9.78s/it]  0%|          | 368/197541 [49:21<446:36:11,  8.15s/it]  0%|          | 369/197541 [49:36<558:28:58, 10.20s/it]  0%|          | 370/197541 [49:44<530:56:49,  9.69s/it]                                                          0%|          | 370/197541 [49:44<530:56:49,  9.69s/it]  0%|          | 371/197541 [49:53<517:24:07,  9.45s/it]  0%|          | 372/197541 [50:02<501:15:45,  9.15s/it]  0%|          | 373/197541 [50:10<491:27:45,  8.97s/it]  0%|          | 374/197541 [50:13<391:59:50,  7.16s/it]  0%|          | 375/197541 [50:22<420:14:25,  7.67s/it]  0%|          | 376/197541 [50:25<345:59:45,  6.32s/it]  0%|          | 377/197541 [50:28<289:49:01,  5.29s/it]  0%|          | 378/197541 [50:31<253:48:47,  4.63s/it]  0%|          | 379/197541 [50:39<316:08:38,  5.77s/it]  0%|          | 380/197541 [50:43<273:50:51,  5.00s/it]                                                          0%|          | 380/197541 [50:43<273:50:51,  5.00s/it]  0%|          | 381/197541 [50:51<328:51:55,  6.00s/it]  0%|          | 382/197541 [50:54<278:15:13,  5.08s/it]  0%|          | 383/197541 [50:57<243:08:20,  4.44s/it]  0%|          | 384/197541 [51:00<228:56:25,  4.18s/it]  0%|          | 385/197541 [51:09<304:33:18,  5.56s/it]  0%|          | 386/197541 [51:13<274:13:36,  5.01s/it]  0%|          | 387/197541 [51:21<331:49:58,  6.06s/it]  0%|          | 388/197541 [51:30<369:45:39,  6.75s/it]  0%|          | 389/197541 [51:33<311:04:20,  5.68s/it]  0%|          | 390/197541 [51:41<354:06:09,  6.47s/it]                                                          0%|          | 390/197541 [51:41<354:06:09,  6.47s/it]  0%|          | 391/197541 [51:45<300:25:24,  5.49s/it]  0%|          | 392/197541 [51:47<253:46:09,  4.63s/it]  0%|          | 393/197541 [51:56<316:45:55,  5.78s/it]  0%|          | 394/197541 [52:04<361:38:59,  6.60s/it]  0%|          | 395/197541 [52:13<398:54:16,  7.28s/it]  0%|          | 396/197541 [52:21<416:18:50,  7.60s/it]  0%|          | 397/197541 [52:25<351:48:25,  6.42s/it]  0%|          | 398/197541 [52:33<375:14:16,  6.85s/it]  0%|          | 399/197541 [52:36<315:18:03,  5.76s/it]  0%|          | 400/197541 [52:44<349:22:26,  6.38s/it]                                                          0%|          | 400/197541 [52:44<349:22:26,  6.38s/it][INFO|trainer.py:2806] 2023-10-17 23:50:15,242 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-400
-[INFO|trainer.py:2893] 2023-10-17 23:50:16,486 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-200] due to args.save_total_limit
-  0%|          | 401/197541 [52:54<402:19:49,  7.35s/it]  0%|          | 402/197541 [53:02<417:58:19,  7.63s/it]  0%|          | 403/197541 [53:06<357:51:16,  6.53s/it]  0%|          | 404/197541 [53:09<295:24:00,  5.39s/it]  0%|          | 405/197541 [53:14<302:47:02,  5.53s/it]  0%|          | 406/197541 [53:17<262:17:35,  4.79s/it]  0%|          | 407/197541 [53:20<230:47:11,  4.21s/it]  0%|          | 408/197541 [53:23<212:30:37,  3.88s/it]  0%|          | 409/197541 [53:27<204:34:37,  3.74s/it]  0%|          | 410/197541 [53:35<281:02:33,  5.13s/it]                                                          0%|          | 410/197541 [53:35<281:02:33,  5.13s/it]  0%|          | 411/197541 [53:44<337:10:50,  6.16s/it]  0%|          | 412/197541 [53:47<289:35:02,  5.29s/it]  0%|          | 413/197541 [53:56<346:53:23,  6.33s/it]  0%|          | 414/197541 [54:04<380:45:27,  6.95s/it]  0%|          | 415/197541 [54:13<410:59:27,  7.51s/it]  0%|          | 416/197541 [54:21<418:29:27,  7.64s/it]  0%|          | 417/197541 [54:26<369:56:55,  6.76s/it]  0%|          | 418/197541 [54:36<429:25:37,  7.84s/it]  0%|          | 419/197541 [54:44<437:34:00,  7.99s/it]  0%|          | 420/197541 [54:53<443:43:21,  8.10s/it]                                                          0%|          | 420/197541 [54:53<443:43:21,  8.10s/it]  0%|          | 421/197541 [55:01<452:45:44,  8.27s/it]  0%|          | 422/197541 [55:10<454:35:49,  8.30s/it]  0%|          | 423/197541 [55:20<490:56:51,  8.97s/it]  0%|          | 424/197541 [55:26<440:45:55,  8.05s/it]  0%|          | 425/197541 [55:35<445:51:18,  8.14s/it]  0%|          | 426/197541 [55:43<449:24:12,  8.21s/it]  0%|          | 427/197541 [55:46<373:04:52,  6.81s/it]  0%|          | 428/197541 [55:52<358:00:01,  6.54s/it]  0%|          | 429/197541 [56:01<390:25:37,  7.13s/it]  0%|          | 430/197541 [56:06<356:38:29,  6.51s/it]                                                          0%|          | 430/197541 [56:06<356:38:29,  6.51s/it]  0%|          | 431/197541 [56:14<389:50:45,  7.12s/it]  0%|          | 432/197541 [56:19<350:25:21,  6.40s/it]  0%|          | 433/197541 [56:28<382:49:18,  6.99s/it]  0%|          | 434/197541 [56:36<406:17:13,  7.42s/it]  0%|          | 435/197541 [56:44<422:39:41,  7.72s/it]  0%|          | 436/197541 [56:49<371:43:57,  6.79s/it]  0%|          | 437/197541 [56:58<406:04:54,  7.42s/it]  0%|          | 438/197541 [57:01<338:53:39,  6.19s/it]  0%|          | 439/197541 [57:10<376:00:46,  6.87s/it]  0%|          | 440/197541 [57:14<341:09:41,  6.23s/it]                                                          0%|          | 440/197541 [57:14<341:09:41,  6.23s/it]  0%|          | 441/197541 [57:18<293:41:12,  5.36s/it]  0%|          | 442/197541 [57:22<278:16:26,  5.08s/it]  0%|          | 443/197541 [57:25<246:05:11,  4.49s/it]  0%|          | 444/197541 [57:34<314:30:52,  5.74s/it]  0%|          | 445/197541 [57:42<358:42:28,  6.55s/it]  0%|          | 446/197541 [57:46<303:57:53,  5.55s/it]  0%|          | 447/197541 [57:50<291:03:22,  5.32s/it]  0%|          | 448/197541 [57:59<350:17:58,  6.40s/it]  0%|          | 449/197541 [58:02<290:13:26,  5.30s/it]  0%|          | 450/197541 [58:12<369:57:11,  6.76s/it]                                                          0%|          | 450/197541 [58:12<369:57:11,  6.76s/it]  0%|          | 451/197541 [58:21<398:55:43,  7.29s/it]  0%|          | 452/197541 [58:24<333:45:28,  6.10s/it]  0%|          | 453/197541 [58:33<373:01:14,  6.81s/it]  0%|          | 454/197541 [58:43<433:57:19,  7.93s/it]  0%|          | 455/197541 [58:48<380:36:11,  6.95s/it]  0%|          | 456/197541 [58:58<437:18:00,  7.99s/it]  0%|          | 457/197541 [59:01<358:47:23,  6.55s/it]  0%|          | 458/197541 [59:04<300:08:16,  5.48s/it]  0%|          | 459/197541 [59:14<375:53:24,  6.87s/it]  0%|          | 460/197541 [59:18<316:41:21,  5.78s/it]                                                          0%|          | 460/197541 [59:18<316:41:21,  5.78s/it]  0%|          | 461/197541 [59:26<358:54:15,  6.56s/it]  0%|          | 462/197541 [59:34<386:59:19,  7.07s/it]  0%|          | 463/197541 [59:42<400:28:48,  7.32s/it]  0%|          | 464/197541 [59:51<416:33:31,  7.61s/it]  0%|          | 465/197541 [59:58<419:31:14,  7.66s/it]  0%|          | 466/197541 [1:00:07<429:28:49,  7.85s/it]  0%|          | 467/197541 [1:00:15<438:03:28,  8.00s/it]  0%|          | 468/197541 [1:00:18<360:13:09,  6.58s/it]  0%|          | 469/197541 [1:00:29<421:14:12,  7.69s/it]  0%|          | 470/197541 [1:00:31<343:35:45,  6.28s/it]                                                            0%|          | 470/197541 [1:00:31<343:35:45,  6.28s/it]  0%|          | 471/197541 [1:00:40<379:57:48,  6.94s/it]  0%|          | 472/197541 [1:00:43<317:57:19,  5.81s/it]  0%|          | 473/197541 [1:00:46<274:18:44,  5.01s/it]  0%|          | 474/197541 [1:00:49<243:45:49,  4.45s/it]  0%|          | 475/197541 [1:00:58<308:24:46,  5.63s/it]  0%|          | 476/197541 [1:01:06<343:19:05,  6.27s/it]  0%|          | 477/197541 [1:01:14<373:16:46,  6.82s/it]  0%|          | 478/197541 [1:01:17<313:48:22,  5.73s/it]  0%|          | 479/197541 [1:01:25<354:29:27,  6.48s/it]  0%|          | 480/197541 [1:01:34<389:28:27,  7.12s/it]                                                            0%|          | 480/197541 [1:01:34<389:28:27,  7.12s/it]  0%|          | 481/197541 [1:01:37<324:45:38,  5.93s/it]  0%|          | 482/197541 [1:01:40<273:47:21,  5.00s/it]  0%|          | 483/197541 [1:01:47<317:31:13,  5.80s/it]  0%|          | 484/197541 [1:01:52<296:57:17,  5.43s/it]  0%|          | 485/197541 [1:02:00<336:04:22,  6.14s/it]  0%|          | 486/197541 [1:02:03<286:00:04,  5.22s/it]  0%|          | 487/197541 [1:02:07<276:36:46,  5.05s/it]  0%|          | 488/197541 [1:02:12<269:14:46,  4.92s/it]  0%|          | 489/197541 [1:02:20<325:16:16,  5.94s/it]  0%|          | 490/197541 [1:02:28<357:28:56,  6.53s/it]                                                            0%|          | 490/197541 [1:02:28<357:28:56,  6.53s/it]  0%|          | 491/197541 [1:02:33<322:16:44,  5.89s/it]  0%|          | 492/197541 [1:02:41<369:00:57,  6.74s/it]  0%|          | 493/197541 [1:02:52<429:17:32,  7.84s/it]  0%|          | 494/197541 [1:03:00<437:28:12,  7.99s/it]  0%|          | 495/197541 [1:03:09<447:43:45,  8.18s/it]  0%|          | 496/197541 [1:03:17<455:54:15,  8.33s/it]  0%|          | 497/197541 [1:03:26<460:59:30,  8.42s/it]  0%|          | 498/197541 [1:03:35<460:55:21,  8.42s/it]  0%|          | 499/197541 [1:03:43<457:17:09,  8.35s/it]  0%|          | 500/197541 [1:03:45<364:08:10,  6.65s/it]                                                            0%|          | 500/197541 [1:03:45<364:08:10,  6.65s/it][INFO|trainer.py:2806] 2023-10-18 00:01:16,708 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-500
-[INFO|trainer.py:2893] 2023-10-18 00:01:17,182 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xxl_peft_ft_v1/checkpoint-300] due to args.save_total_limit
-  0%|          | 501/197541 [1:03:49<313:24:16,  5.73s/it]  0%|          | 502/197541 [1:03:56<332:46:38,  6.08s/it]  0%|          | 503/197541 [1:04:04<369:11:27,  6.75s/it]  0%|          | 504/197541 [1:04:12<393:58:18,  7.20s/it]  0%|          | 505/197541 [1:04:20<402:38:12,  7.36s/it]  0%|          | 506/197541 [1:04:23<325:09:55,  5.94s/it]  0%|          | 507/197541 [1:04:26<276:53:43,  5.06s/it]  0%|          | 508/197541 [1:04:30<267:09:26,  4.88s/it]  0%|          | 509/197541 [1:04:33<231:04:47,  4.22s/it]  0%|          | 510/197541 [1:04:41<298:42:51,  5.46s/it]                                                            0%|          | 510/197541 [1:04:41<298:42:51,  5.46s/it]  0%|          | 511/197541 [1:04:50<348:19:40,  6.36s/it]  0%|          | 512/197541 [1:04:54<319:23:51,  5.84s/it]  0%|          | 513/197541 [1:05:03<366:45:42,  6.70s/it]  0%|          | 514/197541 [1:05:12<394:53:29,  7.22s/it]  0%|          | 515/197541 [1:05:20<413:23:53,  7.55s/it]  0%|          | 516/197541 [1:05:28<426:35:07,  7.79s/it]  0%|          | 517/197541 [1:05:31<350:55:01,  6.41s/it]  0%|          | 518/197541 [1:05:36<319:38:53,  5.84s/it]  0%|          | 519/197541 [1:05:39<275:43:17,  5.04s/it]  0%|          | 520/197541 [1:05:42<236:29:40,  4.32s/it]                                                            0%|          | 520/197541 [1:05:42<236:29:40,  4.32s/it]  0%|          | 521/197541 [1:05:50<301:08:42,  5.50s/it]  0%|          | 522/197541 [1:05:53<267:37:27,  4.89s/it]  0%|          | 523/197541 [1:06:04<357:05:57,  6.53s/it]  0%|          | 524/197541 [1:06:07<302:14:24,  5.52s/it]  0%|          | 525/197541 [1:06:15<348:16:00,  6.36s/it]  0%|          | 526/197541 [1:06:23<371:28:45,  6.79s/it]  0%|          | 527/197541 [1:06:26<312:02:02,  5.70s/it]  0%|          | 528/197541 [1:06:29<268:47:27,  4.91s/it]  0%|          | 529/197541 [1:06:38<324:30:21,  5.93s/it]  0%|          | 530/197541 [1:06:45<353:51:16,  6.47s/it]                                                            0%|          | 530/197541 [1:06:45<353:51:16,  6.47s/it]  0%|          | 531/197541 [1:06:54<386:05:49,  7.06s/it]  0%|          | 532/197541 [1:06:57<321:35:12,  5.88s/it]  0%|          | 533/197541 [1:07:05<363:55:32,  6.65s/it]  0%|          | 534/197541 [1:07:14<390:06:55,  7.13s/it]  0%|          | 535/197541 [1:07:22<415:22:49,  7.59s/it]  0%|          | 536/197541 [1:07:25<340:19:27,  6.22s/it]  0%|          | 537/197541 [1:07:34<374:30:14,  6.84s/it]  0%|          | 538/197541 [1:07:42<400:00:40,  7.31s/it]  0%|          | 539/197541 [1:07:50<417:26:39,  7.63s/it]  0%|          | 540/197541 [1:07:54<349:23:46,  6.38s/it]                                                            0%|          | 540/197541 [1:07:54<349:23:46,  6.38s/it]  0%|          | 541/197541 [1:08:02<382:28:38,  6.99s/it]  0%|          | 542/197541 [1:08:05<320:33:14,  5.86s/it]  0%|          | 543/197541 [1:08:14<359:29:20,  6.57s/it]  0%|          | 544/197541 [1:08:22<388:34:42,  7.10s/it]  0%|          | 545/197541 [1:08:25<323:48:59,  5.92s/it]  0%|          | 546/197541 [1:08:34<364:42:06,  6.66s/it]  0%|          | 547/197541 [1:08:37<307:53:45,  5.63s/it]  0%|          | 548/197541 [1:08:42<294:33:48,  5.38s/it]  0%|          | 549/197541 [1:08:50<343:39:51,  6.28s/it]  0%|          | 550/197541 [1:08:53<293:58:01,  5.37s/it]                                                            0%|          | 550/197541 [1:08:53<293:58:01,  5.37s/it]  0%|          | 551/197541 [1:08:58<283:28:20,  5.18s/it]  0%|          | 552/197541 [1:09:01<250:19:44,  4.57s/it]  0%|          | 553/197541 [1:09:04<226:52:26,  4.15s/it]slurmstepd-idc-beta-batch-pvc-node-14: error: *** JOB 31243 ON idc-beta-batch-pvc-node-14 CANCELLED AT 2023-10-18T00:06:39 ***
