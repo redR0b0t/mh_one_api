@@ -1,0 +1,488 @@
+got current job name=fti7
+new job name=fti8
+new job created with id: 32283
+----------checking if gpu available on current job-----------------
+no change     /opt/intel/oneapi/intelpython/latest/condabin/conda
+no change     /opt/intel/oneapi/intelpython/latest/bin/conda
+no change     /opt/intel/oneapi/intelpython/latest/bin/conda-env
+no change     /opt/intel/oneapi/intelpython/latest/bin/activate
+no change     /opt/intel/oneapi/intelpython/latest/bin/deactivate
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.sh
+no change     /opt/intel/oneapi/intelpython/latest/etc/fish/conf.d/conda.fish
+no change     /opt/intel/oneapi/intelpython/latest/shell/condabin/Conda.psm1
+no change     /opt/intel/oneapi/intelpython/latest/shell/condabin/conda-hook.ps1
+no change     /opt/intel/oneapi/intelpython/latest/lib/python3.9/site-packages/xontrib/conda.xsh
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.csh
+no change     /opt/intel/oneapi/intelpython/latest/etc/profile.d/conda.ksh
+no change     /home/u131168/.bashrc
+No action taken.
+-------------------------------------------
+users render freetier premium
+ 
+:: initializing oneAPI environment ...
+   slurm_script: BASH_VERSION = 5.1.16(1)-release
+   args: Using "$@" for setvars.sh arguments: --force
+:: advisor -- latest
+:: ccl -- latest
+:: compiler -- latest
+:: dal -- latest
+:: debugger -- latest
+:: dev-utilities -- latest
+:: dnnl -- latest
+:: dpcpp-ct -- latest
+:: dpl -- latest
+:: embree -- latest
+:: inspector -- latest
+:: intelpython -- latest
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda deactivate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
+:: ipp -- latest
+:: ippcp -- latest
+:: ispc -- latest
+:: itac -- latest
+:: mkl -- latest
+:: modelzoo -- latest
+:: modin -- latest
+:: mpi -- latest
+:: neural-compressor -- latest
+:: oidn -- latest
+:: openpgl -- latest
+:: openvkl -- latest
+:: ospray -- latest
+:: ospray_studio -- latest
+:: pytorch -- latest
+:: rkcommon -- latest
+:: rkutil -- latest
+:: tbb -- latest
+:: tensorflow -- latest
+:: vtune -- latest
+:: oneAPI environment initialized ::
+ 
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:3.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+[opencl:cpu:0] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
+[opencl:acc:1] Intel(R) FPGA Emulation Platform for OpenCL(TM), Intel(R) FPGA Emulation Device 1.2 [2023.16.7.0.21_160000]
+[opencl:cpu:2] Intel(R) OpenCL, Intel(R) Xeon(R) Platinum 8480+ 3.0 [2023.16.7.0.21_160000]
+[ext_oneapi_level_zero:gpu:0] Intel(R) Level-Zero, Intel(R) Data Center GPU Max 1100 1.3 [1.3.26516]
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:3.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+num_gpu=1\n
+Warning: ONEAPI_DEVICE_SELECTOR environment variable is set to opencl:cpu;opencl:fpga;level_zero:3.
+To see the correct device id, please unset ONEAPI_DEVICE_SELECTOR.
+
+num_cpu=2\n
+/var/spool/slurmd/job32165/slurm_script: line 33: [: missing `]'
+-------------------------------------------
+starting fine tuning model
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: datasets in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 1)) (2.14.5)
+Requirement already satisfied: torch in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 2)) (2.1.0)
+Requirement already satisfied: transformers>=4.32.0 in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 3)) (4.35.0.dev0)
+Requirement already satisfied: sentencepiece in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 4)) (0.1.99)
+Requirement already satisfied: peft in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 5)) (0.5.0)
+Requirement already satisfied: evaluate in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 6)) (0.4.0)
+Requirement already satisfied: nltk in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 7)) (3.8.1)
+Requirement already satisfied: rouge_score in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 8)) (0.1.2)
+Requirement already satisfied: einops in /home/u131168/.local/lib/python3.9/site-packages (from -r requirements.txt (line 9)) (0.7.0)
+Requirement already satisfied: numpy>=1.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (1.24.3)
+Requirement already satisfied: pyarrow>=8.0.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (13.0.0)
+Requirement already satisfied: dill<0.3.8,>=0.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.3.7)
+Requirement already satisfied: pandas in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.0.3)
+Requirement already satisfied: requests>=2.19.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2.31.0)
+Requirement already satisfied: tqdm>=4.62.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (4.65.0)
+Requirement already satisfied: xxhash in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.4.1)
+Requirement already satisfied: multiprocess in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.70.15)
+Requirement already satisfied: fsspec[http]<2023.9.0,>=2023.1.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (2023.6.0)
+Requirement already satisfied: aiohttp in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (3.8.6)
+Requirement already satisfied: huggingface-hub<1.0.0,>=0.14.0 in /home/u131168/.local/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (0.17.3)
+Requirement already satisfied: packaging in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from datasets->-r requirements.txt (line 1)) (6.0)
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.12.4)
+Requirement already satisfied: typing-extensions in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (4.6.3)
+Requirement already satisfied: sympy in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (1.12)
+Requirement already satisfied: networkx in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1)
+Requirement already satisfied: jinja2 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (3.1.2)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.18.1 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (2.18.1)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (12.1.105)
+Requirement already satisfied: triton==2.1.0 in /home/u131168/.local/lib/python3.9/site-packages (from torch->-r requirements.txt (line 2)) (2.1.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /home/u131168/.local/lib/python3.9/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch->-r requirements.txt (line 2)) (12.2.140)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (2023.10.3)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.14.1)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers>=4.32.0->-r requirements.txt (line 3)) (0.4.0)
+Requirement already satisfied: psutil in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (5.9.0)
+Requirement already satisfied: accelerate in /home/u131168/.local/lib/python3.9/site-packages (from peft->-r requirements.txt (line 5)) (0.23.0)
+Requirement already satisfied: responses<0.19 in /home/u131168/.local/lib/python3.9/site-packages (from evaluate->-r requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: click in /home/u131168/.local/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (8.1.7)
+Requirement already satisfied: joblib in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from nltk->-r requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: absl-py in /home/u131168/.local/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (2.0.0)
+Requirement already satisfied: six>=1.14.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from rouge_score->-r requirements.txt (line 8)) (1.16.0)
+Requirement already satisfied: attrs>=17.3.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (23.1.0)
+Requirement already satisfied: charset-normalizer<4.0,>=2.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (3.1.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (6.0.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0.0a3 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (4.0.3)
+Requirement already satisfied: yarl<2.0,>=1.0 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.9.2)
+Requirement already satisfied: frozenlist>=1.1.1 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.4.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /home/u131168/.local/lib/python3.9/site-packages (from aiohttp->datasets->-r requirements.txt (line 1)) (1.3.1)
+Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2.0.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests>=2.19.0->datasets->-r requirements.txt (line 1)) (2023.7.22)
+Requirement already satisfied: MarkupSafe>=2.0 in /home/u131168/.local/lib/python3.9/site-packages (from jinja2->torch->-r requirements.txt (line 2)) (2.1.3)
+Requirement already satisfied: python-dateutil>=2.8.2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: tzdata>=2022.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from pandas->datasets->-r requirements.txt (line 1)) (2023.3)
+Requirement already satisfied: mpmath>=0.19 in /home/u131168/.local/lib/python3.9/site-packages (from sympy->torch->-r requirements.txt (line 2)) (1.3.0)
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: https://developer.intel.com/ipex-whl-stable-cpu
+Requirement already satisfied: oneccl_bind_pt in /home/u131168/.local/lib/python3.9/site-packages (2.0.0+cpu)
+Defaulting to user installation because normal site-packages is not writeable
+Collecting git+https://github.com/huggingface/transformers
+  Cloning https://github.com/huggingface/transformers to /tmp/pip-req-build-w2es80fn
+  Running command git clone --filter=blob:none --quiet https://github.com/huggingface/transformers /tmp/pip-req-build-w2es80fn
+  Resolved https://github.com/huggingface/transformers to commit 093848d3ccf3884caf048718b6bae833da0edb94
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: filelock in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (3.12.4)
+Requirement already satisfied: huggingface-hub<1.0,>=0.16.4 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.17.3)
+Requirement already satisfied: numpy>=1.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (1.24.3)
+Requirement already satisfied: packaging>=20.0 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (23.1)
+Requirement already satisfied: pyyaml>=5.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (6.0)
+Requirement already satisfied: regex!=2019.12.17 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2023.10.3)
+Requirement already satisfied: requests in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (2.31.0)
+Requirement already satisfied: tokenizers<0.15,>=0.14 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.14.1)
+Requirement already satisfied: safetensors>=0.3.1 in /home/u131168/.local/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (0.4.0)
+Requirement already satisfied: tqdm>=4.27 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from transformers==4.35.0.dev0) (4.65.0)
+Requirement already satisfied: fsspec in /home/u131168/.local/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (2023.6.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from huggingface-hub<1.0,>=0.16.4->transformers==4.35.0.dev0) (4.6.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.1.0)
+Requirement already satisfied: idna<4,>=2.5 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (2.0.3)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/intel/oneapi/intelpython/python3.9/lib/python3.9/site-packages (from requests->transformers==4.35.0.dev0) (2023.7.22)
+/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-223900
+10/20/2023 19:13:26 - WARNING - __main__ - Process rank: 0, device: cpu, n_gpu: 0distributed training: True, 16-bits training: False
+10/20/2023 19:13:26 - INFO - __main__ - Training/evaluation parameters Seq2SeqTrainingArguments(
+_n_gpu=0,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=False,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=None,
+evaluation_strategy=no,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+generation_config=None,
+generation_max_length=None,
+generation_num_beams=None,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=1e-05,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/runs/Oct20_19-13-26_idc-beta-batch-pvc-node-18,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=10,
+logging_strategy=steps,
+lr_scheduler_type=linear,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=adamw_torch,
+optim_args=None,
+output_dir=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/,
+overwrite_output_dir=True,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+predict_with_generate=False,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=[],
+resume_from_checkpoint=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-223900,
+run_name=/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/,
+save_on_each_node=False,
+save_safetensors=False,
+save_steps=100,
+save_strategy=steps,
+save_total_limit=2,
+seed=42,
+skip_memory_metrics=True,
+sortish_sampler=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+/home/u131168/.local/lib/python3.9/site-packages/datasets/load.py:2089: FutureWarning: 'use_auth_token' was deprecated in favor of 'token' in version 2.14.0 and will be removed in 3.0.0.
+You can remove this warning by passing 'token=None' instead.
+  warnings.warn(
+Using custom data configuration default-38f9584b76c562a9
+10/20/2023 19:13:26 - INFO - datasets.builder - Using custom data configuration default-38f9584b76c562a9
+Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
+10/20/2023 19:13:26 - INFO - datasets.info - Loading Dataset Infos from /home/u131168/.local/lib/python3.9/site-packages/datasets/packaged_modules/csv
+Overwrite dataset info from restored data version if exists.
+10/20/2023 19:13:26 - INFO - datasets.builder - Overwrite dataset info from restored data version if exists.
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+10/20/2023 19:13:26 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+10/20/2023 19:13:26 - INFO - datasets.builder - Found cached dataset csv (/home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d)
+Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+10/20/2023 19:13:26 - INFO - datasets.info - Loading Dataset info from /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d
+[INFO|tokenization_utils_base.py:2053] 2023-10-20 19:13:26,816 >> loading file spiece.model from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/spiece.model
+[INFO|tokenization_utils_base.py:2053] 2023-10-20 19:13:26,816 >> loading file tokenizer.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer.json
+[INFO|tokenization_utils_base.py:2053] 2023-10-20 19:13:26,816 >> loading file added_tokens.json from cache at None
+[INFO|tokenization_utils_base.py:2053] 2023-10-20 19:13:26,816 >> loading file special_tokens_map.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2053] 2023-10-20 19:13:26,816 >> loading file tokenizer_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/tokenizer_config.json
+Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-93df3f6ae8c5c3b8.arrow
+10/20/2023 19:13:26 - INFO - datasets.arrow_dataset - Loading cached processed dataset at /home/u131168/.cache/huggingface/datasets/csv/default-38f9584b76c562a9/0.0.0/eea64c71ca8b46dd3f537ed218fc9bf495d5707789152eb2764f5c78fa66d59d/cache-93df3f6ae8c5c3b8.arrow
+[INFO|configuration_utils.py:716] 2023-10-20 19:13:27,486 >> loading configuration file config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/config.json
+[INFO|configuration_utils.py:776] 2023-10-20 19:13:27,501 >> Model config T5Config {
+  "_name_or_path": "google/flan-t5-xl",
+  "architectures": [
+    "T5ForConditionalGeneration"
+  ],
+  "classifier_dropout": 0.0,
+  "d_ff": 5120,
+  "d_kv": 64,
+  "d_model": 2048,
+  "decoder_start_token_id": 0,
+  "dense_act_fn": "gelu_new",
+  "dropout_rate": 0.1,
+  "eos_token_id": 1,
+  "feed_forward_proj": "gated-gelu",
+  "initializer_factor": 1.0,
+  "is_encoder_decoder": true,
+  "is_gated_act": true,
+  "layer_norm_epsilon": 1e-06,
+  "model_type": "t5",
+  "n_positions": 512,
+  "num_decoder_layers": 24,
+  "num_heads": 32,
+  "num_layers": 24,
+  "output_past": true,
+  "pad_token_id": 0,
+  "relative_attention_max_distance": 128,
+  "relative_attention_num_buckets": 32,
+  "task_specific_params": {
+    "summarization": {
+      "early_stopping": true,
+      "length_penalty": 2.0,
+      "max_length": 200,
+      "min_length": 30,
+      "no_repeat_ngram_size": 3,
+      "num_beams": 4,
+      "prefix": "summarize: "
+    },
+    "translation_en_to_de": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to German: "
+    },
+    "translation_en_to_fr": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to French: "
+    },
+    "translation_en_to_ro": {
+      "early_stopping": true,
+      "max_length": 300,
+      "num_beams": 4,
+      "prefix": "translate English to Romanian: "
+    }
+  },
+  "tie_word_embeddings": false,
+  "torch_dtype": "float32",
+  "transformers_version": "4.35.0.dev0",
+  "use_cache": true,
+  "vocab_size": 32128
+}
+
+[INFO|modeling_utils.py:2995] 2023-10-20 19:13:27,554 >> loading weights file pytorch_model.bin from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/pytorch_model.bin.index.json
+[INFO|configuration_utils.py:789] 2023-10-20 19:13:27,562 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.82s/it]
+[INFO|modeling_utils.py:3779] 2023-10-20 19:13:45,618 >> All model checkpoint weights were used when initializing T5ForConditionalGeneration.
+
+[INFO|modeling_utils.py:3787] 2023-10-20 19:13:45,618 >> All the weights of T5ForConditionalGeneration were initialized from the model checkpoint at google/flan-t5-xl.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use T5ForConditionalGeneration for predictions without further training.
+[INFO|configuration_utils.py:749] 2023-10-20 19:13:45,717 >> loading configuration file generation_config.json from cache at /home/u131168/.cache/huggingface/hub/models--google--flan-t5-xl/snapshots/8772db7a7a11f7b08e6be7d7088f7a7fd4813bc5/generation_config.json
+[INFO|configuration_utils.py:789] 2023-10-20 19:13:45,717 >> Generate config GenerationConfig {
+  "decoder_start_token_id": 0,
+  "eos_token_id": 1,
+  "pad_token_id": 0
+}
+
+[INFO|modeling_utils.py:1619] 2023-10-20 19:13:45,724 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 32100. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+[INFO|trainer.py:584] 2023-10-20 19:13:50,950 >> Using cpu_amp half precision backend
+[INFO|trainer.py:2008] 2023-10-20 19:13:50,954 >> Loading model from /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-223900.
+[INFO|trainer.py:1669] 2023-10-20 19:13:51,127 >> ***** Running training *****
+[INFO|trainer.py:1670] 2023-10-20 19:13:51,128 >>   Num examples = 526,776
+[INFO|trainer.py:1671] 2023-10-20 19:13:51,128 >>   Num Epochs = 1
+[INFO|trainer.py:1672] 2023-10-20 19:13:51,128 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1675] 2023-10-20 19:13:51,128 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1676] 2023-10-20 19:13:51,128 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1677] 2023-10-20 19:13:51,128 >>   Total optimization steps = 263,388
+[INFO|trainer.py:1678] 2023-10-20 19:13:51,130 >>   Number of trainable parameters = 4,718,592
+[INFO|trainer.py:1698] 2023-10-20 19:13:51,150 >>   Continuing training from checkpoint, will skip to saved global_step
+[INFO|trainer.py:1699] 2023-10-20 19:13:51,150 >>   Continuing training from epoch 0
+[INFO|trainer.py:1700] 2023-10-20 19:13:51,150 >>   Continuing training from global step 223900
+[INFO|trainer.py:1702] 2023-10-20 19:13:51,150 >>   Will skip the first 0 epochs then the first 223900 batches in the first epoch.
+trainable params: 4,718,592 || all params: 2,854,361,088 || trainable%: 0.1653116706164963
+  0%|          | 0/263388 [00:00<?, ?it/s][WARNING|logging.py:316] 2023-10-20 19:13:51,249 >> You're using a T5TokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ 85%|████████▌ | 223901/263388 [00:04<00:00, 48071.29it/s] 85%|████████▌ | 223904/263388 [00:16<00:00, 48071.29it/s] 85%|████████▌ | 223905/263388 [00:18<00:04, 9042.07it/s]  85%|████████▌ | 223906/263388 [00:21<00:05, 7449.58it/s] 85%|████████▌ | 223909/263388 [00:36<00:05, 7449.58it/s] 85%|████████▌ | 223910/263388 [00:36<00:13, 2975.27it/s]                                                          85%|████████▌ | 223910/263388 [00:36<00:13, 2975.27it/s] 85%|████████▌ | 223911/263388 [00:41<00:16, 2380.79it/s] 85%|████████▌ | 223917/263388 [00:56<00:16, 2380.79it/s] 85%|████████▌ | 223918/263388 [00:58<00:34, 1141.03it/s] 85%|████████▌ | 223919/263388 [01:01<00:38, 1028.82it/s]                                                          85%|████████▌ | 223920/263388 [01:03<00:38, 1028.82it/s] 85%|████████▌ | 223924/263388 [01:16<00:38, 1028.82it/s] 85%|████████▌ | 223925/263388 [01:17<01:12, 542.38it/s]  85%|████████▌ | 223926/263388 [01:19<01:20, 493.01it/s]                                                         85%|████████▌ | 223930/263388 [01:29<01:20, 493.01it/s] 85%|████████▌ | 223931/263388 [01:36<01:20, 493.01it/s] 85%|████████▌ | 223932/263388 [01:36<02:35, 254.08it/s] 85%|████████▌ | 223933/263388 [01:41<03:02, 216.60it/s] 85%|████████▌ | 223938/263388 [01:56<03:02, 216.60it/s] 85%|████████▌ | 223939/263388 [01:58<05:39, 116.09it/s] 85%|████████▌ | 223940/263388 [02:00<06:05, 108.06it/s]                                                         85%|████████▌ | 223940/263388 [02:00<06:05, 108.06it/s] 85%|████████▌ | 223946/263388 [02:16<06:05, 108.06it/s] 85%|████████▌ | 223947/263388 [02:18<11:21, 57.90it/s]  85%|████████▌ | 223948/263388 [02:19<11:55, 55.09it/s]                                                        85%|████████▌ | 223950/263388 [02:25<11:55, 55.09it/s] 85%|████████▌ | 223954/263388 [02:36<11:55, 55.09it/s] 85%|████████▌ | 223955/263388 [02:37<22:49, 28.79it/s] 85%|████████▌ | 223956/263388 [02:39<24:32, 26.78it/s]                                                        85%|████████▌ | 223960/263388 [02:48<24:32, 26.78it/s] 85%|████████▌ | 223962/263388 [02:56<24:31, 26.78it/s] 85%|████████▌ | 223963/263388 [02:57<45:58, 14.29it/s] 85%|████████▌ | 223964/263388 [03:01<52:40, 12.47it/s]                                                        85%|████████▌ | 223970/263388 [03:16<52:40, 12.47it/s] 85%|████████▌ | 223970/263388 [03:16<52:40, 12.47it/s] 85%|████████▌ | 223971/263388 [03:18<1:33:19,  7.04it/s] 85%|████████▌ | 223972/263388 [03:21<1:41:33,  6.47it/s] 85%|████████▌ | 223978/263388 [03:36<1:41:32,  6.47it/s] 85%|████████▌ | 223979/263388 [03:36<2:48:41,  3.89it/s] 85%|████████▌ | 223980/263388 [03:38<3:01:47,  3.61it/s]                                                          85%|████████▌ | 223980/263388 [03:38<3:01:47,  3.61it/s] 85%|████████▌ | 223986/263388 [03:56<3:01:46,  3.61it/s] 85%|████████▌ | 223987/263388 [03:56<5:18:07,  2.06it/s] 85%|████████▌ | 223988/263388 [03:58<5:29:49,  1.99it/s]                                                          85%|████████▌ | 223990/263388 [04:04<5:29:48,  1.99it/s] 85%|████████▌ | 223994/263388 [04:16<5:29:46,  1.99it/s] 85%|████████▌ | 223995/263388 [04:17<9:24:23,  1.16it/s] 85%|████████▌ | 223996/263388 [04:20<9:57:22,  1.10it/s]                                                          85%|████████▌ | 224000/263388 [04:29<9:57:18,  1.10it/s][INFO|trainer.py:2806] 2023-10-20 19:18:20,387 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224000
+ 85%|████████▌ | 224002/263388 [04:36<9:57:17,  1.10it/s] 85%|████████▌ | 224003/263388 [04:39<14:47:08,  1.35s/it] 85%|████████▌ | 224004/263388 [04:42<15:24:19,  1.41s/it] 85%|████████▌ | 224009/263388 [04:56<15:24:12,  1.41s/it] 85%|████████▌ | 224010/263388 [04:57<18:54:58,  1.73s/it]                                                           85%|████████▌ | 224010/263388 [04:57<18:54:58,  1.73s/it] 85%|████████▌ | 224011/263388 [05:01<20:06:20,  1.84s/it] 85%|████████▌ | 224016/263388 [05:16<20:06:11,  1.84s/it] 85%|████████▌ | 224017/263388 [05:18<23:57:46,  2.19s/it] 85%|████████▌ | 224018/263388 [05:20<23:46:15,  2.17s/it]                                                           85%|████████▌ | 224020/263388 [05:26<23:46:11,  2.17s/it] 85%|████████▌ | 224023/263388 [05:34<26:35:26,  2.43s/it] 85%|████████▌ | 224024/263388 [05:37<26:54:53,  2.46s/it] 85%|████████▌ | 224028/263388 [05:50<29:39:14,  2.71s/it] 85%|████████▌ | 224029/263388 [05:52<29:42:07,  2.72s/it]                                                           85%|████████▌ | 224030/263388 [05:55<29:42:05,  2.72s/it] 85%|████████▌ | 224032/263388 [06:01<29:41:46,  2.72s/it] 85%|████████▌ | 224034/263388 [06:06<29:47:22,  2.73s/it] 85%|████████▌ | 224036/263388 [06:10<27:37:13,  2.53s/it] 85%|████████▌ | 224037/263388 [06:13<28:27:25,  2.60s/it] 85%|████████▌ | 224038/263388 [06:16<28:52:17,  2.64s/it] 85%|████████▌ | 224039/263388 [06:18<28:48:26,  2.64s/it] 85%|████████▌ | 224040/263388 [06:21<28:38:38,  2.62s/it]                                                           85%|████████▌ | 224040/263388 [06:21<28:38:38,  2.62s/it] 85%|████████▌ | 224041/263388 [06:24<29:14:14,  2.68s/it] 85%|████████▌ | 224042/263388 [06:27<29:36:12,  2.71s/it] 85%|████████▌ | 224043/263388 [06:29<29:22:46,  2.69s/it] 85%|████████▌ | 224044/263388 [06:32<29:17:13,  2.68s/it] 85%|████████▌ | 224045/263388 [06:35<29:33:27,  2.70s/it] 85%|████████▌ | 224046/263388 [06:37<29:15:17,  2.68s/it] 85%|████████▌ | 224047/263388 [06:40<29:25:53,  2.69s/it] 85%|████████▌ | 224048/263388 [06:43<29:17:18,  2.68s/it] 85%|████████▌ | 224049/263388 [06:45<29:09:16,  2.67s/it] 85%|████████▌ | 224050/263388 [06:47<24:54:06,  2.28s/it]                                                           85%|████████▌ | 224050/263388 [06:47<24:54:06,  2.28s/it] 85%|████████▌ | 224051/263388 [06:49<24:59:03,  2.29s/it] 85%|████████▌ | 224052/263388 [06:52<26:30:22,  2.43s/it] 85%|████████▌ | 224053/263388 [06:55<27:30:14,  2.52s/it] 85%|████████▌ | 224054/263388 [06:57<27:57:11,  2.56s/it] 85%|████████▌ | 224055/263388 [06:59<23:57:54,  2.19s/it] 85%|████████▌ | 224056/263388 [07:01<25:41:40,  2.35s/it] 85%|████████▌ | 224057/263388 [07:03<24:43:10,  2.26s/it] 85%|████████▌ | 224058/263388 [07:06<26:14:11,  2.40s/it] 85%|████████▌ | 224059/263388 [07:09<27:06:42,  2.48s/it] 85%|████████▌ | 224060/263388 [07:11<27:55:12,  2.56s/it]                                                           85%|████████▌ | 224060/263388 [07:11<27:55:12,  2.56s/it] 85%|████████▌ | 224061/263388 [07:13<25:55:33,  2.37s/it] 85%|████████▌ | 224062/263388 [07:16<26:48:34,  2.45s/it] 85%|████████▌ | 224063/263388 [07:19<27:26:33,  2.51s/it] 85%|████████▌ | 224064/263388 [07:21<28:30:44,  2.61s/it] 85%|████████▌ | 224065/263388 [07:24<28:40:04,  2.62s/it] 85%|████████▌ | 224066/263388 [07:26<26:42:50,  2.45s/it] 85%|████████▌ | 224067/263388 [07:29<27:16:13,  2.50s/it] 85%|████████▌ | 224068/263388 [07:31<27:20:04,  2.50s/it] 85%|████████▌ | 224069/263388 [07:33<23:20:40,  2.14s/it] 85%|████████▌ | 224070/263388 [07:35<23:00:14,  2.11s/it]                                                           85%|████████▌ | 224070/263388 [07:35<23:00:14,  2.11s/it] 85%|████████▌ | 224071/263388 [07:37<25:17:48,  2.32s/it] 85%|████████▌ | 224072/263388 [07:40<24:50:48,  2.28s/it] 85%|████████▌ | 224073/263388 [07:42<26:05:28,  2.39s/it] 85%|████████▌ | 224074/263388 [07:45<27:11:05,  2.49s/it] 85%|████████▌ | 224075/263388 [07:49<32:04:02,  2.94s/it] 85%|████████▌ | 224076/263388 [07:52<31:13:22,  2.86s/it] 85%|████████▌ | 224077/263388 [07:54<30:40:46,  2.81s/it] 85%|████████▌ | 224078/263388 [07:58<34:33:18,  3.16s/it] 85%|████████▌ | 224079/263388 [08:01<33:16:32,  3.05s/it] 85%|████████▌ | 224080/263388 [08:03<31:00:46,  2.84s/it]                                                           85%|████████▌ | 224080/263388 [08:03<31:00:46,  2.84s/it] 85%|████████▌ | 224081/263388 [08:06<30:24:29,  2.78s/it] 85%|████████▌ | 224082/263388 [08:10<34:18:33,  3.14s/it] 85%|████████▌ | 224083/263388 [08:13<32:47:43,  3.00s/it] 85%|████████▌ | 224084/263388 [08:15<31:22:44,  2.87s/it] 85%|████████▌ | 224085/263388 [08:18<30:35:41,  2.80s/it] 85%|████████▌ | 224086/263388 [08:20<29:31:08,  2.70s/it] 85%|████████▌ | 224087/263388 [08:23<30:01:02,  2.75s/it] 85%|████████▌ | 224088/263388 [08:26<29:55:31,  2.74s/it] 85%|████████▌ | 224089/263388 [08:29<30:11:43,  2.77s/it] 85%|████████▌ | 224090/263388 [08:32<30:07:19,  2.76s/it]                                                           85%|████████▌ | 224090/263388 [08:32<30:07:19,  2.76s/it] 85%|████████▌ | 224091/263388 [08:34<30:25:38,  2.79s/it] 85%|████████▌ | 224092/263388 [08:38<31:36:49,  2.90s/it] 85%|████████▌ | 224093/263388 [08:41<31:44:48,  2.91s/it] 85%|████████▌ | 224094/263388 [08:43<31:24:05,  2.88s/it] 85%|████████▌ | 224095/263388 [08:46<30:18:10,  2.78s/it] 85%|████████▌ | 224096/263388 [08:47<25:22:25,  2.32s/it] 85%|████████▌ | 224097/263388 [08:49<23:20:04,  2.14s/it] 85%|████████▌ | 224098/263388 [08:52<25:34:11,  2.34s/it] 85%|████████▌ | 224099/263388 [08:55<28:33:38,  2.62s/it] 85%|████████▌ | 224100/263388 [08:58<29:07:03,  2.67s/it]                                                           85%|████████▌ | 224100/263388 [08:58<29:07:03,  2.67s/it][INFO|trainer.py:2806] 2023-10-20 19:22:49,384 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224100
+[INFO|trainer.py:2893] 2023-10-20 19:22:50,926 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-223900] due to args.save_total_limit
+ 85%|████████▌ | 224101/263388 [09:02<35:12:28,  3.23s/it] 85%|████████▌ | 224102/263388 [09:04<31:39:35,  2.90s/it] 85%|████████▌ | 224103/263388 [09:07<31:09:20,  2.86s/it] 85%|████████▌ | 224104/263388 [09:10<30:52:00,  2.83s/it] 85%|████████▌ | 224105/263388 [09:11<26:17:27,  2.41s/it] 85%|████████▌ | 224106/263388 [09:14<27:22:59,  2.51s/it] 85%|████████▌ | 224107/263388 [09:17<27:39:08,  2.53s/it] 85%|████████▌ | 224108/263388 [09:20<28:41:28,  2.63s/it] 85%|████████▌ | 224109/263388 [09:22<26:38:26,  2.44s/it] 85%|████████▌ | 224110/263388 [09:25<30:19:45,  2.78s/it]                                                           85%|████████▌ | 224110/263388 [09:25<30:19:45,  2.78s/it] 85%|████████▌ | 224111/263388 [09:26<25:29:59,  2.34s/it] 85%|████████▌ | 224112/263388 [09:29<26:27:37,  2.43s/it] 85%|████████▌ | 224113/263388 [09:32<27:24:07,  2.51s/it] 85%|████████▌ | 224114/263388 [09:34<27:56:06,  2.56s/it] 85%|████████▌ | 224115/263388 [09:37<28:07:09,  2.58s/it] 85%|████████▌ | 224116/263388 [09:40<28:47:15,  2.64s/it] 85%|████████▌ | 224117/263388 [09:43<29:17:44,  2.69s/it] 85%|████████▌ | 224118/263388 [09:46<30:30:53,  2.80s/it] 85%|████████▌ | 224119/263388 [09:48<30:29:35,  2.80s/it] 85%|████████▌ | 224120/263388 [09:53<34:36:04,  3.17s/it]                                                           85%|████████▌ | 224120/263388 [09:53<34:36:04,  3.17s/it] 85%|████████▌ | 224121/263388 [09:55<33:03:11,  3.03s/it] 85%|████████▌ | 224122/263388 [09:57<29:09:42,  2.67s/it] 85%|████████▌ | 224123/263388 [10:00<29:02:39,  2.66s/it] 85%|████████▌ | 224124/263388 [10:02<28:54:11,  2.65s/it] 85%|████████▌ | 224125/263388 [10:05<27:28:30,  2.52s/it] 85%|████████▌ | 224126/263388 [10:07<27:30:53,  2.52s/it] 85%|████████▌ | 224127/263388 [10:10<28:17:03,  2.59s/it] 85%|████████▌ | 224128/263388 [10:13<28:52:58,  2.65s/it] 85%|████████▌ | 224129/263388 [10:16<30:06:04,  2.76s/it] 85%|████████▌ | 224130/263388 [10:18<29:53:27,  2.74s/it]                                                           85%|████████▌ | 224130/263388 [10:18<29:53:27,  2.74s/it] 85%|████████▌ | 224131/263388 [10:21<29:55:26,  2.74s/it] 85%|████████▌ | 224132/263388 [10:23<28:25:15,  2.61s/it] 85%|████████▌ | 224133/263388 [10:26<28:27:31,  2.61s/it] 85%|████████▌ | 224134/263388 [10:28<27:49:45,  2.55s/it] 85%|████████▌ | 224135/263388 [10:30<24:22:32,  2.24s/it] 85%|████████▌ | 224136/263388 [10:33<25:41:43,  2.36s/it] 85%|████████▌ | 224137/263388 [10:35<26:46:56,  2.46s/it] 85%|████████▌ | 224138/263388 [10:38<28:04:59,  2.58s/it] 85%|████████▌ | 224139/263388 [10:41<28:13:05,  2.59s/it] 85%|████████▌ | 224140/263388 [10:44<29:02:04,  2.66s/it]                                                           85%|████████▌ | 224140/263388 [10:44<29:02:04,  2.66s/it] 85%|████████▌ | 224141/263388 [10:46<28:49:13,  2.64s/it] 85%|████████▌ | 224142/263388 [10:49<28:29:35,  2.61s/it] 85%|████████▌ | 224143/263388 [10:51<28:34:44,  2.62s/it] 85%|████████▌ | 224144/263388 [10:53<25:29:49,  2.34s/it] 85%|████████▌ | 224145/263388 [10:56<26:54:05,  2.47s/it] 85%|████████▌ | 224146/263388 [10:58<27:32:40,  2.53s/it] 85%|████████▌ | 224147/263388 [11:01<27:42:37,  2.54s/it] 85%|████████▌ | 224148/263388 [11:04<28:30:09,  2.61s/it] 85%|████████▌ | 224149/263388 [11:07<30:11:35,  2.77s/it] 85%|████████▌ | 224150/263388 [11:10<29:44:20,  2.73s/it]                                                           85%|████████▌ | 224150/263388 [11:10<29:44:20,  2.73s/it] 85%|████████▌ | 224151/263388 [11:12<27:58:01,  2.57s/it] 85%|████████▌ | 224152/263388 [11:14<28:04:42,  2.58s/it] 85%|████████▌ | 224153/263388 [11:17<28:28:40,  2.61s/it] 85%|████████▌ | 224154/263388 [11:20<28:39:43,  2.63s/it] 85%|████████▌ | 224155/263388 [11:22<29:05:05,  2.67s/it] 85%|████████▌ | 224156/263388 [11:25<28:54:49,  2.65s/it] 85%|████████▌ | 224157/263388 [11:27<26:33:10,  2.44s/it] 85%|████████▌ | 224158/263388 [11:31<31:21:32,  2.88s/it] 85%|████████▌ | 224159/263388 [11:34<30:39:28,  2.81s/it] 85%|████████▌ | 224160/263388 [11:36<29:18:43,  2.69s/it]                                                           85%|████████▌ | 224160/263388 [11:36<29:18:43,  2.69s/it] 85%|████████▌ | 224161/263388 [11:39<29:11:00,  2.68s/it] 85%|████████▌ | 224162/263388 [11:41<29:31:07,  2.71s/it] 85%|████████▌ | 224163/263388 [11:44<29:26:09,  2.70s/it] 85%|████████▌ | 224164/263388 [11:47<29:04:30,  2.67s/it] 85%|████████▌ | 224165/263388 [11:49<28:47:11,  2.64s/it] 85%|████████▌ | 224166/263388 [11:52<29:09:27,  2.68s/it] 85%|████████▌ | 224167/263388 [11:56<33:25:46,  3.07s/it] 85%|████████▌ | 224168/263388 [11:57<28:00:47,  2.57s/it] 85%|████████▌ | 224169/263388 [12:00<28:23:29,  2.61s/it] 85%|████████▌ | 224170/263388 [12:03<28:56:37,  2.66s/it]                                                           85%|████████▌ | 224170/263388 [12:03<28:56:37,  2.66s/it] 85%|████████▌ | 224171/263388 [12:05<28:37:45,  2.63s/it] 85%|████████▌ | 224172/263388 [12:08<28:25:11,  2.61s/it] 85%|████████▌ | 224173/263388 [12:11<28:35:25,  2.62s/it] 85%|████████▌ | 224174/263388 [12:13<28:33:24,  2.62s/it] 85%|████████▌ | 224175/263388 [12:16<28:32:14,  2.62s/it] 85%|████████▌ | 224176/263388 [12:18<28:25:46,  2.61s/it] 85%|████████▌ | 224177/263388 [12:20<24:13:51,  2.22s/it] 85%|████████▌ | 224178/263388 [12:22<25:24:50,  2.33s/it] 85%|████████▌ | 224179/263388 [12:24<24:04:14,  2.21s/it] 85%|████████▌ | 224180/263388 [12:27<26:13:46,  2.41s/it]                                                           85%|████████▌ | 224180/263388 [12:27<26:13:46,  2.41s/it] 85%|████████▌ | 224181/263388 [12:30<26:46:30,  2.46s/it] 85%|████████▌ | 224182/263388 [12:32<25:12:43,  2.32s/it] 85%|████████▌ | 224183/263388 [12:34<26:10:27,  2.40s/it] 85%|████████▌ | 224184/263388 [12:37<25:47:04,  2.37s/it] 85%|████████▌ | 224185/263388 [12:41<31:11:28,  2.86s/it] 85%|████████▌ | 224186/263388 [12:43<31:04:53,  2.85s/it] 85%|████████▌ | 224187/263388 [12:46<31:00:28,  2.85s/it] 85%|████████▌ | 224188/263388 [12:49<30:59:40,  2.85s/it] 85%|████████▌ | 224189/263388 [12:52<30:46:54,  2.83s/it] 85%|████████▌ | 224190/263388 [12:54<28:57:00,  2.66s/it]                                                           85%|████████▌ | 224190/263388 [12:54<28:57:00,  2.66s/it] 85%|████████▌ | 224191/263388 [12:57<28:30:00,  2.62s/it] 85%|████████▌ | 224192/263388 [13:00<29:48:00,  2.74s/it] 85%|████████▌ | 224193/263388 [13:02<28:59:35,  2.66s/it] 85%|████████▌ | 224194/263388 [13:05<28:59:32,  2.66s/it] 85%|████████▌ | 224195/263388 [13:08<29:16:31,  2.69s/it] 85%|████████▌ | 224196/263388 [13:10<28:52:36,  2.65s/it] 85%|████████▌ | 224197/263388 [13:12<24:49:01,  2.28s/it] 85%|████████▌ | 224198/263388 [13:14<25:06:09,  2.31s/it] 85%|████████▌ | 224199/263388 [13:17<26:34:23,  2.44s/it] 85%|████████▌ | 224200/263388 [13:21<32:20:39,  2.97s/it]                                                           85%|████████▌ | 224200/263388 [13:21<32:20:39,  2.97s/it][INFO|trainer.py:2806] 2023-10-20 19:27:12,618 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224200
+[INFO|trainer.py:2893] 2023-10-20 19:27:13,130 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224000] due to args.save_total_limit
+ 85%|████████▌ | 224201/263388 [13:24<33:24:39,  3.07s/it] 85%|████████▌ | 224202/263388 [13:27<31:57:11,  2.94s/it] 85%|████████▌ | 224203/263388 [13:29<30:16:07,  2.78s/it] 85%|████████▌ | 224204/263388 [13:32<29:56:04,  2.75s/it] 85%|████████▌ | 224205/263388 [13:35<29:43:38,  2.73s/it] 85%|████████▌ | 224206/263388 [13:37<29:56:16,  2.75s/it] 85%|████████▌ | 224207/263388 [13:40<28:54:04,  2.66s/it] 85%|████████▌ | 224208/263388 [13:43<29:01:28,  2.67s/it] 85%|████████▌ | 224209/263388 [13:45<28:03:21,  2.58s/it] 85%|████████▌ | 224210/263388 [13:47<25:51:40,  2.38s/it]                                                           85%|████████▌ | 224210/263388 [13:47<25:51:40,  2.38s/it] 85%|████████▌ | 224211/263388 [13:50<26:43:59,  2.46s/it] 85%|████████▌ | 224212/263388 [13:52<27:20:49,  2.51s/it] 85%|████████▌ | 224213/263388 [13:55<27:39:44,  2.54s/it] 85%|████████▌ | 224214/263388 [13:57<27:52:32,  2.56s/it] 85%|████████▌ | 224215/263388 [14:00<28:39:29,  2.63s/it] 85%|████████▌ | 224216/263388 [14:04<32:56:11,  3.03s/it] 85%|████████▌ | 224217/263388 [14:06<29:34:54,  2.72s/it] 85%|████████▌ | 224218/263388 [14:09<29:33:36,  2.72s/it] 85%|████████▌ | 224219/263388 [14:11<29:14:03,  2.69s/it] 85%|████████▌ | 224220/263388 [14:14<29:24:31,  2.70s/it]                                                           85%|████████▌ | 224220/263388 [14:14<29:24:31,  2.70s/it] 85%|████████▌ | 224221/263388 [14:18<33:32:35,  3.08s/it] 85%|████████▌ | 224222/263388 [14:21<32:12:40,  2.96s/it] 85%|████████▌ | 224223/263388 [14:22<27:23:35,  2.52s/it] 85%|████████▌ | 224224/263388 [14:25<29:13:29,  2.69s/it] 85%|████████▌ | 224225/263388 [14:28<29:11:27,  2.68s/it] 85%|████████▌ | 224226/263388 [14:31<29:02:42,  2.67s/it] 85%|████████▌ | 224227/263388 [14:33<28:47:38,  2.65s/it] 85%|████████▌ | 224228/263388 [14:36<29:39:52,  2.73s/it] 85%|████████▌ | 224229/263388 [14:38<28:10:32,  2.59s/it] 85%|████████▌ | 224230/263388 [14:43<32:53:16,  3.02s/it]                                                           85%|████████▌ | 224230/263388 [14:43<32:53:16,  3.02s/it] 85%|████████▌ | 224231/263388 [14:45<31:57:49,  2.94s/it] 85%|████████▌ | 224232/263388 [14:48<31:24:32,  2.89s/it] 85%|████████▌ | 224233/263388 [14:51<31:09:54,  2.87s/it] 85%|████████▌ | 224234/263388 [14:53<30:17:03,  2.78s/it] 85%|████████▌ | 224235/263388 [14:56<29:03:43,  2.67s/it] 85%|████████▌ | 224236/263388 [14:59<29:06:12,  2.68s/it] 85%|████████▌ | 224237/263388 [15:03<33:21:20,  3.07s/it] 85%|████████▌ | 224238/263388 [15:05<30:03:21,  2.76s/it] 85%|████████▌ | 224239/263388 [15:07<29:59:57,  2.76s/it] 85%|████████▌ | 224240/263388 [15:10<29:35:25,  2.72s/it]                                                           85%|████████▌ | 224240/263388 [15:10<29:35:25,  2.72s/it] 85%|████████▌ | 224241/263388 [15:13<29:41:26,  2.73s/it] 85%|████████▌ | 224242/263388 [15:15<29:27:05,  2.71s/it] 85%|████████▌ | 224243/263388 [15:17<25:13:32,  2.32s/it] 85%|████████▌ | 224244/263388 [15:20<27:41:41,  2.55s/it] 85%|████████▌ | 224245/263388 [15:21<23:37:59,  2.17s/it] 85%|████████▌ | 224246/263388 [15:24<25:15:12,  2.32s/it] 85%|████████▌ | 224247/263388 [15:26<26:08:46,  2.40s/it] 85%|████████▌ | 224248/263388 [15:29<26:53:31,  2.47s/it] 85%|████████▌ | 224249/263388 [15:33<31:59:49,  2.94s/it] 85%|████████▌ | 224250/263388 [15:36<31:31:36,  2.90s/it]                                                           85%|████████▌ | 224250/263388 [15:36<31:31:36,  2.90s/it] 85%|████████▌ | 224251/263388 [15:38<30:33:41,  2.81s/it] 85%|████████▌ | 224252/263388 [15:41<30:13:19,  2.78s/it] 85%|████████▌ | 224253/263388 [15:44<29:53:47,  2.75s/it] 85%|████████▌ | 224254/263388 [15:47<29:41:51,  2.73s/it] 85%|████████▌ | 224255/263388 [15:49<29:26:42,  2.71s/it] 85%|████████▌ | 224256/263388 [15:52<29:32:18,  2.72s/it] 85%|████████▌ | 224257/263388 [15:55<29:20:04,  2.70s/it] 85%|████████▌ | 224258/263388 [15:57<29:34:47,  2.72s/it] 85%|████████▌ | 224259/263388 [16:01<31:28:36,  2.90s/it] 85%|████████▌ | 224260/263388 [16:03<30:43:28,  2.83s/it]                                                           85%|████████▌ | 224260/263388 [16:03<30:43:28,  2.83s/it] 85%|████████▌ | 224261/263388 [16:06<30:37:17,  2.82s/it] 85%|████████▌ | 224262/263388 [16:09<31:12:33,  2.87s/it] 85%|████████▌ | 224263/263388 [16:12<32:26:48,  2.99s/it] 85%|████████▌ | 224264/263388 [16:15<32:18:28,  2.97s/it] 85%|████████▌ | 224265/263388 [16:19<33:35:19,  3.09s/it] 85%|████████▌ | 224266/263388 [16:21<32:22:43,  2.98s/it] 85%|████████▌ | 224267/263388 [16:24<32:01:18,  2.95s/it] 85%|████████▌ | 224268/263388 [16:26<26:41:48,  2.46s/it] 85%|████████▌ | 224269/263388 [16:29<28:11:07,  2.59s/it] 85%|████████▌ | 224270/263388 [16:31<28:22:03,  2.61s/it]                                                           85%|████████▌ | 224270/263388 [16:31<28:22:03,  2.61s/it] 85%|████████▌ | 224271/263388 [16:34<28:41:46,  2.64s/it] 85%|████████▌ | 224272/263388 [16:36<26:39:11,  2.45s/it] 85%|████████▌ | 224273/263388 [16:40<32:04:21,  2.95s/it] 85%|████████▌ | 224274/263388 [16:42<28:46:34,  2.65s/it] 85%|████████▌ | 224275/263388 [16:45<29:08:25,  2.68s/it] 85%|████████▌ | 224276/263388 [16:47<28:21:27,  2.61s/it] 85%|████████▌ | 224277/263388 [16:50<28:45:22,  2.65s/it] 85%|████████▌ | 224278/263388 [16:51<24:23:46,  2.25s/it] 85%|████████▌ | 224279/263388 [16:54<26:08:18,  2.41s/it] 85%|████████▌ | 224280/263388 [16:57<27:05:11,  2.49s/it]                                                           85%|████████▌ | 224280/263388 [16:57<27:05:11,  2.49s/it] 85%|████████▌ | 224281/263388 [16:59<27:36:08,  2.54s/it] 85%|████████▌ | 224282/263388 [17:01<23:44:23,  2.19s/it] 85%|████████▌ | 224283/263388 [17:04<25:48:00,  2.38s/it] 85%|████████▌ | 224284/263388 [17:08<31:20:31,  2.89s/it] 85%|████████▌ | 224285/263388 [17:10<31:08:15,  2.87s/it] 85%|████████▌ | 224286/263388 [17:13<30:48:42,  2.84s/it] 85%|████████▌ | 224287/263388 [17:16<32:09:39,  2.96s/it] 85%|████████▌ | 224288/263388 [17:19<31:01:27,  2.86s/it] 85%|████████▌ | 224289/263388 [17:22<30:41:52,  2.83s/it] 85%|████████▌ | 224290/263388 [17:26<34:51:42,  3.21s/it]                                                           85%|████████▌ | 224290/263388 [17:26<34:51:42,  3.21s/it] 85%|████████▌ | 224291/263388 [17:29<33:50:24,  3.12s/it] 85%|████████▌ | 224292/263388 [17:32<32:42:28,  3.01s/it] 85%|████████▌ | 224293/263388 [17:33<27:28:55,  2.53s/it] 85%|████████▌ | 224294/263388 [17:36<28:47:29,  2.65s/it] 85%|████████▌ | 224295/263388 [17:38<25:36:53,  2.36s/it] 85%|████████▌ | 224296/263388 [17:42<31:12:54,  2.87s/it] 85%|████████▌ | 224297/263388 [17:44<30:53:02,  2.84s/it] 85%|████████▌ | 224298/263388 [17:47<30:36:20,  2.82s/it] 85%|████████▌ | 224299/263388 [17:50<30:25:54,  2.80s/it] 85%|████████▌ | 224300/263388 [17:53<30:08:28,  2.78s/it]                                                           85%|████████▌ | 224300/263388 [17:53<30:08:28,  2.78s/it][INFO|trainer.py:2806] 2023-10-20 19:31:44,339 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224300
+[INFO|trainer.py:2893] 2023-10-20 19:31:45,531 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224100] due to args.save_total_limit
+ 85%|████████▌ | 224301/263388 [17:56<32:49:08,  3.02s/it] 85%|████████▌ | 224302/263388 [17:59<32:07:10,  2.96s/it] 85%|████████▌ | 224303/263388 [18:02<31:41:50,  2.92s/it] 85%|████████▌ | 224304/263388 [18:05<31:53:59,  2.94s/it] 85%|████████▌ | 224305/263388 [18:07<28:50:03,  2.66s/it] 85%|████████▌ | 224306/263388 [18:10<29:21:25,  2.70s/it] 85%|████████▌ | 224307/263388 [18:12<29:17:44,  2.70s/it] 85%|████████▌ | 224308/263388 [18:14<24:50:55,  2.29s/it] 85%|████████▌ | 224309/263388 [18:16<26:21:39,  2.43s/it] 85%|████████▌ | 224310/263388 [18:18<22:45:31,  2.10s/it]                                                           85%|████████▌ | 224310/263388 [18:18<22:45:31,  2.10s/it] 85%|████████▌ | 224311/263388 [18:21<24:58:09,  2.30s/it] 85%|████████▌ | 224312/263388 [18:23<24:05:00,  2.22s/it] 85%|████████▌ | 224313/263388 [18:25<26:14:00,  2.42s/it] 85%|████████▌ | 224314/263388 [18:28<27:23:17,  2.52s/it] 85%|████████▌ | 224315/263388 [18:31<28:22:07,  2.61s/it] 85%|████████▌ | 224316/263388 [18:34<29:13:56,  2.69s/it] 85%|████████▌ | 224317/263388 [18:37<29:57:54,  2.76s/it] 85%|████████▌ | 224318/263388 [18:40<30:10:01,  2.78s/it] 85%|████████▌ | 224319/263388 [18:42<29:03:39,  2.68s/it] 85%|████████▌ | 224320/263388 [18:45<30:15:32,  2.79s/it]                                                           85%|████████▌ | 224320/263388 [18:45<30:15:32,  2.79s/it] 85%|████████▌ | 224321/263388 [18:48<30:33:52,  2.82s/it] 85%|████████▌ | 224322/263388 [18:52<34:29:21,  3.18s/it] 85%|████████▌ | 224323/263388 [18:55<33:24:32,  3.08s/it] 85%|████████▌ | 224324/263388 [18:58<32:46:00,  3.02s/it] 85%|████████▌ | 224325/263388 [19:01<31:45:25,  2.93s/it] 85%|████████▌ | 224326/263388 [19:03<31:12:03,  2.88s/it] 85%|████████▌ | 224327/263388 [19:06<30:29:50,  2.81s/it] 85%|████████▌ | 224328/263388 [19:09<30:16:32,  2.79s/it] 85%|████████▌ | 224329/263388 [19:11<30:07:57,  2.78s/it] 85%|████████▌ | 224330/263388 [19:13<24:51:46,  2.29s/it]                                                           85%|████████▌ | 224330/263388 [19:13<24:51:46,  2.29s/it] 85%|████████▌ | 224331/263388 [19:14<23:29:47,  2.17s/it] 85%|████████▌ | 224332/263388 [19:17<25:55:01,  2.39s/it] 85%|████████▌ | 224333/263388 [19:20<27:15:58,  2.51s/it] 85%|████████▌ | 224334/263388 [19:23<28:09:45,  2.60s/it] 85%|████████▌ | 224335/263388 [19:24<24:36:59,  2.27s/it] 85%|████████▌ | 224336/263388 [19:27<26:01:33,  2.40s/it] 85%|████████▌ | 224337/263388 [19:30<27:07:10,  2.50s/it] 85%|████████▌ | 224338/263388 [19:33<28:55:43,  2.67s/it] 85%|████████▌ | 224339/263388 [19:36<29:29:37,  2.72s/it] 85%|████████▌ | 224340/263388 [19:39<29:46:43,  2.75s/it]                                                           85%|████████▌ | 224340/263388 [19:39<29:46:43,  2.75s/it] 85%|████████▌ | 224341/263388 [19:41<28:30:55,  2.63s/it] 85%|████████▌ | 224342/263388 [19:44<29:00:23,  2.67s/it] 85%|████████▌ | 224343/263388 [19:45<25:04:46,  2.31s/it] 85%|████████▌ | 224344/263388 [19:48<25:29:09,  2.35s/it] 85%|████████▌ | 224345/263388 [19:50<26:05:11,  2.41s/it] 85%|████████▌ | 224346/263388 [19:53<27:57:13,  2.58s/it] 85%|████████▌ | 224347/263388 [19:56<29:07:59,  2.69s/it] 85%|████████▌ | 224348/263388 [19:59<29:28:57,  2.72s/it] 85%|████████▌ | 224349/263388 [20:01<26:40:22,  2.46s/it] 85%|████████▌ | 224350/263388 [20:04<27:38:41,  2.55s/it]                                                           85%|████████▌ | 224350/263388 [20:04<27:38:41,  2.55s/it] 85%|████████▌ | 224351/263388 [20:05<24:25:47,  2.25s/it] 85%|████████▌ | 224352/263388 [20:08<26:02:12,  2.40s/it] 85%|████████▌ | 224353/263388 [20:10<24:49:00,  2.29s/it] 85%|████████▌ | 224354/263388 [20:13<26:40:58,  2.46s/it] 85%|████████▌ | 224355/263388 [20:16<28:05:37,  2.59s/it] 85%|████████▌ | 224356/263388 [20:20<32:50:20,  3.03s/it] 85%|████████▌ | 224357/263388 [20:23<32:17:58,  2.98s/it] 85%|████████▌ | 224358/263388 [20:25<31:36:52,  2.92s/it] 85%|████████▌ | 224359/263388 [20:28<31:38:03,  2.92s/it] 85%|████████▌ | 224360/263388 [20:31<29:35:12,  2.73s/it]                                                           85%|████████▌ | 224360/263388 [20:31<29:35:12,  2.73s/it] 85%|████████▌ | 224361/263388 [20:33<29:30:29,  2.72s/it] 85%|████████▌ | 224362/263388 [20:37<32:06:06,  2.96s/it] 85%|████████▌ | 224363/263388 [20:39<30:33:16,  2.82s/it] 85%|████████▌ | 224364/263388 [20:42<31:46:10,  2.93s/it] 85%|████████▌ | 224365/263388 [20:45<31:29:31,  2.91s/it] 85%|████████▌ | 224366/263388 [20:49<35:38:47,  3.29s/it] 85%|████████▌ | 224367/263388 [20:52<34:14:38,  3.16s/it] 85%|████████▌ | 224368/263388 [20:54<30:33:13,  2.82s/it] 85%|████████▌ | 224369/263388 [20:57<31:15:37,  2.88s/it] 85%|████████▌ | 224370/263388 [21:00<30:55:40,  2.85s/it]                                                           85%|████████▌ | 224370/263388 [21:00<30:55:40,  2.85s/it] 85%|████████▌ | 224371/263388 [21:04<35:31:02,  3.28s/it] 85%|████████▌ | 224372/263388 [21:07<33:57:01,  3.13s/it] 85%|████████▌ | 224373/263388 [21:09<28:46:14,  2.65s/it] 85%|████████▌ | 224374/263388 [21:10<25:38:10,  2.37s/it] 85%|████████▌ | 224375/263388 [21:13<27:00:42,  2.49s/it] 85%|████████▌ | 224376/263388 [21:16<27:54:46,  2.58s/it] 85%|████████▌ | 224377/263388 [21:18<24:30:49,  2.26s/it] 85%|████████▌ | 224378/263388 [21:19<21:29:21,  1.98s/it] 85%|████████▌ | 224379/263388 [21:22<24:03:01,  2.22s/it] 85%|████████▌ | 224380/263388 [21:25<26:24:10,  2.44s/it]                                                           85%|████████▌ | 224380/263388 [21:25<26:24:10,  2.44s/it] 85%|████████▌ | 224381/263388 [21:27<27:49:01,  2.57s/it] 85%|████████▌ | 224382/263388 [21:30<26:08:41,  2.41s/it] 85%|████████▌ | 224383/263388 [21:33<28:43:55,  2.65s/it] 85%|████████▌ | 224384/263388 [21:36<29:37:29,  2.73s/it] 85%|████████▌ | 224385/263388 [21:38<29:44:22,  2.74s/it] 85%|████████▌ | 224386/263388 [21:42<30:54:52,  2.85s/it] 85%|████████▌ | 224387/263388 [21:44<30:55:19,  2.85s/it] 85%|████████▌ | 224388/263388 [21:47<30:06:40,  2.78s/it] 85%|████████▌ | 224389/263388 [21:51<34:22:36,  3.17s/it] 85%|████████▌ | 224390/263388 [21:54<33:53:20,  3.13s/it]                                                           85%|████████▌ | 224390/263388 [21:54<33:53:20,  3.13s/it] 85%|████████▌ | 224391/263388 [21:57<32:18:55,  2.98s/it] 85%|████████▌ | 224392/263388 [22:00<31:39:37,  2.92s/it] 85%|████████▌ | 224393/263388 [22:02<31:20:21,  2.89s/it] 85%|████████▌ | 224394/263388 [22:05<31:02:19,  2.87s/it] 85%|████████▌ | 224395/263388 [22:08<30:39:55,  2.83s/it] 85%|████████▌ | 224396/263388 [22:11<30:43:48,  2.84s/it] 85%|████████▌ | 224397/263388 [22:12<26:26:56,  2.44s/it] 85%|████████▌ | 224398/263388 [22:15<27:31:27,  2.54s/it] 85%|████████▌ | 224399/263388 [22:18<30:25:57,  2.81s/it] 85%|████████▌ | 224400/263388 [22:22<31:55:48,  2.95s/it]                                                           85%|████████▌ | 224400/263388 [22:22<31:55:48,  2.95s/it][INFO|trainer.py:2806] 2023-10-20 19:36:13,402 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224400
+[INFO|trainer.py:2893] 2023-10-20 19:36:13,965 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224200] due to args.save_total_limit
+ 85%|████████▌ | 224401/263388 [22:25<33:40:15,  3.11s/it] 85%|████████▌ | 224402/263388 [22:28<32:52:18,  3.04s/it] 85%|████████▌ | 224403/263388 [22:31<33:04:44,  3.05s/it] 85%|████████▌ | 224404/263388 [22:34<33:03:41,  3.05s/it] 85%|████████▌ | 224405/263388 [22:37<33:00:23,  3.05s/it] 85%|████████▌ | 224406/263388 [22:39<27:44:15,  2.56s/it] 85%|████████▌ | 224407/263388 [22:42<28:42:54,  2.65s/it] 85%|████████▌ | 224408/263388 [22:45<29:46:48,  2.75s/it] 85%|████████▌ | 224409/263388 [22:48<31:04:39,  2.87s/it] 85%|████████▌ | 224410/263388 [22:50<30:35:34,  2.83s/it]                                                           85%|████████▌ | 224410/263388 [22:50<30:35:34,  2.83s/it] 85%|████████▌ | 224411/263388 [22:53<30:19:43,  2.80s/it] 85%|████████▌ | 224412/263388 [22:55<28:27:28,  2.63s/it] 85%|████████▌ | 224413/263388 [22:57<24:14:22,  2.24s/it] 85%|████████▌ | 224414/263388 [23:00<26:04:48,  2.41s/it] 85%|████████▌ | 224415/263388 [23:02<27:38:37,  2.55s/it] 85%|████████▌ | 224416/263388 [23:05<29:18:41,  2.71s/it] 85%|████████▌ | 224417/263388 [23:09<31:59:15,  2.95s/it] 85%|████████▌ | 224418/263388 [23:12<31:55:50,  2.95s/it] 85%|████████▌ | 224419/263388 [23:15<32:05:55,  2.97s/it] 85%|████████▌ | 224420/263388 [23:19<36:10:11,  3.34s/it]                                                           85%|████████▌ | 224420/263388 [23:19<36:10:11,  3.34s/it] 85%|████████▌ | 224421/263388 [23:21<31:05:53,  2.87s/it] 85%|████████▌ | 224422/263388 [23:24<30:49:39,  2.85s/it] 85%|████████▌ | 224423/263388 [23:26<30:31:07,  2.82s/it] 85%|████████▌ | 224424/263388 [23:29<29:16:49,  2.71s/it] 85%|████████▌ | 224425/263388 [23:31<28:24:53,  2.63s/it] 85%|████████▌ | 224426/263388 [23:34<29:08:55,  2.69s/it] 85%|████████▌ | 224427/263388 [23:38<33:34:42,  3.10s/it] 85%|████████▌ | 224428/263388 [23:41<32:42:30,  3.02s/it] 85%|████████▌ | 224429/263388 [23:43<29:33:46,  2.73s/it] 85%|████████▌ | 224430/263388 [23:45<28:02:23,  2.59s/it]                                                           85%|████████▌ | 224430/263388 [23:45<28:02:23,  2.59s/it] 85%|████████▌ | 224431/263388 [23:48<29:10:51,  2.70s/it] 85%|████████▌ | 224432/263388 [23:52<33:43:51,  3.12s/it] 85%|████████▌ | 224433/263388 [23:55<32:41:39,  3.02s/it] 85%|████████▌ | 224434/263388 [23:58<32:08:32,  2.97s/it] 85%|████████▌ | 224435/263388 [24:01<31:31:47,  2.91s/it] 85%|████████▌ | 224436/263388 [24:04<31:27:08,  2.91s/it] 85%|████████▌ | 224437/263388 [24:05<26:20:36,  2.43s/it] 85%|████████▌ | 224438/263388 [24:08<27:24:52,  2.53s/it] 85%|████████▌ | 224439/263388 [24:09<23:30:29,  2.17s/it] 85%|████████▌ | 224440/263388 [24:11<21:39:45,  2.00s/it]                                                           85%|████████▌ | 224440/263388 [24:11<21:39:45,  2.00s/it] 85%|████████▌ | 224441/263388 [24:14<24:43:06,  2.28s/it] 85%|████████▌ | 224442/263388 [24:16<25:45:24,  2.38s/it] 85%|████████▌ | 224443/263388 [24:19<27:05:31,  2.50s/it] 85%|████████▌ | 224444/263388 [24:22<28:14:28,  2.61s/it] 85%|████████▌ | 224445/263388 [24:25<29:12:58,  2.70s/it] 85%|████████▌ | 224446/263388 [24:27<28:44:20,  2.66s/it] 85%|████████▌ | 224447/263388 [24:31<30:10:34,  2.79s/it] 85%|████████▌ | 224448/263388 [24:33<30:13:43,  2.79s/it] 85%|████████▌ | 224449/263388 [24:36<30:50:51,  2.85s/it] 85%|████████▌ | 224450/263388 [24:39<31:21:59,  2.90s/it]                                                           85%|████████▌ | 224450/263388 [24:39<31:21:59,  2.90s/it] 85%|████████▌ | 224451/263388 [24:42<28:48:08,  2.66s/it] 85%|████████▌ | 224452/263388 [24:45<31:06:56,  2.88s/it] 85%|████████▌ | 224453/263388 [24:48<33:08:16,  3.06s/it] 85%|████████▌ | 224454/263388 [24:51<32:26:42,  3.00s/it] 85%|████████▌ | 224455/263388 [24:53<29:44:50,  2.75s/it] 85%|████████▌ | 224456/263388 [24:56<28:55:43,  2.68s/it] 85%|████████▌ | 224457/263388 [24:59<29:30:39,  2.73s/it] 85%|████████▌ | 224458/263388 [25:01<29:16:36,  2.71s/it] 85%|████████▌ | 224459/263388 [25:04<30:12:58,  2.79s/it] 85%|████████▌ | 224460/263388 [25:07<30:37:26,  2.83s/it]                                                           85%|████████▌ | 224460/263388 [25:07<30:37:26,  2.83s/it] 85%|████████▌ | 224461/263388 [25:10<28:42:58,  2.66s/it] 85%|████████▌ | 224462/263388 [25:13<30:26:41,  2.82s/it] 85%|████████▌ | 224463/263388 [25:17<35:04:23,  3.24s/it] 85%|████████▌ | 224464/263388 [25:20<34:09:28,  3.16s/it] 85%|████████▌ | 224465/263388 [25:23<33:00:57,  3.05s/it] 85%|████████▌ | 224466/263388 [25:25<29:41:40,  2.75s/it] 85%|████████▌ | 224467/263388 [25:28<30:17:11,  2.80s/it] 85%|████████▌ | 224468/263388 [25:31<30:46:55,  2.85s/it] 85%|████████▌ | 224469/263388 [25:34<31:03:38,  2.87s/it] 85%|████████▌ | 224470/263388 [25:37<31:05:46,  2.88s/it]                                                           85%|████████▌ | 224470/263388 [25:37<31:05:46,  2.88s/it] 85%|████████▌ | 224471/263388 [25:39<30:58:57,  2.87s/it] 85%|████████▌ | 224472/263388 [25:42<30:46:19,  2.85s/it] 85%|████████▌ | 224473/263388 [25:44<29:02:02,  2.69s/it] 85%|████████▌ | 224474/263388 [25:48<30:28:04,  2.82s/it] 85%|████████▌ | 224475/263388 [25:52<34:57:24,  3.23s/it] 85%|████████▌ | 224476/263388 [25:54<30:42:06,  2.84s/it] 85%|████████▌ | 224477/263388 [25:57<30:55:49,  2.86s/it] 85%|████████▌ | 224478/263388 [26:00<31:13:41,  2.89s/it] 85%|████████▌ | 224479/263388 [26:02<31:10:37,  2.88s/it] 85%|████████▌ | 224480/263388 [26:05<30:26:14,  2.82s/it]                                                           85%|████████▌ | 224480/263388 [26:05<30:26:14,  2.82s/it] 85%|████████▌ | 224481/263388 [26:08<29:15:24,  2.71s/it] 85%|████████▌ | 224482/263388 [26:10<29:41:45,  2.75s/it] 85%|████████▌ | 224483/263388 [26:13<30:31:36,  2.82s/it] 85%|████████▌ | 224484/263388 [26:16<30:23:42,  2.81s/it] 85%|████████▌ | 224485/263388 [26:19<30:37:42,  2.83s/it] 85%|████████▌ | 224486/263388 [26:22<31:05:01,  2.88s/it] 85%|████████▌ | 224487/263388 [26:26<34:57:42,  3.24s/it] 85%|████████▌ | 224488/263388 [26:29<34:05:35,  3.16s/it] 85%|████████▌ | 224489/263388 [26:32<33:09:35,  3.07s/it] 85%|████████▌ | 224490/263388 [26:35<32:46:30,  3.03s/it]                                                           85%|████████▌ | 224490/263388 [26:35<32:46:30,  3.03s/it] 85%|████████▌ | 224491/263388 [26:38<32:07:47,  2.97s/it] 85%|████████▌ | 224492/263388 [26:41<31:54:51,  2.95s/it] 85%|████████▌ | 224493/263388 [26:44<32:05:33,  2.97s/it] 85%|████████▌ | 224494/263388 [26:47<32:02:22,  2.97s/it] 85%|████████▌ | 224495/263388 [26:49<30:17:00,  2.80s/it] 85%|████████▌ | 224496/263388 [26:52<31:01:26,  2.87s/it] 85%|████████▌ | 224497/263388 [26:55<30:33:29,  2.83s/it] 85%|████████▌ | 224498/263388 [26:58<30:49:10,  2.85s/it] 85%|████████▌ | 224499/263388 [27:01<30:42:57,  2.84s/it] 85%|████████▌ | 224500/263388 [27:04<31:23:57,  2.91s/it]                                                           85%|████████▌ | 224500/263388 [27:04<31:23:57,  2.91s/it][INFO|trainer.py:2806] 2023-10-20 19:40:55,254 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224500
+[INFO|trainer.py:2893] 2023-10-20 19:40:56,764 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224300] due to args.save_total_limit
+ 85%|████████▌ | 224501/263388 [27:08<36:52:03,  3.41s/it] 85%|████████▌ | 224502/263388 [27:11<34:58:48,  3.24s/it] 85%|████████▌ | 224503/263388 [27:14<34:52:02,  3.23s/it] 85%|████████▌ | 224504/263388 [27:17<32:24:32,  3.00s/it] 85%|████████▌ | 224505/263388 [27:20<32:05:10,  2.97s/it] 85%|████████▌ | 224506/263388 [27:23<32:03:14,  2.97s/it] 85%|████████▌ | 224507/263388 [27:25<31:08:05,  2.88s/it] 85%|████████▌ | 224508/263388 [27:29<34:58:05,  3.24s/it] 85%|████████▌ | 224509/263388 [27:32<32:30:36,  3.01s/it] 85%|████████▌ | 224510/263388 [27:35<31:56:07,  2.96s/it]                                                           85%|████████▌ | 224510/263388 [27:35<31:56:07,  2.96s/it] 85%|████████▌ | 224511/263388 [27:37<31:31:23,  2.92s/it] 85%|████████▌ | 224512/263388 [27:40<31:15:53,  2.90s/it] 85%|████████▌ | 224513/263388 [27:43<30:33:47,  2.83s/it] 85%|████████▌ | 224514/263388 [27:46<31:10:28,  2.89s/it] 85%|████████▌ | 224515/263388 [27:49<30:33:28,  2.83s/it] 85%|████████▌ | 224516/263388 [27:52<30:38:14,  2.84s/it] 85%|████████▌ | 224517/263388 [27:56<36:56:11,  3.42s/it] 85%|████████▌ | 224518/263388 [27:59<35:12:41,  3.26s/it] 85%|████████▌ | 224519/263388 [28:02<34:11:30,  3.17s/it] 85%|████████▌ | 224520/263388 [28:05<33:28:22,  3.10s/it]                                                           85%|████████▌ | 224520/263388 [28:05<33:28:22,  3.10s/it] 85%|████████▌ | 224521/263388 [28:08<33:36:28,  3.11s/it] 85%|████████▌ | 224522/263388 [28:09<27:27:45,  2.54s/it] 85%|████████▌ | 224523/263388 [28:12<28:44:20,  2.66s/it] 85%|████████▌ | 224524/263388 [28:18<39:07:11,  3.62s/it] 85%|████████▌ | 224525/263388 [28:21<36:00:19,  3.34s/it] 85%|████████▌ | 224526/263388 [28:25<38:14:11,  3.54s/it] 85%|████████▌ | 224527/263388 [28:28<35:07:37,  3.25s/it] 85%|████████▌ | 224528/263388 [28:30<33:32:36,  3.11s/it] 85%|████████▌ | 224529/263388 [28:33<32:24:33,  3.00s/it] 85%|████████▌ | 224530/263388 [28:36<31:42:39,  2.94s/it]                                                           85%|████████▌ | 224530/263388 [28:36<31:42:39,  2.94s/it] 85%|████████▌ | 224531/263388 [28:40<35:23:32,  3.28s/it] 85%|████████▌ | 224532/263388 [28:42<31:26:42,  2.91s/it] 85%|████████▌ | 224533/263388 [28:45<30:57:00,  2.87s/it] 85%|████████▌ | 224534/263388 [28:48<30:44:45,  2.85s/it] 85%|████████▌ | 224535/263388 [28:51<31:23:26,  2.91s/it] 85%|████████▌ | 224536/263388 [28:53<31:06:00,  2.88s/it] 85%|████████▌ | 224537/263388 [28:56<30:45:36,  2.85s/it] 85%|████████▌ | 224538/263388 [29:00<34:37:04,  3.21s/it] 85%|████████▌ | 224539/263388 [29:03<33:10:23,  3.07s/it] 85%|████████▌ | 224540/263388 [29:06<32:20:43,  3.00s/it]                                                           85%|████████▌ | 224540/263388 [29:06<32:20:43,  3.00s/it] 85%|████████▌ | 224541/263388 [29:09<31:31:35,  2.92s/it] 85%|████████▌ | 224542/263388 [29:12<31:41:18,  2.94s/it] 85%|████████▌ | 224543/263388 [29:14<30:58:48,  2.87s/it] 85%|████████▌ | 224544/263388 [29:18<34:45:49,  3.22s/it] 85%|████████▌ | 224545/263388 [29:21<33:04:43,  3.07s/it] 85%|████████▌ | 224546/263388 [29:24<31:34:59,  2.93s/it] 85%|████████▌ | 224547/263388 [29:26<30:04:09,  2.79s/it] 85%|████████▌ | 224548/263388 [29:30<33:58:21,  3.15s/it] 85%|████████▌ | 224549/263388 [29:33<34:21:30,  3.18s/it] 85%|████████▌ | 224550/263388 [29:36<32:18:04,  2.99s/it]                                                           85%|████████▌ | 224550/263388 [29:36<32:18:04,  2.99s/it] 85%|████████▌ | 224551/263388 [29:38<30:13:21,  2.80s/it] 85%|████████▌ | 224552/263388 [29:41<29:59:35,  2.78s/it] 85%|████████▌ | 224553/263388 [29:44<30:00:11,  2.78s/it] 85%|████████▌ | 224554/263388 [29:46<29:52:05,  2.77s/it] 85%|████████▌ | 224555/263388 [29:49<29:38:42,  2.75s/it] 85%|████████▌ | 224556/263388 [29:51<27:18:41,  2.53s/it] 85%|████████▌ | 224557/263388 [29:54<28:01:33,  2.60s/it] 85%|████████▌ | 224558/263388 [29:55<23:46:05,  2.20s/it] 85%|████████▌ | 224559/263388 [29:58<25:28:54,  2.36s/it] 85%|████████▌ | 224560/263388 [30:01<26:22:58,  2.45s/it]                                                           85%|████████▌ | 224560/263388 [30:01<26:22:58,  2.45s/it] 85%|████████▌ | 224561/263388 [30:03<27:24:06,  2.54s/it] 85%|████████▌ | 224562/263388 [30:06<27:58:31,  2.59s/it] 85%|████████▌ | 224563/263388 [30:09<28:32:24,  2.65s/it] 85%|████████▌ | 224564/263388 [30:13<32:57:39,  3.06s/it] 85%|████████▌ | 224565/263388 [30:16<31:58:52,  2.97s/it] 85%|████████▌ | 224566/263388 [30:18<31:03:06,  2.88s/it] 85%|████████▌ | 224567/263388 [30:21<30:47:46,  2.86s/it] 85%|████████▌ | 224568/263388 [30:22<25:47:46,  2.39s/it] 85%|████████▌ | 224569/263388 [30:24<22:50:56,  2.12s/it] 85%|████████▌ | 224570/263388 [30:27<26:32:24,  2.46s/it]                                                           85%|████████▌ | 224570/263388 [30:27<26:32:24,  2.46s/it] 85%|████████▌ | 224571/263388 [30:30<27:20:39,  2.54s/it] 85%|████████▌ | 224572/263388 [30:33<28:04:05,  2.60s/it] 85%|████████▌ | 224573/263388 [30:35<28:32:01,  2.65s/it] 85%|████████▌ | 224574/263388 [30:38<28:53:34,  2.68s/it] 85%|████████▌ | 224575/263388 [30:41<29:04:49,  2.70s/it] 85%|████████▌ | 224576/263388 [30:45<33:12:51,  3.08s/it] 85%|████████▌ | 224577/263388 [30:48<31:55:48,  2.96s/it] 85%|████████▌ | 224578/263388 [30:50<31:03:48,  2.88s/it] 85%|████████▌ | 224579/263388 [30:53<30:42:30,  2.85s/it] 85%|████████▌ | 224580/263388 [30:56<30:22:13,  2.82s/it]                                                           85%|████████▌ | 224580/263388 [30:56<30:22:13,  2.82s/it] 85%|████████▌ | 224581/263388 [30:57<25:35:17,  2.37s/it] 85%|████████▌ | 224582/263388 [31:00<26:40:10,  2.47s/it] 85%|████████▌ | 224583/263388 [31:03<27:30:48,  2.55s/it] 85%|████████▌ | 224584/263388 [31:04<23:52:44,  2.22s/it] 85%|████████▌ | 224585/263388 [31:07<25:32:05,  2.37s/it] 85%|████████▌ | 224586/263388 [31:11<30:44:39,  2.85s/it] 85%|████████▌ | 224587/263388 [31:12<25:45:29,  2.39s/it] 85%|████████▌ | 224588/263388 [31:15<26:52:29,  2.49s/it] 85%|████████▌ | 224589/263388 [31:16<23:04:30,  2.14s/it] 85%|████████▌ | 224590/263388 [31:19<24:56:50,  2.31s/it]                                                           85%|████████▌ | 224590/263388 [31:19<24:56:50,  2.31s/it] 85%|████████▌ | 224591/263388 [31:21<26:19:32,  2.44s/it] 85%|████████▌ | 224592/263388 [31:24<27:23:15,  2.54s/it] 85%|████████▌ | 224593/263388 [31:27<28:13:31,  2.62s/it] 85%|████████▌ | 224594/263388 [31:28<23:56:09,  2.22s/it] 85%|████████▌ | 224595/263388 [31:31<25:47:29,  2.39s/it] 85%|████████▌ | 224596/263388 [31:34<26:47:25,  2.49s/it] 85%|████████▌ | 224597/263388 [31:37<27:34:39,  2.56s/it] 85%|████████▌ | 224598/263388 [31:40<28:54:01,  2.68s/it] 85%|████████▌ | 224599/263388 [31:42<29:08:01,  2.70s/it] 85%|████████▌ | 224600/263388 [31:45<29:02:39,  2.70s/it]                                                           85%|████████▌ | 224600/263388 [31:45<29:02:39,  2.70s/it][INFO|trainer.py:2806] 2023-10-20 19:45:36,626 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224600
+[INFO|trainer.py:2893] 2023-10-20 19:45:37,796 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224400] due to args.save_total_limit
+ 85%|████████▌ | 224601/263388 [31:49<33:06:25,  3.07s/it] 85%|████████▌ | 224602/263388 [31:52<31:49:40,  2.95s/it] 85%|████████▌ | 224603/263388 [31:54<31:02:40,  2.88s/it] 85%|████████▌ | 224604/263388 [31:57<30:27:11,  2.83s/it] 85%|████████▌ | 224605/263388 [32:00<30:21:29,  2.82s/it] 85%|████████▌ | 224606/263388 [32:03<29:57:26,  2.78s/it] 85%|████████▌ | 224607/263388 [32:05<29:20:22,  2.72s/it] 85%|████████▌ | 224608/263388 [32:08<28:19:17,  2.63s/it] 85%|████████▌ | 224609/263388 [32:11<29:31:23,  2.74s/it] 85%|████████▌ | 224610/263388 [32:13<29:34:06,  2.75s/it]                                                           85%|████████▌ | 224610/263388 [32:13<29:34:06,  2.75s/it] 85%|████████▌ | 224611/263388 [32:16<27:58:46,  2.60s/it] 85%|████████▌ | 224612/263388 [32:18<28:12:17,  2.62s/it] 85%|████████▌ | 224613/263388 [32:21<28:36:37,  2.66s/it] 85%|████████▌ | 224614/263388 [32:24<30:23:53,  2.82s/it] 85%|████████▌ | 224615/263388 [32:27<30:16:38,  2.81s/it] 85%|████████▌ | 224616/263388 [32:30<30:23:34,  2.82s/it] 85%|████████▌ | 224617/263388 [32:33<30:15:12,  2.81s/it] 85%|████████▌ | 224618/263388 [32:35<28:46:47,  2.67s/it] 85%|████████▌ | 224619/263388 [32:38<29:22:42,  2.73s/it] 85%|████████▌ | 224620/263388 [32:40<29:19:40,  2.72s/it]                                                           85%|████████▌ | 224620/263388 [32:40<29:19:40,  2.72s/it] 85%|████████▌ | 224621/263388 [32:43<29:28:12,  2.74s/it] 85%|████████▌ | 224622/263388 [32:46<29:39:14,  2.75s/it] 85%|████████▌ | 224623/263388 [32:49<29:27:32,  2.74s/it] 85%|████████▌ | 224624/263388 [32:51<29:24:27,  2.73s/it] 85%|████████▌ | 224625/263388 [32:54<29:20:11,  2.72s/it] 85%|████████▌ | 224626/263388 [32:57<29:21:42,  2.73s/it] 85%|████████▌ | 224627/263388 [33:00<29:17:14,  2.72s/it] 85%|████████▌ | 224628/263388 [33:02<29:01:05,  2.70s/it] 85%|████████▌ | 224629/263388 [33:04<27:00:59,  2.51s/it] 85%|████████▌ | 224630/263388 [33:06<25:20:25,  2.35s/it]                                                           85%|████████▌ | 224630/263388 [33:06<25:20:25,  2.35s/it] 85%|████████▌ | 224631/263388 [33:09<26:19:44,  2.45s/it] 85%|████████▌ | 224632/263388 [33:12<27:16:41,  2.53s/it] 85%|████████▌ | 224633/263388 [33:16<31:27:20,  2.92s/it] 85%|████████▌ | 224634/263388 [33:17<26:31:49,  2.46s/it] 85%|████████▌ | 224635/263388 [33:18<23:35:09,  2.19s/it] 85%|████████▌ | 224636/263388 [33:21<25:24:36,  2.36s/it] 85%|████████▌ | 224637/263388 [33:24<26:43:59,  2.48s/it] 85%|████████▌ | 224638/263388 [33:27<27:48:39,  2.58s/it] 85%|████████▌ | 224639/263388 [33:30<28:13:18,  2.62s/it] 85%|████████▌ | 224640/263388 [33:32<26:15:59,  2.44s/it]                                                           85%|████████▌ | 224640/263388 [33:32<26:15:59,  2.44s/it] 85%|████████▌ | 224641/263388 [33:34<27:17:48,  2.54s/it] 85%|████████▌ | 224642/263388 [33:37<28:26:40,  2.64s/it] 85%|████████▌ | 224643/263388 [33:39<26:21:57,  2.45s/it] 85%|████████▌ | 224644/263388 [33:42<27:37:29,  2.57s/it] 85%|████████▌ | 224645/263388 [33:44<26:39:35,  2.48s/it] 85%|████████▌ | 224646/263388 [33:47<28:27:10,  2.64s/it] 85%|████████▌ | 224647/263388 [33:50<28:50:20,  2.68s/it] 85%|████████▌ | 224648/263388 [33:53<29:14:10,  2.72s/it] 85%|████████▌ | 224649/263388 [33:56<29:39:43,  2.76s/it] 85%|████████▌ | 224650/263388 [33:59<29:41:49,  2.76s/it]                                                           85%|████████▌ | 224650/263388 [33:59<29:41:49,  2.76s/it] 85%|████████▌ | 224651/263388 [34:01<29:30:41,  2.74s/it] 85%|████████▌ | 224652/263388 [34:04<30:13:19,  2.81s/it] 85%|████████▌ | 224653/263388 [34:07<30:01:12,  2.79s/it] 85%|████████▌ | 224654/263388 [34:10<29:50:19,  2.77s/it] 85%|████████▌ | 224655/263388 [34:12<28:12:49,  2.62s/it] 85%|████████▌ | 224656/263388 [34:15<28:43:30,  2.67s/it] 85%|████████▌ | 224657/263388 [34:18<30:55:29,  2.87s/it] 85%|████████▌ | 224658/263388 [34:21<29:41:15,  2.76s/it] 85%|████████▌ | 224659/263388 [34:25<33:57:21,  3.16s/it] 85%|████████▌ | 224660/263388 [34:28<33:09:00,  3.08s/it]                                                           85%|████████▌ | 224660/263388 [34:28<33:09:00,  3.08s/it] 85%|████████▌ | 224661/263388 [34:30<32:18:34,  3.00s/it] 85%|████████▌ | 224662/263388 [34:33<32:05:34,  2.98s/it] 85%|████████▌ | 224663/263388 [34:36<30:51:30,  2.87s/it] 85%|████████▌ | 224664/263388 [34:39<31:31:03,  2.93s/it] 85%|████████▌ | 224665/263388 [34:42<30:49:13,  2.87s/it] 85%|████████▌ | 224666/263388 [34:44<28:37:10,  2.66s/it] 85%|████████▌ | 224667/263388 [34:48<33:20:28,  3.10s/it] 85%|████████▌ | 224668/263388 [34:49<28:10:02,  2.62s/it] 85%|████████▌ | 224669/263388 [34:52<29:07:10,  2.71s/it] 85%|████████▌ | 224670/263388 [34:55<29:32:19,  2.75s/it]                                                           85%|████████▌ | 224670/263388 [34:55<29:32:19,  2.75s/it] 85%|████████▌ | 224671/263388 [34:58<29:56:19,  2.78s/it] 85%|████████▌ | 224672/263388 [35:01<28:56:44,  2.69s/it] 85%|████████▌ | 224673/263388 [35:03<26:56:36,  2.51s/it] 85%|████████▌ | 224674/263388 [35:05<26:36:41,  2.47s/it] 85%|████████▌ | 224675/263388 [35:08<27:47:24,  2.58s/it] 85%|████████▌ | 224676/263388 [35:10<27:17:09,  2.54s/it] 85%|████████▌ | 224677/263388 [35:13<27:00:29,  2.51s/it] 85%|████████▌ | 224678/263388 [35:16<28:24:37,  2.64s/it] 85%|████████▌ | 224679/263388 [35:18<27:35:03,  2.57s/it] 85%|████████▌ | 224680/263388 [35:21<28:42:27,  2.67s/it]                                                           85%|████████▌ | 224680/263388 [35:21<28:42:27,  2.67s/it] 85%|████████▌ | 224681/263388 [35:24<29:25:28,  2.74s/it] 85%|████████▌ | 224682/263388 [35:27<29:41:36,  2.76s/it] 85%|████████▌ | 224683/263388 [35:29<28:53:01,  2.69s/it] 85%|████████▌ | 224684/263388 [35:32<29:12:46,  2.72s/it] 85%|████████▌ | 224685/263388 [35:35<29:19:37,  2.73s/it] 85%|████████▌ | 224686/263388 [35:38<29:31:12,  2.75s/it] 85%|████████▌ | 224687/263388 [35:40<29:43:31,  2.77s/it] 85%|████████▌ | 224688/263388 [35:43<29:51:00,  2.78s/it] 85%|████████▌ | 224689/263388 [35:46<29:55:20,  2.78s/it] 85%|████████▌ | 224690/263388 [35:49<29:32:42,  2.75s/it]                                                           85%|████████▌ | 224690/263388 [35:49<29:32:42,  2.75s/it] 85%|████████▌ | 224691/263388 [35:51<28:38:58,  2.67s/it] 85%|████████▌ | 224692/263388 [35:54<28:50:30,  2.68s/it] 85%|████████▌ | 224693/263388 [35:57<29:27:01,  2.74s/it] 85%|████████▌ | 224694/263388 [35:59<28:24:34,  2.64s/it] 85%|████████▌ | 224695/263388 [36:02<28:46:44,  2.68s/it] 85%|████████▌ | 224696/263388 [36:05<28:35:24,  2.66s/it] 85%|████████▌ | 224697/263388 [36:07<28:17:41,  2.63s/it] 85%|████████▌ | 224698/263388 [36:09<26:23:18,  2.46s/it] 85%|████████▌ | 224699/263388 [36:12<26:23:30,  2.46s/it] 85%|████████▌ | 224700/263388 [36:14<27:28:03,  2.56s/it]                                                           85%|████████▌ | 224700/263388 [36:14<27:28:03,  2.56s/it][INFO|trainer.py:2806] 2023-10-20 19:50:06,054 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224700
+[INFO|trainer.py:2893] 2023-10-20 19:50:07,449 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224500] due to args.save_total_limit
+ 85%|████████▌ | 224701/263388 [36:18<31:37:24,  2.94s/it] 85%|████████▌ | 224702/263388 [36:21<29:47:47,  2.77s/it] 85%|████████▌ | 224703/263388 [36:23<28:30:18,  2.65s/it] 85%|████████▌ | 224704/263388 [36:25<27:36:42,  2.57s/it] 85%|████████▌ | 224705/263388 [36:28<27:02:33,  2.52s/it] 85%|████████▌ | 224706/263388 [36:31<28:26:30,  2.65s/it] 85%|████████▌ | 224707/263388 [36:35<33:00:28,  3.07s/it] 85%|████████▌ | 224708/263388 [36:38<32:30:01,  3.02s/it] 85%|████████▌ | 224709/263388 [36:40<30:37:53,  2.85s/it] 85%|████████▌ | 224710/263388 [36:43<29:25:45,  2.74s/it]                                                           85%|████████▌ | 224710/263388 [36:43<29:25:45,  2.74s/it] 85%|████████▌ | 224711/263388 [36:45<29:32:50,  2.75s/it] 85%|████████▌ | 224712/263388 [36:48<29:35:54,  2.76s/it] 85%|████████▌ | 224713/263388 [36:51<29:37:55,  2.76s/it] 85%|████████▌ | 224714/263388 [36:53<29:00:11,  2.70s/it] 85%|████████▌ | 224715/263388 [36:56<28:23:01,  2.64s/it] 85%|████████▌ | 224716/263388 [36:59<28:16:33,  2.63s/it] 85%|████████▌ | 224717/263388 [37:00<23:44:49,  2.21s/it] 85%|████████▌ | 224718/263388 [37:02<23:39:27,  2.20s/it] 85%|████████▌ | 224719/263388 [37:04<24:26:47,  2.28s/it] 85%|████████▌ | 224720/263388 [37:07<26:02:51,  2.43s/it]                                                           85%|████████▌ | 224720/263388 [37:07<26:02:51,  2.43s/it] 85%|████████▌ | 224721/263388 [37:10<26:46:11,  2.49s/it] 85%|████████▌ | 224722/263388 [37:11<23:07:16,  2.15s/it] 85%|████████▌ | 224723/263388 [37:13<20:56:07,  1.95s/it] 85%|████████▌ | 224724/263388 [37:15<22:58:54,  2.14s/it] 85%|████████▌ | 224725/263388 [37:19<29:11:49,  2.72s/it] 85%|████████▌ | 224726/263388 [37:22<29:18:23,  2.73s/it] 85%|████████▌ | 224727/263388 [37:25<29:15:37,  2.72s/it] 85%|████████▌ | 224728/263388 [37:28<29:39:57,  2.76s/it] 85%|████████▌ | 224729/263388 [37:29<25:45:48,  2.40s/it] 85%|████████▌ | 224730/263388 [37:31<25:07:40,  2.34s/it]                                                           85%|████████▌ | 224730/263388 [37:31<25:07:40,  2.34s/it] 85%|████████▌ | 224731/263388 [37:34<25:31:07,  2.38s/it] 85%|████████▌ | 224732/263388 [37:37<27:15:28,  2.54s/it] 85%|████████▌ | 224733/263388 [37:40<28:46:33,  2.68s/it] 85%|████████▌ | 224734/263388 [37:42<28:27:42,  2.65s/it] 85%|████████▌ | 224735/263388 [37:45<27:43:36,  2.58s/it] 85%|████████▌ | 224736/263388 [37:48<28:54:42,  2.69s/it] 85%|████████▌ | 224737/263388 [37:50<26:03:21,  2.43s/it] 85%|████████▌ | 224738/263388 [37:52<27:09:52,  2.53s/it] 85%|████████▌ | 224739/263388 [37:56<30:01:32,  2.80s/it] 85%|████████▌ | 224740/263388 [37:59<30:12:46,  2.81s/it]                                                           85%|████████▌ | 224740/263388 [37:59<30:12:46,  2.81s/it] 85%|████████▌ | 224741/263388 [38:01<30:22:11,  2.83s/it] 85%|████████▌ | 224742/263388 [38:04<30:32:08,  2.84s/it] 85%|████████▌ | 224743/263388 [38:07<30:16:30,  2.82s/it] 85%|████████▌ | 224744/263388 [38:10<29:27:02,  2.74s/it] 85%|████████▌ | 224745/263388 [38:13<29:38:01,  2.76s/it] 85%|████████▌ | 224746/263388 [38:15<29:40:24,  2.76s/it] 85%|████████▌ | 224747/263388 [38:17<26:31:23,  2.47s/it] 85%|████████▌ | 224748/263388 [38:19<25:04:58,  2.34s/it] 85%|████████▌ | 224749/263388 [38:22<26:38:19,  2.48s/it] 85%|████████▌ | 224750/263388 [38:25<29:17:25,  2.73s/it]                                                           85%|████████▌ | 224750/263388 [38:25<29:17:25,  2.73s/it] 85%|████████▌ | 224751/263388 [38:27<27:46:59,  2.59s/it] 85%|████████▌ | 224752/263388 [38:29<23:56:10,  2.23s/it] 85%|████████▌ | 224753/263388 [38:32<25:46:55,  2.40s/it] 85%|████████▌ | 224754/263388 [38:35<27:22:42,  2.55s/it] 85%|████████▌ | 224755/263388 [38:37<28:32:55,  2.66s/it] 85%|████████▌ | 224756/263388 [38:39<24:49:56,  2.31s/it] 85%|████████▌ | 224757/263388 [38:42<26:17:50,  2.45s/it] 85%|████████▌ | 224758/263388 [38:43<23:39:25,  2.20s/it] 85%|████████▌ | 224759/263388 [38:47<29:40:00,  2.76s/it] 85%|████████▌ | 224760/263388 [38:50<29:23:30,  2.74s/it]                                                           85%|████████▌ | 224760/263388 [38:50<29:23:30,  2.74s/it] 85%|████████▌ | 224761/263388 [38:52<25:03:36,  2.34s/it] 85%|████████▌ | 224762/263388 [38:54<26:33:50,  2.48s/it] 85%|████████▌ | 224763/263388 [38:57<26:23:22,  2.46s/it] 85%|████████▌ | 224764/263388 [39:00<27:41:33,  2.58s/it] 85%|████████▌ | 224765/263388 [39:02<28:07:13,  2.62s/it] 85%|████████▌ | 224766/263388 [39:05<28:30:53,  2.66s/it] 85%|████████▌ | 224767/263388 [39:08<28:43:13,  2.68s/it] 85%|████████▌ | 224768/263388 [39:11<29:27:26,  2.75s/it] 85%|████████▌ | 224769/263388 [39:13<29:24:45,  2.74s/it] 85%|████████▌ | 224770/263388 [39:17<30:59:54,  2.89s/it]                                                           85%|████████▌ | 224770/263388 [39:17<30:59:54,  2.89s/it] 85%|████████▌ | 224771/263388 [39:19<30:28:19,  2.84s/it] 85%|████████▌ | 224772/263388 [39:22<30:29:23,  2.84s/it] 85%|████████▌ | 224773/263388 [39:25<30:43:01,  2.86s/it] 85%|████████▌ | 224774/263388 [39:28<30:35:13,  2.85s/it] 85%|████████▌ | 224775/263388 [39:31<30:18:57,  2.83s/it] 85%|████████▌ | 224776/263388 [39:34<30:14:09,  2.82s/it] 85%|████████▌ | 224777/263388 [39:36<29:49:10,  2.78s/it] 85%|████████▌ | 224778/263388 [39:38<27:00:47,  2.52s/it] 85%|████████▌ | 224779/263388 [39:41<27:54:45,  2.60s/it] 85%|████████▌ | 224780/263388 [39:45<32:24:48,  3.02s/it]                                                           85%|████████▌ | 224780/263388 [39:45<32:24:48,  3.02s/it] 85%|████████▌ | 224781/263388 [39:47<30:10:44,  2.81s/it] 85%|████████▌ | 224782/263388 [39:50<29:27:43,  2.75s/it] 85%|████████▌ | 224783/263388 [39:53<29:30:40,  2.75s/it] 85%|████████▌ | 224784/263388 [39:55<28:04:23,  2.62s/it] 85%|████████▌ | 224785/263388 [39:59<32:30:45,  3.03s/it] 85%|████████▌ | 224786/263388 [40:02<31:44:53,  2.96s/it] 85%|████████▌ | 224787/263388 [40:05<31:21:20,  2.92s/it] 85%|████████▌ | 224788/263388 [40:07<30:52:16,  2.88s/it] 85%|████████▌ | 224789/263388 [40:10<31:06:26,  2.90s/it] 85%|████████▌ | 224790/263388 [40:13<30:47:36,  2.87s/it]                                                           85%|████████▌ | 224790/263388 [40:13<30:47:36,  2.87s/it] 85%|████████▌ | 224791/263388 [40:16<30:48:15,  2.87s/it] 85%|████████▌ | 224792/263388 [40:19<30:38:33,  2.86s/it] 85%|████████▌ | 224793/263388 [40:22<30:19:06,  2.83s/it] 85%|████████▌ | 224794/263388 [40:23<25:44:18,  2.40s/it] 85%|████████▌ | 224795/263388 [40:26<27:22:39,  2.55s/it] 85%|████████▌ | 224796/263388 [40:29<28:15:29,  2.64s/it] 85%|████████▌ | 224797/263388 [40:32<28:54:52,  2.70s/it] 85%|████████▌ | 224798/263388 [40:36<33:23:35,  3.12s/it] 85%|████████▌ | 224799/263388 [40:38<32:33:03,  3.04s/it] 85%|████████▌ | 224800/263388 [40:42<32:57:11,  3.07s/it]                                                           85%|████████▌ | 224800/263388 [40:42<32:57:11,  3.07s/it][INFO|trainer.py:2806] 2023-10-20 19:54:33,309 >> Saving model checkpoint to /home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224800
+[INFO|trainer.py:2893] 2023-10-20 19:54:33,865 >> Deleting older checkpoint [/home/u131168/mh_one_api/model/ft_models/flan-t5-xl_peft_ft_v2/checkpoint-224600] due to args.save_total_limit
+ 85%|████████▌ | 224801/263388 [40:46<38:31:15,  3.59s/it] 85%|████████▌ | 224802/263388 [40:49<36:02:31,  3.36s/it] 85%|████████▌ | 224803/263388 [40:52<34:11:02,  3.19s/it] 85%|████████▌ | 224804/263388 [40:54<31:26:33,  2.93s/it] 85%|████████▌ | 224805/263388 [40:57<29:54:50,  2.79s/it] 85%|████████▌ | 224806/263388 [41:00<30:31:24,  2.85s/it] 85%|████████▌ | 224807/263388 [41:03<30:21:10,  2.83s/it] 85%|████████▌ | 224808/263388 [41:04<25:36:25,  2.39s/it] 85%|████████▌ | 224809/263388 [41:07<27:21:53,  2.55s/it] 85%|████████▌ | 224810/263388 [41:10<28:48:09,  2.69s/it]                                                           85%|████████▌ | 224810/263388 [41:10<28:48:09,  2.69s/it] 85%|████████▌ | 224811/263388 [41:13<29:02:55,  2.71s/it] 85%|████████▌ | 224812/263388 [41:16<29:21:47,  2.74s/it] 85%|████████▌ | 224813/263388 [41:19<30:42:21,  2.87s/it] 85%|████████▌ | 224814/263388 [41:21<28:42:51,  2.68s/it] 85%|████████▌ | 224815/263388 [41:24<31:16:55,  2.92s/it] 85%|████████▌ | 224816/263388 [41:27<31:16:32,  2.92s/it] 85%|████████▌ | 224817/263388 [41:30<29:41:52,  2.77s/it] 85%|████████▌ | 224818/263388 [41:33<30:04:18,  2.81s/it] 85%|████████▌ | 224819/263388 [41:35<30:11:16,  2.82s/it]slurmstepd-idc-beta-batch-pvc-node-18: error: *** JOB 32165 ON idc-beta-batch-pvc-node-18 CANCELLED AT 2023-10-20T19:55:28 ***
