@@ -36,3 +36,4 @@ data/f_traind_v1.csv
 
 # git config --global user.email "jatin.gcp@gmail.com"
 # git config --global user.name "blur0b0t"
+# git config --global credential.helper store
