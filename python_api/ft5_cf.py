@@ -1,22 +1,27 @@
 
+import datetime
 import json
-from flask import Flask, jsonify, request
-app = Flask(__name__)
+import threading
+import time
+
+from pandas import Timestamp
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
 
 
 
 
 
 
-@app.route('/predict', methods=['GET'])
-def predict():
+def predict(context,question):
     print("-------------generating prediction-----------------")
     # data = json.loads(request.data)
     # data.context=data.context.replace('\n','\\n')
     # data.context=data.context.replace('\t','\\t')
 
-    context=request.args.get('context')
-    question=request.args.get('question')
+    # context=request.args.get('context')
+    # question=request.args.get('question')
     context=context.replace('\n','\\n')
     context=context.replace('\t','\\t')
 
@@ -57,8 +62,55 @@ def init_model():
     print("-------------loaded custom model-----------------")
     print("--------------ready----------------------")
 
+def listen_msgs():
+    coll_name='mhi_pred_app'
+    user_uid='mhi_pred'
+        
+    # Use a service account.
+    cred = credentials.Certificate('/home/u131168/mh_one_api/python_api/mh-pred-app-21be554adb6d.json')
+
+    app = firebase_admin.initialize_app(cred)
+
+    db = firestore.client()
+    
+    # Create an Event for notifying main thread.
+    callback_done = threading.Event()
+
+    # Create a callback on_snapshot function to capture changes
+    def on_snapshot(doc_snapshot, changes, read_time):
+        for doc in doc_snapshot:
+            print(f"Received document snapshot: {doc.id}")
+            print(doc.to_dict())
+            data=doc.to_dict()
+
+            pred_res=predict(data['context'],data['message'])
+            # pred_res={'output':"model response"}
+
+            data['senderId']='chatbot@red'
+            data['message']=pred_res['output']
+            data['timestamp']=datetime.datetime.utcnow()
+            print(f'sending response: '+data['message'])
+            doc_id=str(round(time.time() * 1000))
+            db.collection(coll_name).document(user_uid).collection('allMessages').document(doc_id).set(data)
+            print(f"----------sent----------------with id: {doc_id} ")
+
+        callback_done.set()
+
+    doc_ref = db.collection(coll_name).document(user_uid).collection('userMessages').document("message")
+
+    # Watch the document
+    doc_watch = doc_ref.on_snapshot(on_snapshot)
+    
+
+    while True:
+        print('', end='', flush=True)
+        time.sleep(1)
+
 
 
 if __name__ == '__main__':
-   init_model()
-   app.run(host='0.0.0.0',port=5000)
+    init_model()
+    try:
+        listen_msgs()
+    except Exception as e:
+        print(f'error occured:\n\n\n {e}')  
