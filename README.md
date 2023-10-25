@@ -204,7 +204,7 @@ flutter run -d web-server --host=0.0.0.0
 ![](./assets/img.png)
 
 
--(*hugging face currently does not support inference api for peft models, so we need to run the model locally for inference.)
+-(*hugging face currently does not support inference api for peft models, so we need to run the model on Intel Dev Cloud for inference.)
 - model available on Huggingface Hub (https://huggingface.co/blur0b0t/mh_one_api)
 
 
