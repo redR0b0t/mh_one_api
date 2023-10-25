@@ -6,7 +6,6 @@
 
 MachineHack | Intel® oneAPI Hackathon 2023 -
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache-yellow.svg)](https://opensource.org/license/apache-2-0/)
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/redR0b0t/mh_one_api)
 [![GitHub star chart](https://img.shields.io/github/stars/redR0b0t/mh_one_api?style=social)](https://star-history.com/#redR0b0t/mh_one_api)
 
@@ -189,7 +188,9 @@ python ./ft5_cf.py
 ```bash
 https://huggingface.co/spaces/blur0b0t/mh_one_api
 ```
-![Screenshot (22)](https://github.com/redR0b0t/mh_one_api/assets/143605527/648931dc-0448-4072-a244-04fa458e4890)
+
+![image](https://github.com/redR0b0t/mh_one_api/assets/143605527/a13a1480-0a50-413b-9329-53f8c51e6701)
+
 
 
 - option 2: use the prebuild files
