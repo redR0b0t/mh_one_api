@@ -27,7 +27,8 @@ While text-based tasks are present everywhere, one of the most compelling object
 
 - [Intel® oneAPI AI Analytics Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit-download.html) Tech Stack
 
-  ![](./assets/Intel-Tech-Stack.png)
+ ![image](https://github.com/redR0b0t/mh_one_api/assets/143605527/52805b3f-961c-4df5-828a-a98a448faaa3)
+
 
 
 # Step-by-Step Code Execution Instructions:
@@ -41,8 +42,6 @@ While text-based tasks are present everywhere, one of the most compelling object
 ```
 
 - Train/Fine-tune the flan-t5-xl model on intel dev cloud.
-
-
 
 
 ```bash
@@ -167,7 +166,8 @@ echo "finished precition"
 
 # Run chatbot application to interact with the finteuned flan-t5-xl-peft model
 
-- Run python app to serve predictions to the frontend
+- Run python app to serve predictions to the frontend.
+- (*the webapp wont work ,if the python app is not running)
 
 ```bash
  
@@ -212,7 +212,7 @@ flutter run -d web-server --host=0.0.0.0
  <br />
  <br />
     
--(*hugging face currently does not support inference api for peft models, so we need to run the python app on Intel Dev Cloud for the webapp to work.)
+- (*hugging face currently does not support inference api for peft models, so we need to run the python app on Intel Dev Cloud for the webapp to work.)
 - webapp available on Huggingface Spaces (https://huggingface.co/spaces/blur0b0t/mh_one_api)
 - model available on Huggingface Hub (https://huggingface.co/blur0b0t/mh_one_api)
 
