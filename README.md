@@ -21,7 +21,8 @@ While text-based tasks are present everywhere, one of the most compelling object
 
 # Detailed Architecture Flow:
 
-![](./assets/Process-Flow.png)
+<img width="424" alt="image" src="https://github.com/redR0b0t/mh_one_api/assets/143605527/1c8effb2-c0b2-44cb-a638-da3e46814e6d">
+
 
 # Technology Stack:
 
