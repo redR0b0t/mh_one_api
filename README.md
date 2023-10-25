@@ -184,10 +184,12 @@ python ./ft5_cf.py
 
 
 
-- option 1: use the web app hosted on firebase:
+- option 1: use the web app hosted on huggingface spaces:
 ```bash
-url to firebase hosting
+https://huggingface.co/spaces/blur0b0t/mh_one_api
 ```
+![Screenshot (22)](https://github.com/redR0b0t/mh_one_api/assets/143605527/648931dc-0448-4072-a244-04fa458e4890)
+
 
 - option 2: use the prebuild files
 ```bash
@@ -204,7 +206,10 @@ flutter run -d web-server --host=0.0.0.0
 ![](./assets/img.png)
 
 
+
+    
 -(*hugging face currently does not support inference api for peft models, so we need to run the model on Intel Dev Cloud for inference.)
+- webapp available on Huggingface Spaces (https://huggingface.co/spaces/blur0b0t/mh_one_api)
 - model available on Huggingface Hub (https://huggingface.co/blur0b0t/mh_one_api)
 
 
