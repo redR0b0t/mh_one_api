@@ -181,6 +181,7 @@ python ./ft5_cf.py
 
 # Run frontend application(webapp) to ask questions from the model.
 - (*make sure that the python application is running before using the webapp)
+  <br />
 
 
 
@@ -207,8 +208,10 @@ flutter run -d web-server --host=0.0.0.0
 
 
 
+ <br />
+ <br />
     
--(*hugging face currently does not support inference api for peft models, so we need to run the model on Intel Dev Cloud for inference.)
+-(*hugging face currently does not support inference api for peft models, so we need to run the python app on Intel Dev Cloud for the webapp to work.)
 - webapp available on Huggingface Spaces (https://huggingface.co/spaces/blur0b0t/mh_one_api)
 - model available on Huggingface Hub (https://huggingface.co/blur0b0t/mh_one_api)
 
