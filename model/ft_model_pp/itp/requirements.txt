@@ -7,3 +7,4 @@ evaluate
 nltk
 rouge_score
 einops
+git+https://github.com/huggingface/transformers
