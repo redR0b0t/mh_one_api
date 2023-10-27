@@ -19,8 +19,6 @@ data/f_traind_v1.csv
 # model/formatted_traind.csv
 # model/ft_models/*
 
-# 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
-
 
 # git rm -rf --cached ./
 # git filter-branch --tree-filter 'rm -f model/formatted_td.csv' HEAD
