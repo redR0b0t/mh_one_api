@@ -8,7 +8,7 @@ MachineHack | Intel® oneAPI Hackathon 2023 -
 
 ![image](https://github.com/redR0b0t/mh_one_api/assets/143605527/1a62b11c-0421-4c33-9d80-a8841f732a49)
 
-<img width="424" src="https://github.com/redR0b0t/mh_one_api/assets/143605527/ff59ccb1-091a-4ff9-b95d-d4c7f8d1fa60">  
+<img width="300" src="https://github.com/redR0b0t/mh_one_api/assets/143605527/ff59ccb1-091a-4ff9-b95d-d4c7f8d1fa60">  
 
 
 <br/>
@@ -23,13 +23,13 @@ oneAPI is an open, cross-industry, standards-based, unified, multi-architecture,
 # About Intel Development Cloud
 Intel® Developer Cloud offers several configurations that are tuned to various workloads. From AI and inference training to FPGA development to edge prototyping and preproduction deployment, you can use the environment that best matches your business needs.
 
-- Features of Intel Dev Cloud
-Learn with hands-on tutorials.
-Experiment with real-world code samples.
-Evaluate performance and acceleration with multiple hardware configurations.
-Build heterogeneous applications.
-Develop your own prototype.
-Benchmark your own AI workloads with always-on access to the latest AI hardware.
+- Features of Intel Dev Cloud : <br/>
+Learn with hands-on tutorials. <br/>
+Experiment with real-world code samples. <br/>
+Evaluate performance and acceleration with multiple hardware configurations. <br/>
+Build heterogeneous applications. <br/>
+Develop your own prototype. <br/>
+Benchmark your own AI workloads with always-on access to the latest AI hardware. <br/>
  
 # Problem statement
 While text-based tasks are present everywhere, one of the most compelling objectives is the development of a question-answering system tailored to textual data. Imagine a system capable of sifting through vast datasets, identifying 'span_start' and 'span_end' positions within the 'Story' text, extracting the relevant 'span_text,' and generating responses that align perfectly with the provided 'Answer' for each question.
