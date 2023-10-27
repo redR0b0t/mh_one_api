@@ -2,3 +2,4 @@ flask
 peft
 pandas
 firebase_admin
+intel-extension-for-pytorch

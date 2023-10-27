@@ -1,0 +1,15 @@
+{
+  "cxx_compiler": "gxx",
+  "c_compiler_version": "11.2.0",
+  "xz": "5",
+  "readline": "8.0",
+  "sqlite": "3",
+  "target_platform": "linux-64",
+  "tk": "8.6",
+  "cxx_compiler_version": "11.2.0",
+  "c_compiler": "gcc",
+  "channel_targets": "defaults",
+  "zlib": "1.2",
+  "openssl": "3.0",
+  "bzip2": "1.0"
+}

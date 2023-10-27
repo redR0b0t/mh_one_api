@@ -8,11 +8,14 @@ from pandas import Timestamp
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import intel_extension_for_pytorch as ipex
+
+use_intel_optimization=True
 
 
 
-
-
+global uname
+uname="uc4ddc6536e59d9d8f8f5069efdb4e25"
 
 def predict(context,question):
     print("-------------generating prediction-----------------")
@@ -32,7 +35,19 @@ def predict(context,question):
     prompts=[[input,instruction]]
     res=[]
     input_ids = tokenizer(prompts, return_tensors="pt" ,padding=True,truncation=True, max_length=512).input_ids
-    outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=150)
+
+    if use_intel_optimization==True:
+        # input_ids=input_ids.to('xpu')
+        start_time = time.time()
+        outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=150)
+        pti=time.time() - start_time
+        print(f"--------------time taken by optimized model={pti} seconds")
+    else:
+        start_time = time.time()
+        outputs = model.generate(input_ids=input_ids, do_sample=True, max_length=150)
+        pt=time.time() - start_time
+        print(f"--------------time taken by normal model={pt} seconds")
+
     res+=tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
     return  { 'output': f'{res[0]}' }
@@ -50,16 +65,22 @@ def init_model():
     global tokenizer
 
     mh_dir="mh_one_api"
-    checkpoint_dir=f"/home/u131168/{mh_dir}/model/ft_models/flan-t5-xl_peft_ft_v2/"
+    checkpoint_dir=f"/home/{uname}/{mh_dir}/model/ft_models/flan-t5-xl_peft_ft_v2/"
     checkpoint_name=subprocess.check_output(f"ls {checkpoint_dir} | grep checkpoint | tail -1",shell=True)
     checkpoint_name=str(checkpoint_name).replace("b'","").replace("\\n'","")
     checkpoint_path=checkpoint_dir+checkpoint_name
     model_path=checkpoint_path
 
-    # model_path=f"/home/u131168/{mh_dir}/model/ft_models/flan-t5-xl_peft_finetuned_model/checkpoint-36000"
+    # model_path=f"/home/{uname}/{mh_dir}/model/ft_models/flan-t5-xl_peft_finetuned_model/checkpoint-36000"
     tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
     model = AutoPeftModelForSeq2SeqLM.from_pretrained(model_path, )
     print("-------------loaded custom model-----------------")
+    if use_intel_optimization==True:
+        print("--------------optimizing model---------------")
+        # model = model.to('xpu')
+        model=ipex.optimize(model)
+        print("--------------optimized model---------------")
+
     print("--------------ready----------------------")
 
 def listen_msgs():
@@ -67,7 +88,7 @@ def listen_msgs():
     user_uid='mhi_pred'
         
     # Use a service account.
-    cred = credentials.Certificate('/home/u131168/mh_one_api/python_api/mh-pred-app-21be554adb6d.json')
+    cred = credentials.Certificate(f'/home/{uname}/mh_one_api/python_api/mh-pred-app-21be554adb6d.json')
 
     app = firebase_admin.initialize_app(cred)
 

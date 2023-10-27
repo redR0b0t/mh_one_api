@@ -35,14 +35,21 @@ echo "-------------------------------------------"
 
 
 echo "staring prediction"
-# conda acti
+
+
+#installing intel extension for pytorch for GPU
+# python -m pip install torch==2.0.1a0 torchvision==0.15.2a0 intel_extension_for_pytorch==2.0.110+xpu -f https://developer.intel.com/ipex-whl-stable-xpu
+
+# installing intel extension for transformers
+# pip install intel-extension-for-transformers
+
 pip install torch
 pip install transformers
 pip install peft
 
 
 
-python /home/u131168/mh_one_api/model/p_custom_pp/p_custom.py
+python /home/uc4ddc6536e59d9d8f8f5069efdb4e25/mh_one_api/model/p_custom_pp/p_custom.py
 
 echo "finished precition"
 
