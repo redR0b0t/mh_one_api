@@ -236,8 +236,14 @@ flutter run -d web-server --host=0.0.0.0
 ![img](https://github.com/redR0b0t/mh_one_api/assets/143605527/3c2f4697-7a64-45c0-8f3c-026a55a496c2)
 
 
+# inference meterics for finetuned model with and without intel optimization:
+- by using intel one api optimization the inference time reduced by ~ 12.47 %
 
+<br/>
+  
+  ![Screenshot (35)](https://github.com/redR0b0t/mh_one_api/assets/143605527/de6380b0-906e-4346-a465-7b4ac920271e)
 
+  
  <br />
  <br />
     
