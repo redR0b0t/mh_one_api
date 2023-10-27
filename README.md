@@ -7,7 +7,6 @@
 MachineHack | Intel® oneAPI Hackathon 2023 -
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/redR0b0t/mh_one_api)
-[![GitHub star chart](https://img.shields.io/github/stars/redR0b0t/mh_one_api?style=social)](https://star-history.com/#redR0b0t/mh_one_api)
 
 # About oneAPI:
 
@@ -21,7 +20,8 @@ While text-based tasks are present everywhere, one of the most compelling object
 
 # Detailed Architecture Flow:
 
-<img width="424" alt="image" src="https://github.com/redR0b0t/mh_one_api/assets/143605527/1c8effb2-c0b2-44cb-a638-da3e46814e6d">
+<img width="424" alt="Screenshot 2023-10-25 161033" src="https://github.com/redR0b0t/mh_one_api/assets/143605527/20e60843-bf35-4a81-afdf-f8c55a8ff178">
+
 
 
 # Technology Stack:
